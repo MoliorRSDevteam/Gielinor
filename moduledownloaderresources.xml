@@ -1795,7 +1795,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="11CB40F26721DBC4011BA35C3200BFB57B419280" downloadHash="0E02D4D6A21FC014D2685DB650060AF5979B785F" name="2da_loadingscreens.hak" dlsize="106493914" size="262266804" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="96BC2BA7D9BEDBEEBFB7D411FA87B716F67BFEC8" downloadHash="F157E4758325B268D96B1C7A56BC1F21131D0095" name="2da_loadingscreens.hak" dlsize="119987332" size="291604958" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2151,6 +2151,11 @@
     </server-ref>
   </resource>
   <resource type="Music" hash="27EF56F1C2C0090CFF6917624C158C2F4D036397" downloadHash="C8D5362223DBD67CC0C11E248CD9037E676562A1" name="mus_rellekashore.bmu" dlsize="4176435" size="4193633" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="E8F166675FFAB8A92A4866A938E97A00D2CFA6C4" downloadHash="A5C103477A0C4D94120C432F4E18A9300BE6B937" name="shanty chasm.trx" dlsize="4429955" size="22162935" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
