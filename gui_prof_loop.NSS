@@ -33,7 +33,7 @@ void RespawnNode(int nPOOL, string sPOOL, location lPOOL)
 
 void GatherResource(object oPC)
 {
-	if (GetInventoryNum(oPC) >= 128)
+	if (GetInventoryNum(oPC) > 127)
 	{
 		SendMessageToPC(oPC, "Your inventory is full.");
 		CloseInterface(oPC);
@@ -111,8 +111,8 @@ void ProduceItem(object oPC)
 	int nFAIL = 10 * (100 - GetLocalInt(oPC, "SUCCESS_CHANCE"));
 	if (sOUTPUT == "ironbar")
 	{
-		if (GetTag(GetItemInSlot(INVENTORY_SLOT_LEFTRING, oPC)) == "ringofforging") nFAIL = 0;
-		else if (GetTag(GetItemInSlot(INVENTORY_SLOT_RIGHTRING, oPC)) == "ringofforging") nFAIL = 0;
+		if (GetTag(GetItemInSlot(INVENTORY_SLOT_LEFTRING, oPC)) == "rubyringe") nFAIL = 0;
+		else if (GetTag(GetItemInSlot(INVENTORY_SLOT_RIGHTRING, oPC)) == "rubyringe") nFAIL = 0;
 	}
 	int nMULT = GetLocalInt(oPC, "OUTPUT_MULT");
 	int nXP = GetLocalInt(oPC, "OUTPUT_XP");
