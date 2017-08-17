@@ -35,6 +35,17 @@ void UpdateQuests(object oPC, object oITEM)
 	}
 }
 
+void UpdateSkills(object oPC)
+{
+	int nSKILLS = GetNum2DARows("skills");
+	int nSKILL = 29;
+	while (nSKILL < nSKILLS)
+	{
+		if (GetSkillRank(nSKILL, oPC, TRUE) < 1) SetBaseSkillRank(oPC, nSKILL, 1, FALSE);
+		nSKILL = nSKILL + 1;
+	}
+}
+
 void main()
 {
 	object oPC = GetEnteringObject();
@@ -42,4 +53,5 @@ void main()
 	object oITEM = GetItemPossessedBy(oPC, "player_essence");
 	if (oITEM == OBJECT_INVALID) CreateEssence(oPC);
 	else UpdateQuests(oPC, oITEM);
+	DelayCommand(0.0f, UpdateSkills(oPC));
 }

@@ -25,7 +25,7 @@ void main()
 	{
 		if (GetHasPolymorph(oPC) == FALSE) 
 		{
-			FloatingTextStringOnCreature("Character Saved.", oPC, FALSE);
+			SendMessageToPC(oPC, "Character Saved.");
 			ExportSingleCharacter(oPC);
 		}
 		oPC = GetNextPC();
