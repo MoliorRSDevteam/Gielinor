@@ -128,6 +128,11 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			sDESC = "The VTAM corporation are expanding their business. It would be a good opportunity to invest to earn some money.";
 			sREQU = "This quest is designed for rogues, as stealth is a key element. Though any other class can complete it.";
 			break;
+		case 25: 
+			sNAME = "Scheme of Schematics";
+			sDESC = "Doric is trying to recover his schematics to craft pickaxes. He needs your help to get it.";
+			sREQU = "Dorics' Quest, 15 Fletching.";
+			break;
 	}
 	if (nTYPE == 1) return sNAME;
 	else if (nTYPE == 2) return sDESC;

@@ -280,7 +280,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="ADFB88BEAC959A6FEFBBA4629B75017A3BB3F293" downloadHash="F5E55BB35700E789C72CFCE8E9DD96EE39406801" name="road to falador.trx" dlsize="10508667" size="42952599" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="9255570A766B2D8DC2372F4D0D7FE4DBF8487E5C" downloadHash="736ACD3F77CB0634FF1CC00FE764653BF99129EA" name="road to falador.trx" dlsize="12321340" size="49031475" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1000,7 +1000,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="7AFEDD062EBBCEA783354604A35B03ED53C41071" downloadHash="2D59DC431D76F05E8508D2DDB8A8B2CD8041A9CE" name="varrock.trx" dlsize="11295042" size="48839588" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="A23244B5DF39C4711BC3571D6131D6CAF8F12A96" downloadHash="73E3319D71CBBC675FD611C743BCE9D7515A362F" name="varrock.trx" dlsize="11313912" size="48844808" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1170,7 +1170,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="D4ACD334575343E2ED5CA62816E499D032CD3E45" downloadHash="30A7F48A3E16BDE9DC745CBD435D8C7619054A35" name="falador.trx" dlsize="6011388" size="31492094" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="3FE30142A1224C35C2254ED745EBD77D6926DAAB" downloadHash="AB8DFE3BD2499B042431EFE4FED13BFD3552424F" name="falador.trx" dlsize="5985037" size="31490747" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1780,7 +1780,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Tlk" hash="74F763F33958C49FDF09F2D323ABF55D1F62EC54" downloadHash="A2609B0F3AA7F037B17346A3DAC2356E12224C9B" name="moliorrs.tlk" dlsize="11011" size="45732" critical="false" exclude="false" urlOverride="">
+  <resource type="Tlk" hash="A9B57AB282E5F962F0B969CC9F93D0509653E2D7" downloadHash="13E6EF8EAB9AC785D8C20C7BADEEE6A5AFEE9259" name="moliorrs.tlk" dlsize="11068" size="45922" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1795,7 +1795,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="96BC2BA7D9BEDBEEBFB7D411FA87B716F67BFEC8" downloadHash="F157E4758325B268D96B1C7A56BC1F21131D0095" name="2da_loadingscreens.hak" dlsize="119987332" size="291604958" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="3BE84E588E5CFE5B17C89E7D325111B26F6AFD99" downloadHash="C24C68F9147ADEF4667DFE4001318D5ECD6E6338" name="2da_loadingscreens.hak" dlsize="120007908" size="291609738" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2155,7 +2155,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="1673F30FFC7ABD3C073270FF2838A57B9B8C4B10" downloadHash="743741B718C8FBE745DB7740DEC2A059AC2EE0B1" name="shanty chasm.trx" dlsize="7606004" size="31770926" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="6DEA259AFDF042F26369FC9D076385E07A5E4CE4" downloadHash="CC5A55ADE869EB35F98DFD587C14945DFA3AF5E4" name="shanty chasm.trx" dlsize="7560884" size="31733448" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
