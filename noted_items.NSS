@@ -1,6 +1,6 @@
 #include "profession_include"
 
-void PopulateItems(object oPC, int nINPUT_TOTAL, int nINPUT_MAXSTACK, int nOUTPUT_MAXSTACK, string sINPUT_REF, string sOUTPUT_REF, string sOUTPUT_TAG)
+void PopulateItems(object oPC, int nINPUT_TOTAL, int nINPUT_MAXSTACK, int nOUTPUT_MAXSTACK, int nICON, string sFIRST, string sLAST, string sINPUT_REF, string sOUTPUT_REF, string sOUTPUT_TAG)
 {
 	object oOUTPUT;
 	int nOUTPUT_TOTAL = nINPUT_TOTAL;
@@ -12,14 +12,21 @@ void PopulateItems(object oPC, int nINPUT_TOTAL, int nINPUT_MAXSTACK, int nOUTPU
 		if (sOUTPUT_REF == "noted_item")
 		{
 			SetLocalInt(oOUTPUT, "NOTE_MAXSTACK", nINPUT_MAXSTACK);
-			SetLocalString(oOUTPUT, "NOTE_REF", sINPUT_REF);
+			SetLocalString(oOUTPUT, "NOTE_REF", sINPUT_REF);	
+			SetItemIcon(oOUTPUT, nICON);
+			SetFirstName(oOUTPUT, "<c=orange>" + sFIRST);
+			SetLastName(oOUTPUT, sLAST + "*</c>");
 		}
+		SetIdentified(oOUTPUT, TRUE);
 		nOUTPUT_TOTAL = nOUTPUT_TOTAL - nOUTPUT_MAXSTACK;
 	}
 }
 
 void ConvertItems(object oPC, object oINPUT, int nINV, int nALL, string s2DA = "baseitems", string sCOL = "Stacking")
 {
+	int nICON;
+	string sFIRST;
+	string sLAST;
 	int nCACHE = GetNum2DARows(s2DA);
 	string sINPUT_REF = GetResRef(oINPUT);
 	string sINPUT_TAG = GetTag(oINPUT);
@@ -48,6 +55,9 @@ void ConvertItems(object oPC, object oINPUT, int nINV, int nALL, string s2DA = "
 			SendMessageToPC(oPC, "This function can be used only for items that have a maximum stack size lower than 9999.");
 			return;
 		}
+		nICON = GetItemIcon(oINPUT);
+		sFIRST = GetFirstName(oINPUT);
+		sLAST = GetLastName(oINPUT);
 		sOUTPUT_REF = "noted_item";
 		nOUTPUT_MAXSTACK = 10000;
 	}
@@ -79,7 +89,7 @@ void ConvertItems(object oPC, object oINPUT, int nINV, int nALL, string s2DA = "
 		}
 	}
 	DestroyObject(oINPUT);
-	DelayCommand(0.0f, PopulateItems(oPC, nINPUT_TOTAL, nINPUT_MAXSTACK, nOUTPUT_MAXSTACK, sINPUT_REF, sOUTPUT_REF, sOUTPUT_TAG));
+	DelayCommand(0.0f, PopulateItems(oPC, nINPUT_TOTAL, nINPUT_MAXSTACK, nOUTPUT_MAXSTACK, nICON, sFIRST, sLAST, sINPUT_REF, sOUTPUT_REF, sOUTPUT_TAG));
 }
 
 void main(int nALL = FALSE)
@@ -99,6 +109,11 @@ void main(int nALL = FALSE)
 	if (GetItemCursedFlag(oINPUT) == TRUE)
 	{
 		SendMessageToPC(oPC, "Cursed items are not eligible for this service.");
+		return;
+	}
+	if (GetIdentified(oINPUT) == FALSE)
+	{
+		SendMessageToPC(oPC, "You must identify an item before noting it.");
 		return;
 	}
 	int nINV = GetInventoryNum(oPC);
