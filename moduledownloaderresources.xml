@@ -725,7 +725,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="80FB080ACC6FF2FB431ED348A8C1034831C74838" downloadHash="AF3AFE8FB2F2038A6EDD42A041063ACE3B39FA5E" name="musa point.trx" dlsize="7293280" size="42076321" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="37BF4B966D86CC3F5E3068C594B6C8473AE78A44" downloadHash="7EB3128CC32221F767B3628303B466167131E7A0" name="musa point.trx" dlsize="7267447" size="42080306" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
