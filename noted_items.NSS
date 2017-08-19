@@ -1,6 +1,6 @@
 #include "profession_include"
 
-void PopulateItems(object oPC, int nINPUT_TOTAL, int nINPUT_MAXSTACK, int nOUTPUT_MAXSTACK, int nICON, string sFIRST, string sLAST, string sINPUT_REF, string sOUTPUT_REF, string sOUTPUT_TAG)
+void PopulateItems(object oPC, int nINPUT_TOTAL, int nINPUT_MAXSTACK, int nOUTPUT_MAXSTACK, int nICON, string sNAME, string sINPUT_REF, string sOUTPUT_REF, string sOUTPUT_TAG)
 {
 	object oOUTPUT;
 	int nOUTPUT_TOTAL = nINPUT_TOTAL;
@@ -9,15 +9,14 @@ void PopulateItems(object oPC, int nINPUT_TOTAL, int nINPUT_MAXSTACK, int nOUTPU
 	{
 		if (nOUTPUT_TOTAL < nOUTPUT_MAXSTACK) nOUTPUT_STACK = nOUTPUT_TOTAL;
 		oOUTPUT = CreateItemOnObject(sOUTPUT_REF, oPC, nOUTPUT_STACK, sOUTPUT_TAG, FALSE);
+		SetIdentified(oOUTPUT, TRUE);
 		if (sOUTPUT_REF == "noted_item")
 		{
 			SetLocalInt(oOUTPUT, "NOTE_MAXSTACK", nINPUT_MAXSTACK);
 			SetLocalString(oOUTPUT, "NOTE_REF", sINPUT_REF);	
 			SetItemIcon(oOUTPUT, nICON);
-			SetFirstName(oOUTPUT, "<c=orange>" + sFIRST);
-			SetLastName(oOUTPUT, sLAST + "*</c>");
-		}
-		SetIdentified(oOUTPUT, TRUE);
+			SetFirstName(oOUTPUT, "<c=orange>" + sNAME + "*</c>");
+		}	
 		nOUTPUT_TOTAL = nOUTPUT_TOTAL - nOUTPUT_MAXSTACK;
 	}
 }
@@ -25,8 +24,7 @@ void PopulateItems(object oPC, int nINPUT_TOTAL, int nINPUT_MAXSTACK, int nOUTPU
 void ConvertItems(object oPC, object oINPUT, int nINV, int nALL, string s2DA = "baseitems", string sCOL = "Stacking")
 {
 	int nICON;
-	string sFIRST;
-	string sLAST;
+	string sNAME;
 	int nCACHE = GetNum2DARows(s2DA);
 	string sINPUT_REF = GetResRef(oINPUT);
 	string sINPUT_TAG = GetTag(oINPUT);
@@ -56,8 +54,7 @@ void ConvertItems(object oPC, object oINPUT, int nINV, int nALL, string s2DA = "
 			return;
 		}
 		nICON = GetItemIcon(oINPUT);
-		sFIRST = GetFirstName(oINPUT);
-		sLAST = GetLastName(oINPUT);
+		sNAME = GetName(oINPUT);
 		sOUTPUT_REF = "noted_item";
 		nOUTPUT_MAXSTACK = 10000;
 	}
@@ -89,7 +86,7 @@ void ConvertItems(object oPC, object oINPUT, int nINV, int nALL, string s2DA = "
 		}
 	}
 	DestroyObject(oINPUT);
-	DelayCommand(0.0f, PopulateItems(oPC, nINPUT_TOTAL, nINPUT_MAXSTACK, nOUTPUT_MAXSTACK, nICON, sFIRST, sLAST, sINPUT_REF, sOUTPUT_REF, sOUTPUT_TAG));
+	DelayCommand(0.0f, PopulateItems(oPC, nINPUT_TOTAL, nINPUT_MAXSTACK, nOUTPUT_MAXSTACK, nICON, sNAME, sINPUT_REF, sOUTPUT_REF, sOUTPUT_TAG));
 }
 
 void main(int nALL = FALSE)

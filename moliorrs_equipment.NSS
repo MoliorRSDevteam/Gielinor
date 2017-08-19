@@ -77,7 +77,7 @@ void BeginHandlingEquipment(object oPC, object oITEM, int nUNEQUIP = FALSE)
 		{
 			AssignCommand(oPC, ClearAllActions(TRUE));
 			AssignCommand(oPC, ActionUnequipItem(oITEM));
-			string sFEED = GetLocalString(oPC, "EQUIP_FEEDBACK");;
+			string sFEED = GetLocalString(oPC, "EQUIP_FEEDBACK");
 			SendMessageToPC(oPC, sFEED);
 			DeleteLocalString(oPC, "EQUIP_FEEDBACK");
 			return;
