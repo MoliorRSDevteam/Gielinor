@@ -1,3 +1,5 @@
+#include "nw_i0_spells"
+
 const int QUEST_LIMIT = 50;
 
 void CreateEssence(object oPC)
@@ -35,6 +37,26 @@ void UpdateQuests(object oPC, object oITEM)
 	}
 }
 
+void FixStuck(object oPC)
+{
+	int nTYPE;
+	effect eFX = GetFirstEffect(oPC);
+	while (GetIsEffectValid(eFX))
+    {
+		nTYPE = GetEffectType(eFX);
+		switch (nTYPE)
+		{
+			case EFFECT_TYPE_CUTSCENE_PARALYZE:
+			case EFFECT_TYPE_CUTSCENEGHOST:
+			case EFFECT_TYPE_CUTSCENEIMMOBILIZE:
+				RemoveEffect(oPC, eFX);
+				eFX = GetFirstEffect(oPC);
+				break;
+			default: eFX = GetNextEffect(oPC);				
+		}
+    }
+}
+
 void UpdateSkills(object oPC)
 {
 	int nSKILLS = GetNum2DARows("skills");
@@ -44,6 +66,7 @@ void UpdateSkills(object oPC)
 		if (GetSkillRank(nSKILL, oPC, TRUE) < 1) SetBaseSkillRank(oPC, nSKILL, 1, FALSE);
 		nSKILL = nSKILL + 1;
 	}
+	DelayCommand(0.0f, FixStuck(oPC));
 }
 
 void main()
