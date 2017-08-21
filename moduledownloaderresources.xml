@@ -1000,7 +1000,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="A23244B5DF39C4711BC3571D6131D6CAF8F12A96" downloadHash="73E3319D71CBBC675FD611C743BCE9D7515A362F" name="varrock.trx" dlsize="11313912" size="48844808" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="88D062CEAD1D0DF51F1FE5BDFE43695926DAECC9" downloadHash="5AD8409A9381DBB60FD4975FCBC9FED1B085757C" name="varrock.trx" dlsize="11352261" size="48906960" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1795,12 +1795,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="3BE84E588E5CFE5B17C89E7D325111B26F6AFD99" downloadHash="C24C68F9147ADEF4667DFE4001318D5ECD6E6338" name="2da_loadingscreens.hak" dlsize="120007908" size="291609738" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="05DEB5EA831CC3424264C16AEA193CCF0CA397AD" downloadHash="625DA89221644EF04AFA2413CC7D025E6B8BD3CB" name="2da_loadingscreens.hak" dlsize="120007908" size="291609738" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="03B8E8B8159CF1BFC9E9AF09993D8C14DB156E0F" downloadHash="EDDE63B571D32B30575FEEE88BA5C8CB03E5C9DD" name="xmls.hak" dlsize="30336" size="544526" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="155F2D71490506FD735E099423E637006576BE99" downloadHash="749C463B84BA1782EFD5A28895308C4242B78A32" name="xmls.hak" dlsize="30357" size="544526" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
