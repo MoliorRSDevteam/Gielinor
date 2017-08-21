@@ -109,7 +109,7 @@ void ReallyPlayCustomAnimation(object oPC, string sANIM, int nLOOP = FALSE, floa
 void BeginProfessionLoop(object oPC, object oPOOL, string sSOUND, string sANIM)
 {
 	SetLocalObject(oPC, "PROF_POOL", oPOOL);
-	DisplayGuiScreen(oPC, "SCREEN_PROF_LOOP", TRUE, "prof_loop.xml");
+	DisplayGuiScreen(oPC, "SCREEN_PROF_LOOP", FALSE, "prof_loop.xml");
 	effect eFX = EffectCutsceneImmobilize();
 	eFX = SupernaturalEffect(eFX);
 	ApplyEffectToObject(DURATION_TYPE_PERMANENT, eFX, oPC);
