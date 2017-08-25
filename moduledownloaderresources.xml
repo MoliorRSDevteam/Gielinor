@@ -470,7 +470,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="188F9901BA054EC1C3D794146C609C3F7F8CD875" downloadHash="AD2FAD37FDC68BA662E204B98D69D00C7BBF8A66" name="Draynor - Mill.trx" dlsize="19023" size="19034" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="B92C17D848B039663EA0D0E0FF7CB706BF25479B" downloadHash="CEA71CE266D3269763625743F94AE17375A977C6" name="Draynor - Mill.trx" dlsize="19017" size="19034" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1390,7 +1390,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="7B55B92D4074ED63F35CF374E6FAEE00F02CFCAA" downloadHash="7E498A334389BE0A5A82ECD740F011F7723E0B10" name="0burthorpe.trx" dlsize="8584217" size="35812645" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="B4AC49A656ED01FD7E457977DC9C630E69DA45D2" downloadHash="496C81A1540393843BDA0D92BD860D7A35BE4431" name="0burthorpe.trx" dlsize="8549719" size="35830888" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2155,7 +2155,72 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="6DEA259AFDF042F26369FC9D076385E07A5E4CE4" downloadHash="CC5A55ADE869EB35F98DFD587C14945DFA3AF5E4" name="shanty chasm.trx" dlsize="7560884" size="31733448" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="7931EEF3A8FEC35CF442DAA569AE37E49E3FCF23" downloadHash="9A2F3A8FE1183C652D194BC6753215D2C2056645" name="shanty chasm.trx" dlsize="7652399" size="31911021" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="CB6A2E1023F5FAE0D96AFB158A5C547852518428" downloadHash="363D70437D8C328FF1F942CDB9973B87571B629D" name="Warriors Guild.trx" dlsize="84834" size="87394" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="0A47000733A7F38559BD1803A176EB02CDED2593" downloadHash="CACC8B350D4FC7EECE1D9B27751C3759071AF51E" name="Burthorpe Mine.trx" dlsize="34015" size="34160" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="90550C4F2F8D8B32C018505CC540BFA46A59C9BE" downloadHash="C40C59F5DD2E3D5D16BA31718264393F6E39DA3D" name="throne room of scorpia {q3}.trx" dlsize="217112" size="225611" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="8443339CF66C2DB3FF3D6299584D4C39E35A4979" downloadHash="D2B4387ACCECEC3FBCAE0149CD2DC243B2B7444D" name="Osman's office.trx" dlsize="7656" size="7643" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="F2FBED51FE436571E85246887F3B78118E746385" downloadHash="D6A413745023B6F1F43247AD3CA088526584F991" name="temple of scorpia - level 2 {q2}.trx" dlsize="313347" size="317404" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="90550C4F2F8D8B32C018505CC540BFA46A59C9BE" downloadHash="C40C59F5DD2E3D5D16BA31718264393F6E39DA3D" name="throne room of scorpia.trx" dlsize="217112" size="225611" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="F2FBED51FE436571E85246887F3B78118E746385" downloadHash="D6A413745023B6F1F43247AD3CA088526584F991" name="temple of scorpia - level 2.trx" dlsize="313347" size="317404" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="90550C4F2F8D8B32C018505CC540BFA46A59C9BE" downloadHash="C40C59F5DD2E3D5D16BA31718264393F6E39DA3D" name="throne room of scorpia {q2}.trx" dlsize="217112" size="225611" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="1085695D5D7D2A503798C5693C319599BD65BC8D" downloadHash="32E7D2FBB027358ADD5A1BFD4EDD4C245C4996F1" name="Temple of Scorpia - Level 1.trx" dlsize="178434" size="182757" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="ACD6CFDD8580C0A5C834A0045B4DBA95F843B5D8" downloadHash="5A28C7A20229F790EA9E4A13C62286F3BF6DAFF3" name="treasure room {q1}.trx" dlsize="26359" size="26295" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="ACD6CFDD8580C0A5C834A0045B4DBA95F843B5D8" downloadHash="5A28C7A20229F790EA9E4A13C62286F3BF6DAFF3" name="treasure room {q2}.trx" dlsize="26359" size="26295" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="F2FBED51FE436571E85246887F3B78118E746385" downloadHash="D6A413745023B6F1F43247AD3CA088526584F991" name="temple of scorpia - level 2 {q}.trx" dlsize="313347" size="317404" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="90550C4F2F8D8B32C018505CC540BFA46A59C9BE" downloadHash="C40C59F5DD2E3D5D16BA31718264393F6E39DA3D" name="throne room of scorpia {q}.trx" dlsize="217112" size="225611" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>

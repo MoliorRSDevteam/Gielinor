@@ -133,6 +133,11 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			sDESC = "Doric is trying to recover his schematics to craft pickaxes. He needs your help to get it.";
 			sREQU = "Dorics' Quest, 15 Fletching.";
 			break;
+		case 26: 
+			sNAME = "The Cult of Scorpia";
+			sDESC = "Citizens are being lured into joining a cult, worshipping Scorpia. Those who join up are never seen again.";
+			sREQU = "Prince Ali Rescue, Romeo and Juliet, 42 Cooking.";
+			break;
 	}
 	if (nTYPE == 1) return sNAME;
 	else if (nTYPE == 2) return sDESC;
