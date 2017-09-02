@@ -39,16 +39,16 @@ void SlayAndTeleportCheck(object oPC, object oMOB)
 {
 	string sMOB = GetTag(oMOB);
 	string sNAME = GetName(oMOB);
+	string sWP = GetLocalString(oMOB, "QUEST_TP");
+	object oWP = GetObjectByTag(sWP);
 	object oINVALID = OBJECT_INVALID;
 	object oPARTY = GetFirstFactionMember(oPC, FALSE);
 	while (oPARTY != oINVALID)
 	{
-		SlayerKill(oPARTY, sMOB, sNAME);
+		if (GetIsOwnedByPlayer(oPARTY) == TRUE) SlayerKill(oPARTY, sMOB, sNAME);
+		if (oWP != oINVALID) AssignCommand(oPARTY, JumpToObject(oWP));
 		oPARTY = GetNextFactionMember(oPC, FALSE);
-	}
-	string sWP = GetLocalString(oMOB, "QUEST_TP");
-	object oWP = GetObjectByTag(sWP);
-	if (oWP != oINVALID) DelayCommand(0.0f, JumpPartyToArea(oPC, oWP));
+	}	
 }
 
 void UpdateQuest(object oPC, object oMOB)
