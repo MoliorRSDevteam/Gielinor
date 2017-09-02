@@ -8,8 +8,11 @@
 	 QUEST_WP (String) - Optional. The tag of destination waypoint (if any) after you have killed the creature.
 */
 
-void TeleportEveryone(object oPC, object oWP, object oINVALID)
+void TeleportEveryone(object oPC, object oMOB, object oINVALID = OBJECT_INVALID)
 {
+	string sWP = GetLocalString(oMOB, "QUEST_TP");
+	object oWP = GetObjectByTag(sWP);
+	if (oWP == oINVALID) return;
 	object oPARTY = GetFirstFactionMember(oPC, FALSE);
 	while (oPARTY != oINVALID)
 	{
@@ -32,10 +35,6 @@ void main()
 	AddScriptParameterInt(nQP);
 	AddScriptParameterInt(FALSE); //Not from Conversation
 	AddScriptParameterInt(TRUE); //Check all party members by default
-	ExecuteScriptEnhanced("quest_action", oPC);
-	string sWP = GetLocalString(oMOB, "QUEST_TP");
-	if (sWP == "") return;
-	object oWP = GetNearestObjectByTag(sWP);
-	object oINVALID = OBJECT_INVALID;
-	if (oWP != oINVALID) DelayCommand(0.0f, TeleportEveryone(oPC, oWP, oINVALID));
+	ExecuteScriptEnhanced("quest_action", oPC);	
+	DelayCommand(0.0f, TeleportEveryone(oPC, oMOB));
 }
