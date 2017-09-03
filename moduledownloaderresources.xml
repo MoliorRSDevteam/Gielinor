@@ -250,11 +250,6 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="B8FD98CD36C07DD9913A65559A583349FE136A2A" downloadHash="320F1C8D05401BFC6591835511E16FE6538FC410" name="0kharidian southern beach.trx" dlsize="2008443" size="19837861" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
   <resource type="DirectoryEntry" hash="2FBA9F746ADDEE8843CEF223CF8C8BE9EBBBC760" downloadHash="69CDFA418CB138E2D333E2AC698E1ABD4A8258C2" name="0ullek.trx" dlsize="3296322" size="26373817" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
@@ -416,11 +411,6 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="F8F8E6DAB4892507E6A2D9B4A32632F5AB579341" downloadHash="D34633AF7175B10CF4A72C73C4376FDF75403EEA" name="varrock - warehouse.trx" dlsize="56822" size="56893" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
-  <resource type="DirectoryEntry" hash="6505E7396327244C0D54222A4759B6008907F473" downloadHash="2493CE64F4EF0D2E82CA3746E718F5DA22DB62C6" name="0kalphite hive - outside.trx" dlsize="6666663" size="36563862" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -725,7 +715,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="37BF4B966D86CC3F5E3068C594B6C8473AE78A44" downloadHash="7EB3128CC32221F767B3628303B466167131E7A0" name="musa point.trx" dlsize="7267447" size="42080306" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="F285C4D997CA8CB3AA95FD5E381C6C169BEA4E53" downloadHash="D8747C95782C4CF144BB3A3E67535BD541BE8B67" name="musa point.trx" dlsize="6726577" size="42435692" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -766,11 +756,6 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="426EA378F96ED9FBF16321710F6ACA27CCB25A4B" downloadHash="DC6EEC8AAEA6ABCEBDC4B7D393171DA5B1BA3006" name="entrana - house, downstairs.trx" dlsize="5375" size="5368" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
-  <resource type="DirectoryEntry" hash="136606C394EFB7EA7467F967756BCDD8783B4019" downloadHash="2B4503CF8DA1F3D39F2ABB46713A9F8D99ECD49E" name="0bandit camp.trx" dlsize="5294930" size="34556463" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1155,11 +1140,6 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="FEACB3E834DD7EB0B09ED7118C0F5C4C2F91665A" downloadHash="41E97C6CBF3E00BC0ED0AF6A9DAF1703C1A26451" name="0kharidian desert - east.trx" dlsize="5858688" size="31138494" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
   <resource type="DirectoryEntry" hash="2B1D64FD0B882403A8CB6EF87E96C4AA34B6F9CC" downloadHash="C6977F662677AC5EFCDEE9D006937215931A0A6C" name="university of camdozaal.trx" dlsize="243753" size="245818" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
@@ -1181,11 +1161,6 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="401F22A27E9491BF3D34E7D3910F77E75E4CF9A2" downloadHash="722E3BADA0FD28E480BBD5D7FF6B36B3B7C069DB" name="falador - mace shop.trx" dlsize="5809" size="5792" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
-  <resource type="DirectoryEntry" hash="646D8121CD07A887A54FD89848A6D6619E4D7563" downloadHash="4943E5BE223B1687D8E438D9C1A0C0D66B31A710" name="0kharidian desert - west.trx" dlsize="6772959" size="35067272" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1286,11 +1261,6 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="133E6CF4F2101B6110CAFD4BDA44BA5597148C43" downloadHash="5AEEAD3B6E63D022A01F380D7EB7773CB86D0EA6" name="0pollnivneach.trx" dlsize="3286123" size="18715055" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
-  <resource type="DirectoryEntry" hash="A63AB0C994A623A795DC956036714F70BCC34A64" downloadHash="4F9E4DBE2025A768010D8C9B98687D68BFBD9B35" name="0shanty pass.trx" dlsize="7718003" size="38050189" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1615,11 +1585,6 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="0B95898FF2AEFC4F710EA37A69107BD9AC0210F9" downloadHash="F916F36EB02D4DC1B3A172FB6B6D8440FF44C72C" name="0nardah.trx" dlsize="7974623" size="40970425" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
   <resource type="DirectoryEntry" hash="9EB06E4F3905DF724EDD97B4C5BF27BAAF42A2F2" downloadHash="4AC80334D6C8C369DFAD694958B2E070A564B3C9" name="Lumbridge - East house.trx" dlsize="140769" size="141536" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
@@ -1760,7 +1725,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="AF8606740AFA32DBA9665041C5DE40FC143C7233" downloadHash="A7A8B3FBC9E340F937258261329797CD993444C8" name="leg_master.ini" dlsize="253" size="425" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="CEDA8AE2070EC2AB9E60F812D462B467D83DA1E0" downloadHash="F75D883E9A0F260F3AF83D2ABDD975588C71B85B" name="leg_master.ini" dlsize="260" size="432" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1795,7 +1760,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="05DEB5EA831CC3424264C16AEA193CCF0CA397AD" downloadHash="625DA89221644EF04AFA2413CC7D025E6B8BD3CB" name="2da_loadingscreens.hak" dlsize="120007908" size="291609738" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="83A1A1BDA4BA613F453FA10502079A1C5FD9D676" downloadHash="8E11804D7469230235D6AFC2B12EDB0032E4B037" name="2da_loadingscreens.hak" dlsize="125505451" size="307836038" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2155,12 +2120,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="7931EEF3A8FEC35CF442DAA569AE37E49E3FCF23" downloadHash="9A2F3A8FE1183C652D194BC6753215D2C2056645" name="shanty chasm.trx" dlsize="7652399" size="31911021" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="B4404685E03371E50613A2C5E48C2929EB2BE173" downloadHash="F14E7B6F2587655CD24995292ADEC4EDC0859919" name="shanty chasm.trx" dlsize="7565982" size="31821233" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="CB6A2E1023F5FAE0D96AFB158A5C547852518428" downloadHash="363D70437D8C328FF1F942CDB9973B87571B629D" name="Warriors Guild.trx" dlsize="84834" size="87394" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="7BFFBCEC7760BCB541F59ACDC1EA0E3E91D57547" downloadHash="27ABC98E78BA75737BB82535FD3238BA7CF19FC3" name="Warriors Guild.trx" dlsize="164418" size="1750411" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2200,12 +2165,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="1085695D5D7D2A503798C5693C319599BD65BC8D" downloadHash="32E7D2FBB027358ADD5A1BFD4EDD4C245C4996F1" name="Temple of Scorpia - Level 1.trx" dlsize="178434" size="182757" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="22274D46BD7FAC8ECCF5ECE5CE834FE25EE21469" downloadHash="E5D7F75B0B130385B0212E37F5C60F5384947519" name="Temple of Scorpia - Level 1.trx" dlsize="196415" size="201468" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="ACD6CFDD8580C0A5C834A0045B4DBA95F843B5D8" downloadHash="5A28C7A20229F790EA9E4A13C62286F3BF6DAFF3" name="treasure room {q1}.trx" dlsize="26359" size="26295" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="09D2B2B29FC629245F56C1B327B71B849F79715A" downloadHash="435CC300752FE8A10B07863A158BFD1589396701" name="treasure room {q1}.trx" dlsize="26043" size="26042" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2221,6 +2186,96 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="90550C4F2F8D8B32C018505CC540BFA46A59C9BE" downloadHash="C40C59F5DD2E3D5D16BA31718264393F6E39DA3D" name="throne room of scorpia {q}.trx" dlsize="217112" size="225611" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="18F78EC5E84E44B52EC87F7F72EB1C10D13CC1C9" downloadHash="652137358FF15E12E784C7EC9BDABE3A1137C9EF" name="warriors guild courtyard.trx" dlsize="1302692" size="8364703" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="300F0B08616641234C1CB705C9A8FB33FF9A9AD1" downloadHash="2AC37F8B05298FCDEF44473C9C39D19939B73627" name="kharidian - south desert.trx" dlsize="5826379" size="31133863" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="6C4233B069C9F18E3B7341B68CEA2216E35DF4E6" downloadHash="D3E173350D0344A0135BA56B4CB1324A512ABE6A" name="Al-Kharid - Estate.trx" dlsize="63399" size="106480" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="6505E7396327244C0D54222A4759B6008907F473" downloadHash="2493CE64F4EF0D2E82CA3746E718F5DA22DB62C6" name="kharidian - north-west.trx" dlsize="6666663" size="36563862" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="4A7658821003B7A5A8D3BBB0829115A9FE0EE326" downloadHash="EEBB3400174CF7FF2A23ED64D7EF32ACCB937DC0" name="Bandit camp - Pub.trx" dlsize="26830" size="26882" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="070CC029CAFC522C64ED7FEC899CD0C3B1F2CD2B" downloadHash="69820AB3BB5F650240320B51DA16322C487BDCD1" name="Nardah - Temple of She.trx" dlsize="38384" size="38547" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="658EABA07E2ADBD70EB3D1146DB39D0F0544B095" downloadHash="947BC9FC97FFD263D2F939D4BFB2DC1752F7ACA2" name="kharidian - bandit camp.trx" dlsize="4123155" size="24635967" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="B9069CB6B7F10FA68E1322D75DFA37B78E84909F" downloadHash="8F2B8B7259D1F9C64F23DEBE185BCA7B629B76AB" name="Nardah - Zahur's house.trx" dlsize="18279" size="18277" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="D2C7A5D3C877E660F402CF67484BCAF2C1C4A77E" downloadHash="8D7A8120571FB47FB22381EA904655B922DC7B48" name="Nardah - Bank.trx" dlsize="19695" size="19709" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="09E64E8EF7FA204C7871178F3E71E0208A5B5ED7" downloadHash="3226EEEDCAE4121CD61E78BB38317B7F6E2720FB" name="Nardah - Mayor's house.trx" dlsize="49890" size="50231" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="7BA123B66629EFD12300C68C4717FF16A693CFDC" downloadHash="64D87EB930368B01524E5774D30E93C82E92746A" name="Bandit camp - House.trx" dlsize="17649" size="17642" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="3E21A8EACD1142652B470E652B8ABAEC14717530" downloadHash="57EB0BB0DF59CD803571306D266197787D2E0E63" name="Bandit camp - House 2.trx" dlsize="13188" size="13174" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="B8FD98CD36C07DD9913A65559A583349FE136A2A" downloadHash="320F1C8D05401BFC6591835511E16FE6538FC410" name="kharidian desert - beach.trx" dlsize="2008443" size="19837861" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="1F17A05C2AB1077FC119C304182D8487EC923E83" downloadHash="D70E39263A8BA765A67A12C3565098FF7B5F7254" name="kharidian desert - west desert.trx" dlsize="6717236" size="34743069" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="081C992550A9F410D5A154CF0D582665B43B9B2B" downloadHash="60CE835141B2ACD8B68C3C59ACF9DA8DA20C762E" name="kharidian - north desert.trx" dlsize="7637308" size="38010767" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="50F9BFD21A62BC7222C8B21A13054524EB1AEDCB" downloadHash="B748A5EF9DA1B1E378F25DE8769DF7762C714147" name="Granite mine.trx" dlsize="18343" size="18373" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="52A6F946C7A10809F61F55B075A032A1ABE0F20A" downloadHash="776F811D945CB507CDAA7450BEE5D6CB5B69067D" name="kharidian desert - nardah.trx" dlsize="7949812" size="40897738" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Hak" hash="3FA881390DC836F31FE3DDF9F20EA1C73686E13E" downloadHash="BF354BA21E855303DC2DA969AF4AAB4DA20EAA65" name="leg_quest.hak" dlsize="1074395" size="2831594" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>

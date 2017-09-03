@@ -1,230 +1,131 @@
+// NW_C2_DEFAULT9
 /*
-
-    Script:			AI Script for the Spawn Event to go NPC's and Mobs.  Mostly a copy of the built
-					in AI with major modifications.
-	Version:		1.2
-	Plugin Version: 1.93
-	Author:			Marshall Vyper
-	Parameters:		N/A
-	
-	Change Log:		06/23/2011 - 1.00 MV - Initial Release
-					11/12/2012 - 1.1 MV - Added support to call optional Pre Scripts
-					05/29/2015 - 1.2 MV - Added support for SE recalling when a Mob changes AI
-	
+    Default OnSpawn handler
+ 
+    To create customized spawn scripts, use the "Custom OnSpawn" script template. 
 */
+//:://////////////////////////////////////////////////
+//:: Copyright (c) 2002 Floodgate Entertainment
+//:: Created By: Naomi Novik
+//:: Created On: 12/11/2002
+//:://////////////////////////////////////////////////
+//:: Updated 2003-08-20 Georg Zoeller: Added check for variables to active spawn in conditions without changing the spawnscript
+// ChazM 6/20/05 ambient anims flag set on spawn for encounter cratures.
+// ChazM 1/6/06 modified call to WalkWayPoints()
+// DBR 2/03/06  Added option for a spawn script (AI stuff, but also handy in general)
+// ChazM 8/22/06 Removed reference to "kinc_globals".
+// ChazM 3/8/07 Added campaign level creature spawn modifications script.  Moved excess commented code out to template.
+// ChazM 4/5/07 Incorporeal creatures immune to non magic weapons
+// JSH-OEI 5/1/08 - Check creature type before spawning random treasure.
 
+#include "x0_i0_anims"
+#include "x0_i0_treasure"
+#include "x2_inc_switches"
 
-// /////////////////////////////////////////////////////////////////////////////////////////////////////
-// INCLUDES
-// /////////////////////////////////////////////////////////////////////////////////////////////////////
-#include "leg_ai_include"
-
-// /////////////////////////////////////////////////////////////////////////////////////////////////////
-// BUILT IN CONSTANTS
-// /////////////////////////////////////////////////////////////////////////////////////////////////////
-const int EVENT_USER_DEFINED_PRESPAWN = 1510;
-const int EVENT_USER_DEFINED_POSTSPAWN = 1511;
-
-// /////////////////////////////////////////////////////////////////////////////////////////////////////
-// MAIN ROUTINE
-// /////////////////////////////////////////////////////////////////////////////////////////////////////
 void main()
 {
-	object oNPC = OBJECT_SELF;
-	
-	//If Passive, turn names to Aqua color
-	if (GetLocalInt(oNPC, "PASSIVE") == TRUE)
-	{
-		SetFirstName(oNPC, "<c=aqua>"+ GetFirstName(oNPC));
-		SetLastName(oNPC, "<c=aqua>"+ GetLastName(oNPC));
-	}
-	
-	// Run custom script
-	string sScript = GetLocalString(oNPC, "LEG_AI_OnSpawnScript");
-	if (sScript != "") ExecuteScript(sScript, oNPC);
-	
-	// Start with default code with any minor mods in them.
-    // User defined OnSpawn event requested?
-    int nSpecEvent = GetLocalInt(oNPC,"X2_USERDEFINED_ONSPAWN_EVENTS");
-
-    // Pre Spawn Event requested
-    if (nSpecEvent == 1  || nSpecEvent == 3  )
+    // Run this campaign's standard creature spawn modifications script (set in module load)
+    string sScriptSpawnCreature = GetGlobalString("N2_SCRIPT_SPAWN_CREATURE");
+    if (sScriptSpawnCreature != "")
     {
-    SignalEvent(oNPC,EventUserDefined(EVENT_USER_DEFINED_PRESPAWN ));
+		ExecuteScript(sScriptSpawnCreature, OBJECT_SELF);
     }
 
-    /*  Fix for the new golems to reduce their number of attacks */
-
-    int nNumber = GetLocalInt(oNPC,CREATURE_VAR_NUMBER_OF_ATTACKS);
-    if (nNumber >0 )
+    // ***** Spawn-In Conditions ***** //
+    // See x2_inc_switches for more information about these
+    
+    // Enable stealth mode by setting a variable on the creature
+    // Great for ambushes
+    if (GetCreatureFlag(OBJECT_SELF, CREATURE_VAR_USE_SPAWN_STEALTH) == TRUE)
     {
-        SetBaseAttackBonus(nNumber);
+        SetSpawnInCondition(NW_FLAG_STEALTH);
+    }
+    
+    // Make creature enter search mode after spawning by setting a variable
+    // Great for guards, etc
+    if (GetCreatureFlag(OBJECT_SELF, CREATURE_VAR_USE_SPAWN_SEARCH) == TRUE)
+    {
+        SetSpawnInCondition(NW_FLAG_SEARCH);
     }
 
-	// Setup default profile if we're using them - If we weren't calling for a change in profile then set default profile up
-	int iProfiles = GetLocalInt(oNPC, "LEG_AI_Profile");
-	int iChangeCalled = GetLocalInt(oNPC, "LEG_AI_ChangeCalled");
-	
-	if (iProfiles)
-	{
-		if (!iChangeCalled)
+    // Enable immobile ambient animations by setting a variable
+    if (GetCreatureFlag(OBJECT_SELF, CREATURE_VAR_USE_SPAWN_AMBIENT_IMMOBILE) == TRUE)
+    {
+        SetSpawnInCondition(NW_FLAG_IMMOBILE_AMBIENT_ANIMATIONS);
+    }
+
+    // Enable mobile ambient animations by setting a variable
+    if (GetCreatureFlag(OBJECT_SELF, CREATURE_VAR_USE_SPAWN_AMBIENT) == TRUE)
+    {
+        SetSpawnInCondition(NW_FLAG_AMBIENT_ANIMATIONS);
+    }
+
+    // ***** DEFAULT GENERIC BEHAVIOR ***** //
+    // * Goes through and sets up which shouts the NPC will listen to.
+    SetListeningPatterns();
+
+    // * Walk among a set of waypoints if they exist.
+    // * 1. Find waypoints with the tag "WP_" + NPC TAG + "_##" and walk
+    // *    among them in order.
+    // * 2. If the tag of the Way Point is "POST_" + NPC TAG, stay there
+    // *    and return to it after combat.
+    //
+    // * If "NW_FLAG_DAY_NIGHT_POSTING" is set, you can also
+    // * create waypoints with the tags "WN_" + NPC Tag + "_##"
+    // * and those will be walked at night. (The standard waypoints
+    // * will be walked during the day.)
+    // * The night "posting" waypoint tag is simply "NIGHT_" + NPC tag.
+    WalkWayPoints(FALSE, "spawn");
+    
+    //* Create a small amount of treasure on the creature
+    if (GetLocalInt(GetModule(), "X2_L_NOTREASURE") == FALSE
+        && GetLocalInt(OBJECT_SELF, "X2_L_NOTREASURE") == FALSE
+		&& GetRacialType(OBJECT_SELF) != RACIAL_TYPE_ANIMAL
+		&& GetRacialType(OBJECT_SELF) != RACIAL_TYPE_BEAST
+		&& GetRacialType(OBJECT_SELF) != RACIAL_TYPE_CONSTRUCT
+		&& GetRacialType(OBJECT_SELF) != RACIAL_TYPE_ELEMENTAL
+		&& GetRacialType(OBJECT_SELF) != RACIAL_TYPE_VERMIN)
+    {
+		if (GetChallengeRating(OBJECT_SELF) <= 5.0)
 		{
-			LEG_AI_SetAIProfile(1);
+        	CTG_GenerateNPCTreasure(TREASURE_TYPE_LOW, OBJECT_SELF);
+		}
+		else if (GetChallengeRating(OBJECT_SELF) >5.0 && GetChallengeRating(OBJECT_SELF) <=10.0)
+		{
+			CTG_GenerateNPCTreasure(TREASURE_TYPE_MED, OBJECT_SELF);
 		}
 		else
 		{
-			LEG_AI_SetAIProfile(iChangeCalled);
+			CTG_GenerateNPCTreasure(TREASURE_TYPE_HIGH, OBJECT_SELF);
 		}
-	}
-	
-	// Get Vars
-	int iDayNight = GetLocalInt(oNPC, "LEG_AI_DayNight");
-	int iEscort = GetLocalInt(oNPC, "LEG_QUEST_Escort");
-	int iSpawnBehavior = GetLocalInt(oNPC, "LEG_AI_SpawnCondition");
-	int iCombatBehavior = GetLocalInt(oNPC, "LEG_AI_CombatBehavior");
-	int iMobType = GetLocalInt(oNPC, "LEG_AI_MobType");
-	
-	string sPatrolRoute = GetLocalString(oNPC, "LEG_AI_WalkRoute");
-	string sWPTAG = GetLocalString(oNPC, "WP_TAG");
-	
-	// See if he is supposed to be on a Patrol Route or not.
-	if (iDayNight)
-		SetSpawnInCondition(NW_FLAG_DAY_NIGHT_POSTING);
-		
-	if (sPatrolRoute != "" && iEscort == 0 && sWPTAG != sPatrolRoute)
-	{
-		SetLocalString(oNPC, "WP_TAG", sPatrolRoute);
-	 	SetWWPController(sPatrolRoute);
-	}
-
-	// Look up what their behavior is going to be.  The first is their spawn in condition, the second is
-	// how they behave in a fight.
-
-	// Elevated AI?
-	if (GetLocalInt(oNPC, "LEG_AI_AILevel") == 3)
-		SetAILevel(oNPC, AI_LEVEL_NORMAL);
-
-	// Ok, let's do something about their spawn in condition.		
-	switch (iSpawnBehavior)
-	{
-		case 1:				SetSpawnInCondition(NW_FLAG_STEALTH);
-							SetLocalInt(oNPC, "X2_L_SPAWN_USE_STEALTH", 1);
-							SetCreatureFlag(oNPC, "CREATURE_VAR_USE_SPAWN_STEALTH", TRUE);
-							break;
-
-		case 2: 			AssignCommand(oNPC, LEG_AI_Animations(oNPC, "laydownB", 0));
-							DelayCommand(2.0, AssignCommand(oNPC, LEG_AI_Animations(oNPC, "proneB", 1)));
-							DelayCommand(2.5, SetFacing(GetFacing(oNPC), TRUE));
-							SetOrientOnDialog(oNPC, FALSE);
-							SetLocalInt(oNPC, "LEG_AI_MobType", 4);
-							break;
-		case 3:				ExecuteScript("x2_spn_dead", oNPC);
-							break;
-		case 4:				SetSpawnInCondition(NW_FLAG_SLEEPING_AT_NIGHT);
-							SetLocalString(GetModule(),"X2_S_SLEEP_AT_NIGHT_SCRIPT", "leg_ai_sleep");
-							break;
-	}			
-
-	// Now setup the traits for the combat behavior.
-	switch (iCombatBehavior)
-	{
-		case 1:				SetLocalInt(oNPC, "X0_COMBAT_FLAG_RANGED", 1);
-							SetCombatCondition(X0_COMBAT_FLAG_RANGED);
-							break;
-			
-		case 2:				SetLocalInt(oNPC, "X0_COMBAT_FLAG_DEFENSIVE", 1);
-							SetCombatCondition(X0_COMBAT_FLAG_DEFENSIVE);
-							break;		
-		
-		case 3:				SetLocalInt(oNPC, "X0_COMBAT_FLAG_AMBUSHER", 1);
-							SetCombatCondition(X0_COMBAT_FLAG_AMBUSHER);
-							break;
-							
-		case 4:				SetLocalInt(oNPC, "X0_COMBAT_FLAG_COWARDLY", 1);
-							SetCombatCondition(X0_COMBAT_FLAG_COWARDLY);
-							break;
-		case 5:				SetLocalInt(oNPC, "X2_L_BEH_MAGIC", 100);
-							//SetCombatCondition(X0_COMBAT_FLAG_COWARDLY);
-							break;
-		case 6:				SetLocalInt(oNPC, "X2_L_BEH_OFFENSE", 100);
-							//SetCombatCondition(X0_COMBAT_FLAG_COWARDLY);
-							break;
-	}
-	
-    // Execute default OnSpawn script.
-    //ExecuteScript("nw_c2_default9", oNPC);
-
-    //Post Spawn event requeste
-    if (nSpecEvent == 2 || nSpecEvent == 3)
-    {
-    SignalEvent(oNPC,EventUserDefined(EVENT_USER_DEFINED_POSTSPAWN));
     }
-	
-	
-	// Here is our additional code.
-	// First, now that we've spawned, all mobs require that they have a home point, which is their spawn point
-	// unless they are a patroller.  We're going to try and make their home point their next waypoint!  
-    LEG_AI_SetMobHome(oNPC);
+    
+    // encounter creatures use ambient animations
+    if (GetIsEncounterCreature())
+		SetSpawnInCondition(NW_FLAG_AMBIENT_ANIMATIONS, TRUE);
 
-	// Setup some Spawn in conditions for various events.
-	SetSpawnInCondition(NW_FLAG_HEARTBEAT_EVENT);
-	SetSpawnInCondition(NW_FLAG_DAMAGED_EVENT);
-	SetSpawnInCondition(NW_FLAG_PERCIEVE_EVENT);
-	SetAnimationCondition(NW_ANIM_FLAG_CONSTANT);
-
+    // * If Incorporeal, apply changes
+    if (GetCreatureFlag(OBJECT_SELF, CREATURE_VAR_IS_INCORPOREAL) == TRUE)
+    {
+        effect eConceal = EffectConcealment(50, MISS_CHANCE_TYPE_NORMAL);
+        eConceal = ExtraordinaryEffect(eConceal);
+        effect eGhost = EffectCutsceneGhost();
+        eGhost = ExtraordinaryEffect(eGhost);
+        effect eImmuneToNonMagicWeapons = EffectDamageReduction(1000, DAMAGE_POWER_PLUS_ONE, 0, DR_TYPE_MAGICBONUS);
+        eImmuneToNonMagicWeapons = ExtraordinaryEffect(eImmuneToNonMagicWeapons);
+		
+        ApplyEffectToObject(DURATION_TYPE_PERMANENT, eConceal, OBJECT_SELF);
+        ApplyEffectToObject(DURATION_TYPE_PERMANENT, eGhost, OBJECT_SELF);
+        ApplyEffectToObject(DURATION_TYPE_PERMANENT, eImmuneToNonMagicWeapons, OBJECT_SELF);
+    }	
 	
-	// Set up some AI type stuff for our critter here.
-	SetLocalInt(oNPC, "NW_ANIM_FLAG_CONSTANT", 1);
-	SetLocalInt(oNPC, "X2_USERDEFINED_ONSPAWN_EVENTS", 2);
-	SetLocalInt(oNPC, "NW_FLAG_HEARTBEAT_EVENT", 1);
-	
-	// The MobType variable determines the MOB's movement behavior such as standing still,
-	// Milling about, or standing guard etc.
-	switch (iMobType)
-	{
-		case 1:
-			SetLocalInt(oNPC, "X2_L_SPAWN_USE_AMBIENT_IMMOBILE", 1);
-			SetCreatureFlag(oNPC, "CREATURE_VAR_USE_SPAWN_AMBIENT_IMMOBILE", TRUE);
-			SetSpawnInCondition(NW_FLAG_IMMOBILE_AMBIENT_ANIMATIONS);
-			break;
-		case 2:
-			SetLocalInt(oNPC, "X2_L_SPAWN_USE_AMBIENT", 1);
-			SetCreatureFlag(oNPC, "CREATURE_VAR_USE_SPAWN_AMBIENT", TRUE);
-			SetSpawnInCondition(NW_FLAG_AMBIENT_ANIMATIONS);
-			break;
-		case 3:
-			SetLocalInt(oNPC, "X2_L_SPAWN_USE_AMBIENT", 1);
-			SetCreatureFlag(oNPC, "CREATURE_VAR_USE_SPAWN_AMBIENT", TRUE);
-			SetLocalInt(oNPC, "AMCIVIL", 1);
-			SetSpawnInCondition(NW_FLAG_AMBIENT_ANIMATIONS);
-			break;
-		case 4:
-			// don't set up any vars for guards.
-			break;
-	  	case 99:
-			SetLocalInt(oNPC, "X2_L_SPAWN_USE_AMBIENT_IMMOBILE", 0);
-			SetCreatureFlag(oNPC, "CREATURE_VAR_USE_SPAWN_AMBIENT_IMMOBILE", FALSE);
-			SetSpawnInCondition(NW_FLAG_IMMOBILE_AMBIENT_ANIMATIONS);
-			break;
-		default:
-			SetLocalInt(oNPC, "X2_L_SPAWN_USE_AMBIENT", 1);
-			SetCreatureFlag(oNPC, "CREATURE_VAR_USE_SPAWN_AMBIENT", TRUE);
-			SetSpawnInCondition(NW_FLAG_AMBIENT_ANIMATIONS);
-			break;
-	}  
+	if (GetLocalInt(OBJECT_SELF, "NX2_NO_ORIENT_ON_DIALOG"))
+		SetOrientOnDialog(OBJECT_SELF, FALSE);
+    	
+	//DBR 2/03/06 - added option for a spawn script (ease of AI hookup)
+	string sSpawnScript=GetLocalString(OBJECT_SELF,"SpawnScript");
+	if (sSpawnScript!="")
+		ExecuteScript(sSpawnScript,OBJECT_SELF);
+		
 
-	// Last thing we want to do is to call our Master Spawn script!
-	if (iChangeCalled != TRUE)
-	{
-		ExecuteScript("leg_all_masterspawn", oNPC);
-	}
-	else
-		SetLocalInt(oNPC, "LEG_QUEST_SE_Called", FALSE);
-	
-	// Ok we are now spawned.  Equip our gear and make us ready.
-	DelayCommand(2.0, LEG_AI_Equip());	
-
-	// Start walking if I'm supposed to.
-	WalkWayPoints(FALSE, "spawn"); 
-	//WalkWayPoints(TRUE, "spawn");
 }

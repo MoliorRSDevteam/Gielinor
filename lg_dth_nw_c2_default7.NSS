@@ -49,19 +49,4 @@ void main()
 	/*if (!GetIsSpirit(OBJECT_SELF))
     	craft_drop_items(oKiller);*/
 	
-	{
-	// REMOVE ANY BARS ANYWAY (DIRECT TO DEATH BYPASS DAMAGE)
-	RemoveSEFFromObject(OBJECT_SELF, "alb_hp_100");	
-	RemoveSEFFromObject(OBJECT_SELF, "alb_hp_90");	
-	RemoveSEFFromObject(OBJECT_SELF, "alb_hp_80");	
-	RemoveSEFFromObject(OBJECT_SELF, "alb_hp_70");	
-	RemoveSEFFromObject(OBJECT_SELF, "alb_hp_60");	
-	RemoveSEFFromObject(OBJECT_SELF, "alb_hp_50");	
-	RemoveSEFFromObject(OBJECT_SELF, "alb_hp_40");	
-	RemoveSEFFromObject(OBJECT_SELF, "alb_hp_30");	
-	RemoveSEFFromObject(OBJECT_SELF, "alb_hp_20");	
-	RemoveSEFFromObject(OBJECT_SELF, "alb_hp_10");	
-	}
-
-
 }
