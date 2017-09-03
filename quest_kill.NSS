@@ -8,21 +8,53 @@
 	 QUEST_WP (String) - Optional. The tag of destination waypoint (if any) after you have killed the creature.
 */
 
-void TeleportEveryone(object oPC, object oWP, object oINVALID)
+#include "profession_include"
+
+void SlayerKill(object oPARTY, string sMOB, string sNAME)
 {
+	object oESSENCE = GetItemPossessedBy(oPARTY, "player_essence");
+	if (GetLocalString(oESSENCE, "SLAYER_TAG") != sMOB) return;
+	string sTXT;
+	int nTOTAL = GetLocalInt(oESSENCE, "SLAYER_TOTAL");
+	int nKILLS = GetLocalInt(oESSENCE, "SLAYER_KILLS") + 1;
+	if (nKILLS < nTOTAL)
+	{
+		sTXT = sNAME + "(s) killed: " + IntToString(nKILLS) + "/" + IntToString(nTOTAL);
+		SetLocalInt(oESSENCE, "SLAYER_KILLS", nKILLS);
+	}
+	else
+	{
+		int nXP = GetLocalInt(oESSENCE, "SLAYER_EXP");
+		GiveCraftXP(oPARTY, SKILL_SLAYER, nXP);
+		sTXT = "You have killed all the " + sNAME + "(s) required by the Slayer Master!";
+		DeleteLocalInt(oESSENCE, "SLAYER_KILLS");
+		DeleteLocalInt(oESSENCE, "SLAYER_TOTAL");
+		DeleteLocalInt(oESSENCE, "SLAYER_EXP");
+		DeleteLocalString(oESSENCE, "SLAYER_TAG");	
+	}
+	FloatingTextStringOnCreature(sTXT, oPARTY, FALSE);
+}
+
+void SlayAndTeleportCheck(object oPC, object oMOB)
+{
+	string sMOB = GetTag(oMOB);
+	string sNAME = GetName(oMOB);
+	string sWP = GetLocalString(oMOB, "QUEST_TP");
+	object oWP = GetObjectByTag(sWP);
+	object oINVALID = OBJECT_INVALID;
 	object oPARTY = GetFirstFactionMember(oPC, FALSE);
 	while (oPARTY != oINVALID)
 	{
-		AssignCommand(oPARTY, JumpToObject(oWP));
+		if (GetIsOwnedByPlayer(oPARTY) == TRUE) SlayerKill(oPARTY, sMOB, sNAME);
+		if (oWP != oINVALID) AssignCommand(oPARTY, JumpToObject(oWP));
 		oPARTY = GetNextFactionMember(oPC, FALSE);
-	}
+	}	
 }
 
-void main()
+void UpdateQuest(object oPC, object oMOB)
 {
-	object oMOB = OBJECT_SELF;
-	object oPC = GetLastKiller();
 	string sQUEST = GetLocalString(oMOB, "QUEST_ID");
+	if (sQUEST == "") return;
 	int nSTEP = GetLocalInt(oMOB, "QUEST_STEP");
 	int nXP = GetLocalInt(oMOB, "QUEST_XP");
 	int nQP = GetLocalInt(oMOB, "QUEST_QP");
@@ -33,9 +65,12 @@ void main()
 	AddScriptParameterInt(FALSE); //Not from Conversation
 	AddScriptParameterInt(TRUE); //Check all party members by default
 	ExecuteScriptEnhanced("quest_action", oPC);
-	string sWP = GetLocalString(oMOB, "QUEST_TP");
-	if (sWP == "") return;
-	object oWP = GetNearestObjectByTag(sWP);
-	object oINVALID = OBJECT_INVALID;
-	if (oWP != oINVALID) DelayCommand(0.0f, TeleportEveryone(oPC, oWP, oINVALID));
+}
+
+void main()
+{
+	object oMOB = OBJECT_SELF;
+	object oPC = GetLastKiller();
+	UpdateQuest(oPC, oMOB);
+	DelayCommand(0.0f, SlayAndTeleportCheck(oPC, oMOB));
 }

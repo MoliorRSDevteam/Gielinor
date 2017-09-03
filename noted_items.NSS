@@ -1,6 +1,6 @@
 #include "profession_include"
 
-void PopulateItems(object oPC, int nINPUT_TOTAL, int nINPUT_MAXSTACK, int nOUTPUT_MAXSTACK, int nICON, string sNAME, string sINPUT_REF, string sOUTPUT_REF, string sOUTPUT_TAG)
+void CreateOutput(object oPC, int nINPUT_TOTAL, int nINPUT_MAXSTACK, int nOUTPUT_MAXSTACK, int nICON, string sNAME, string sINPUT_REF, string sOUTPUT_REF, string sOUTPUT_TAG)
 {
 	object oOUTPUT;
 	int nOUTPUT_TOTAL = nINPUT_TOTAL;
@@ -21,20 +21,16 @@ void PopulateItems(object oPC, int nINPUT_TOTAL, int nINPUT_MAXSTACK, int nOUTPU
 	}
 }
 
-void ConvertItems(object oPC, object oINPUT, int nINV, int nALL, string s2DA = "baseitems", string sCOL = "Stacking")
+void DestroyInput(object oPC, object oINPUT, int nINV, int nALL, string s2DA = "baseitems", string sCOL = "Stacking")
 {
-	int nICON;
-	string sNAME;
 	int nCACHE = GetNum2DARows(s2DA);
 	string sINPUT_REF = GetResRef(oINPUT);
-	string sINPUT_TAG = GetTag(oINPUT);
-	int nINPUT_STACK = GetItemStackSize(oINPUT);
 	int nINPUT_TYPE = GetBaseItemType(oINPUT);
 	string sINPUT_MAXSTACK = Get2DAString(s2DA, sCOL, nINPUT_TYPE);
 	int nINPUT_MAXSTACK = StringToInt(sINPUT_MAXSTACK);
-	int nOUTPUT_MAXSTACK;
-	string sOUTPUT_REF;
-	string sOUTPUT_TAG = sINPUT_TAG;
+	int nOUTPUT_MAXSTACK = 10000;
+	string sOUTPUT_REF = "noted_item";	
+	
 	if (sINPUT_REF == "noted_item")
 	{
 		if (nALL == TRUE)
@@ -46,26 +42,25 @@ void ConvertItems(object oPC, object oINPUT, int nINV, int nALL, string s2DA = "
 		nOUTPUT_MAXSTACK = GetLocalInt(oINPUT, "NOTE_MAXSTACK");
 		if (nOUTPUT_MAXSTACK < 1) nOUTPUT_MAXSTACK = 1;
 	}
-	else
-	{		
-		if (nINPUT_MAXSTACK >= 9999)
-		{
-			SendMessageToPC(oPC, "This function can be used only for items that have a maximum stack size lower than 9999.");
-			return;
-		}
-		nICON = GetItemIcon(oINPUT);
-		sNAME = GetName(oINPUT);
-		sOUTPUT_REF = "noted_item";
-		nOUTPUT_MAXSTACK = 10000;
+	else if (nINPUT_MAXSTACK >= 9999)
+	{
+		SendMessageToPC(oPC, "This function can be used only for items that have a maximum stack size lower than 9999.");
+		return;
 	}
+	
+	int nINPUT_STACK = GetItemStackSize(oINPUT);
 	int nINPUT_TOTAL = nINPUT_STACK;
 	int nITEMS = (nINPUT_TOTAL / nOUTPUT_MAXSTACK);
-	if (nINV + nITEMS > 127)
+	if (nINV + nITEMS > 128)
 	{
 		SendMessageToPC(oPC, "You are attempting to convert too many items. Please use a smaller stack.");
 		return;
 	}
-	if (nALL = TRUE)
+	
+	int nICON = GetItemIcon(oINPUT);
+	string sNAME = GetName(oINPUT);
+	string sINPUT_TAG = GetTag(oINPUT);	
+	if (nALL == TRUE)
 	{
 		object oINVALID = OBJECT_INVALID;
 		object oITEM = GetFirstItemInInventory(oPC);
@@ -78,15 +73,15 @@ void ConvertItems(object oPC, object oINPUT, int nINV, int nALL, string s2DA = "
 					if (oITEM != oINPUT)
 					{
 						nINPUT_TOTAL = nINPUT_TOTAL + GetItemStackSize(oITEM);
-						DestroyObject(oITEM);
+						DestroyObject(oITEM, 0.0f, FALSE);
 					}
 				}
 			}
 			oITEM = GetNextItemInInventory(oPC);
 		}
 	}
-	DestroyObject(oINPUT);
-	DelayCommand(0.0f, PopulateItems(oPC, nINPUT_TOTAL, nINPUT_MAXSTACK, nOUTPUT_MAXSTACK, nICON, sNAME, sINPUT_REF, sOUTPUT_REF, sOUTPUT_TAG));
+	DestroyObject(oINPUT, 0.0f, FALSE);
+	DelayCommand(0.0f, CreateOutput(oPC, nINPUT_TOTAL, nINPUT_MAXSTACK, nOUTPUT_MAXSTACK, nICON, sNAME, sINPUT_REF, sOUTPUT_REF, sINPUT_TAG));
 }
 
 void main(int nALL = FALSE)
@@ -95,7 +90,7 @@ void main(int nALL = FALSE)
 	object oINPUT = GetPlayerCurrentTarget(oPC);
 	if (GetItemPossessor(oINPUT) != oPC)
 	{
-		SendMessageToPC(oPC, "Please target one of the items in your possession first.");
+		SendMessageToPC(oPC, "Please target one of the items in your possession.");
 		return;
 	}
 	if (GetPlotFlag(oINPUT) == TRUE)
@@ -114,10 +109,10 @@ void main(int nALL = FALSE)
 		return;
 	}
 	int nINV = GetInventoryNum(oPC);
-	if (nINV > 126)
+	if (nINV > 127)
 	{
-		SendMessageToPC(oPC, "You must have at least two free slots in your inventory to use this service (this is necessary to avoid potential item losses).");
+		SendMessageToPC(oPC, "You must have at least one free slot in your inventory to use this service (this is necessary to avoid potential item losses).");
 		return;
 	}
-	DelayCommand(0.0f, ConvertItems(oPC, oINPUT, nINV, nALL));
+	DelayCommand(0.0f, DestroyInput(oPC, oINPUT, nINV, nALL));
 }
