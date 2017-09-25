@@ -1360,7 +1360,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="B4AC49A656ED01FD7E457977DC9C630E69DA45D2" downloadHash="496C81A1540393843BDA0D92BD860D7A35BE4431" name="0burthorpe.trx" dlsize="8549719" size="35830888" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="F1405498679D37CDD52108A7722A20F8C1F888B8" downloadHash="FD499CC0865B776E647215E7AE52845E4A0E14A0" name="0burthorpe.trx" dlsize="8563844" size="35794127" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1455,7 +1455,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="F8CFC44B68C4C7021BEEE96A33F5CDFA2CB2C205" downloadHash="38B8823F2A37B367F63D8F27FE32F99E5C8536E2" name="0taverly.trx" dlsize="6938193" size="36284289" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="132DFAB070BB095936AB5792AEC6D8A259208D29" downloadHash="24911A84C94A5074CBE23E3DCCC163BD53F23208" name="0taverly.trx" dlsize="8927506" size="42634978" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2265,7 +2265,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="50F9BFD21A62BC7222C8B21A13054524EB1AEDCB" downloadHash="B748A5EF9DA1B1E378F25DE8769DF7762C714147" name="Granite mine.trx" dlsize="18343" size="18373" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="8CA036BA2B38C4F94D1036138ADDB89E69353EE4" downloadHash="C47497096EEAEFF398AD4F25B516A2A8360F7D75" name="Granite mine.trx" dlsize="18342" size="18373" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2276,6 +2276,26 @@
     </server-ref>
   </resource>
   <resource type="Hak" hash="3FA881390DC836F31FE3DDF9F20EA1C73686E13E" downloadHash="BF354BA21E855303DC2DA969AF4AAB4DA20EAA65" name="leg_quest.hak" dlsize="1074395" size="2831594" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="70353F3D40302996D154AA59A2D244D3307E2D41" downloadHash="EEB2E21ED708B4EC5D2F49C183E6DDA1C5613453" name="desert mining camp.trx" dlsize="248029" size="251226" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="4B4AA6F888DA7C9BD717E12B64E662B2F04C8F29" downloadHash="2D5E9E30108422808EFEDC393CADE69FBDBD3AE0" name="Nardah - Library.trx" dlsize="9950" size="9946" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="D7704C42D5812A7F0780D29C441AE0C3FF549295" downloadHash="094113A3A78E3F1916E1BD7B6F6276A4E249D803" name="Death altar.trx" dlsize="411038" size="6340965" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="AB9344ABC24645DE75D467B519DC1491438E8203" downloadHash="CCFFA4D56677ED9D4BB6B2CD98E9C31AAC36C9FA" name="Jailhouse.trx" dlsize="36342" size="36415" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>

@@ -1,5 +1,5 @@
 // Plugin Generated CONSTANTS FILE
-// Plugin Version: 1.93
+// Plugin Version: 2.0
 const int GAME_MINUTES = 2;
 const int REAL_MINUTES = 30;
 const int TIME_HOUR_DAWN = 6;

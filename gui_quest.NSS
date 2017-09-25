@@ -138,6 +138,16 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			sDESC = "Citizens are being lured into joining a cult, worshipping Scorpia. Those who join up are never seen again.";
 			sREQU = "Prince Ali Rescue, Romeo and Juliet, 42 Cooking.";
 			break;
+		case 27: 
+			sNAME = "A Baragin for Profit";
+			sDESC = "Lucam has been contracted by the Emir of Al-Kharid to excavate a mine north of Al-Kharid in search of gems.";
+			sREQU = "Prince Ali Rescue, 30 Mining.";
+			break;
+		case 28: 
+			sNAME = "The Tourist Trap";
+			sDESC = "South of Al Kharid a new desert pass has opened up, leading to the dangers of the Kharid desert.";
+			sREQU = "10 Fletching, 20 Smithing";
+			break;
 	}
 	if (nTYPE == 1) return sNAME;
 	else if (nTYPE == 2) return sDESC;
