@@ -148,6 +148,11 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			sDESC = "South of Al Kharid a new desert pass has opened up, leading to the dangers of the Kharid desert.";
 			sREQU = "10 Fletching, 20 Smithing";
 			break;
+		case 29: 
+			sNAME = "The Golem";
+			sDESC = "Deep in the desert sand, the ruins of the once great city of Uzer, a lone survivor—an ancient clay golem—forever paces back and forth.";
+			sREQU = "20 Crafting, 20 Thieving";
+			break;
 	}
 	if (nTYPE == 1) return sNAME;
 	else if (nTYPE == 2) return sDESC;
