@@ -163,6 +163,11 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			sDESC = "Trolls have begun to muster their forces in the North, I should speak to the Captain of the Guard.";
 			sREQU = "Death Plateau, spiked boots, the ability to fight a Troll General";
 			break;
+		case 32: 
+			sNAME = "Witch's House";
+			sDESC = "A young boy who lives in Taverley has kicked his ball into the garden of a scary old lady. He asks you to get it back for him. This proves more difficult than it first sounds.";
+			sREQU = "None.";
+			break;
 	}
 	if (nTYPE == 1) return sNAME;
 	else if (nTYPE == 2) return sDESC;
