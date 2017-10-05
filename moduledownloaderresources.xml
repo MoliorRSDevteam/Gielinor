@@ -310,7 +310,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="17146B41BF318A8ABA9413F91267B07C71137C34" downloadHash="16A12ACD425321FF210A6ABF6969ED8969033292" name="varrock - museum.trx" dlsize="70796" size="70989" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="4FCA6327934561DADF640F7F970EA0CDFA827BDA" downloadHash="B349D24BC59D2C4CDE64E90A724D1932CCEDEB54" name="varrock - museum.trx" dlsize="126797" size="127411" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1335,7 +1335,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="84E54E776CA075712B6079C61B464CAA3FAD35B5" downloadHash="A19CDB57AA71F2B1589908FEF17A9CF71B25A6CD" name="0burthorpe.trx" dlsize="8270824" size="34601040" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="83D022B794F36FC915022B99B38947382C57B0EA" downloadHash="06C3AE2304EA666C0D107EFAD8DAEE537E9A1E92" name="0burthorpe.trx" dlsize="8314792" size="34635963" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1430,7 +1430,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="1319F1319E424EC6AF1B5417612D7E11BDF1F12B" downloadHash="FDB25FD63BB3874867983BAA4E344B08EFFD7A64" name="0taverly.trx" dlsize="9009705" size="42693736" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="1E9EA2C3451FCF4B1DF52D5BC0D7B8B8D06263DF" downloadHash="2D847BBD6CB68CEAA5EBC1BF23283CA3C6D4C00C" name="0taverly.trx" dlsize="8952605" size="42671785" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2105,7 +2105,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="AE320AA4769727F7824B749D31F01D053C12880F" downloadHash="1D7EC8ABC33B28825C4F2E4EE1CAB1072EB50420" name="Burthorpe Mine.trx" dlsize="44148" size="44435" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="E16052CC69FC625E3E782EA726771BAB4ADFB6A8" downloadHash="8046930D8461A08EF8662BE6C6ACEAFF083FACC4" name="Burthorpe Mine.trx" dlsize="44728" size="44892" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2460,7 +2460,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="8D8645F83BEED7D25E64251CD863562997086C27" downloadHash="89A4D6993DAD6B269A52B6270428600D757102C5" name="trollheim.trx" dlsize="2600126" size="11924462" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="A17520F1B540953804067BC476F88D65464EBCAB" downloadHash="DB0EE8C4D5122B9B52C374B58879599BB5BAC8EF" name="trollheim.trx" dlsize="2589537" size="11918216" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2475,7 +2475,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="6B3F1E5C1AFE292D370FECD41F5C98FF4012B8B4" downloadHash="BAC71423AF3939CD63EED2716FDC98CD61EBBA1D" name="Burthorpe Keep.trx" dlsize="41114" size="41136" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="77E89E9450F1395308CB7E7F9E00287F37A55A44" downloadHash="4CFFDB89B8452F4795E79A25BF61D0699CE276E6" name="Burthorpe Keep.trx" dlsize="44236" size="44219" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2490,12 +2490,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="A20CA64DA0E73C5AE35F7E9323F4C82E4CE11265" downloadHash="60884C71F22BC1390ABE79AD22B0A144B0776CDF" name="trollheim - passway.trx" dlsize="16408" size="16436" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="5E55FB5417283269955CE1571199713313B65111" downloadHash="A48B9B7D8453F31077F27D7EFBE21C8717225713" name="trollheim - passway.trx" dlsize="16370" size="16387" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="3C79291283D392A2BB6FE9FE3B247AB66C798965" downloadHash="8EA30D98924D314182C2117913D84C9A0940AAC2" name="Sherpa's home.trx" dlsize="15591" size="15578" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="DCE962C2C18B421DD9E094468E6BC5E9EABBFC53" downloadHash="DC47EDB46058DAEF3F4CBBDC5616BFE1126B91A4" name="Sherpa's home.trx" dlsize="14034" size="14023" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2525,12 +2525,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="0F8F555FD4370065AF0CB0C689747B4CC22015E6" downloadHash="8B5CA4268FB89DB5EE777DC179995D604F2C3F7D" name="troll stronghold - upper level.trx" dlsize="1448071" size="12061414" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="212E6D7DCA8399FEF651832BCAA9FB05025EA4D6" downloadHash="D98055F056146569182427F073006DD813B29B63" name="troll stronghold - upper level.trx" dlsize="1360616" size="11973729" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="59945542E84B8B104D52D2752270D52154913B04" downloadHash="FF5FB8A4F9F2F766D42AFC6726799BE0F9ECB6E1" name="death plateu.trx" dlsize="12469198" size="47711925" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="B177A4FAEF175D4D9E8431827F434A901827B6B7" downloadHash="B62BC5CFE6CC385492E306ACE4EABEE3BB99718B" name="death plateu.trx" dlsize="12548123" size="47865581" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2540,22 +2540,32 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="8CE06F0C495A590B29214F33ED7DF7E7E52C5A20" downloadHash="BF4E6EA2A7699EA07DEAAF6F58F0A07EA5D92558" name="trollheim - arena.trx" dlsize="2172160" size="10469951" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="5ED31AB2E7F3DCC7CEC3BF0619A4BFC07A9FB802" downloadHash="2EB0D142BEE47F8738A02A1AB93012F45F077CE0" name="trollheim - arena.trx" dlsize="2170571" size="10472559" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="A192542CF85785A560DB5FCBD2748C36D5CA9EF7" downloadHash="1710515E4DAA29DA805DA06F570E60F41280426F" name="troll stronghold - middle level.trx" dlsize="615645" size="11244183" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="55EE371B7ED2A4A2C03CCFEF5DDE55FA18A92CF8" downloadHash="423000719FD2CB9B1439A70CF7BF1602EE3248A5" name="troll stronghold - middle level.trx" dlsize="617805" size="11249065" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="C0D87F913252AA893C98A07A4AA780159B3EA6B2" downloadHash="7931801BD9C94EC5203096F26006BB1285F813E0" name="troll stronghold - lower level.trx" dlsize="681665" size="11284433" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="50503ED7E8A28DC705BD6A1FCF42F216EF177862" downloadHash="706E20CDE2E975D2C0D935F515E03B9228796E24" name="troll stronghold - lower level.trx" dlsize="679910" size="11285242" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="5BD4954CBFD9355BB963A764DFBE9A8FF2501DBA" downloadHash="C02357592D79DB768233C2E3685EB2EC2EDAC9E2" name="taverly house {3}.trx" dlsize="21948" size="21958" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="4218B3A9B33E7933EE0889BBDDAC71161D887966" downloadHash="D7CFBC4709458E4E21626BB1593528268626D4F3" name="witchhouse.trx" dlsize="52575" size="52875" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="E6DD2B85B9964600DAAAAD1642C59CE3A69F1165" downloadHash="6E5513EB2E9C4CCFA6B3A18DC07AB184762B58D5" name="Paterdomus - Temple.trx" dlsize="87394" size="87862" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
