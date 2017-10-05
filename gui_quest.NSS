@@ -139,7 +139,7 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			sREQU = "Prince Ali Rescue, Romeo and Juliet, 42 Cooking.";
 			break;
 		case 27: 
-			sNAME = "A Baragin for Profit";
+			sNAME = "A Bargain for Profit";
 			sDESC = "Lucam has been contracted by the Emir of Al-Kharid to excavate a mine north of Al-Kharid in search of gems.";
 			sREQU = "Prince Ali Rescue, 30 Mining.";
 			break;
@@ -152,6 +152,21 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			sNAME = "The Golem";
 			sDESC = "Deep in the desert sand, the ruins of the once great city of Uzer, a lone survivor—an ancient clay golem—forever paces back and forth.";
 			sREQU = "20 Crafting, 20 Thieving";
+			break;
+		case 30: 
+			sNAME = "Death Plateau";
+			sDESC = "The Burthorpe Captain of the Guards is missing his scouts, he needs the know what happened and to find a safe passage through the plateau.";
+			sREQU = "None";
+			break;
+		case 31: 
+			sNAME = "Troll Stronghold";
+			sDESC = "Trolls have begun to muster their forces in the North, I should speak to the Captain of the Guard.";
+			sREQU = "Death Plateau, spiked boots, the ability to fight a Troll General";
+			break;
+		case 32: 
+			sNAME = "Witch's House";
+			sDESC = "A young boy who lives in Taverley has kicked his ball into the garden of a scary old lady. He asks you to get it back for him. This proves more difficult than it first sounds.";
+			sREQU = "None.";
 			break;
 	}
 	if (nTYPE == 1) return sNAME;
