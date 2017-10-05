@@ -970,7 +970,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="F11CCFBE8112DB10497B58BB9C4DEB31A6CEE68E" downloadHash="F1CDE849CADC5E79DE3E66A8B0E634FB78723ECD" name="Exam Centre.trx" dlsize="44725" size="44798" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="E8C543A2A736695B91DCFE17CB7BC51D8CDBDBC8" downloadHash="590BA95B6DA8BBF1949B811D2CD51923089C833D" name="Exam Centre.trx" dlsize="44747" size="44901" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1335,7 +1335,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="F1405498679D37CDD52108A7722A20F8C1F888B8" downloadHash="FD499CC0865B776E647215E7AE52845E4A0E14A0" name="0burthorpe.trx" dlsize="8563844" size="35794127" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="84E54E776CA075712B6079C61B464CAA3FAD35B5" downloadHash="A19CDB57AA71F2B1589908FEF17A9CF71B25A6CD" name="0burthorpe.trx" dlsize="8270824" size="34601040" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1430,7 +1430,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="527A5AEFA4EAD7DBEF6A50A6BE2282D8E43FA480" downloadHash="3D14DEEA83A51921FB2935CC41BB91EEE236A237" name="0taverly.trx" dlsize="8949862" size="42618280" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="1319F1319E424EC6AF1B5417612D7E11BDF1F12B" downloadHash="FDB25FD63BB3874867983BAA4E344B08EFFD7A64" name="0taverly.trx" dlsize="9009705" size="42693736" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2100,12 +2100,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="7BFFBCEC7760BCB541F59ACDC1EA0E3E91D57547" downloadHash="27ABC98E78BA75737BB82535FD3238BA7CF19FC3" name="Warriors Guild.trx" dlsize="164418" size="1750411" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="EB548480517C27EB830C0A2FDC9CCC28301EE470" downloadHash="1DD2A3831F607BD9009B525BA03171D3D6E5AD83" name="Warriors Guild.trx" dlsize="167377" size="1756231" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="0A47000733A7F38559BD1803A176EB02CDED2593" downloadHash="CACC8B350D4FC7EECE1D9B27751C3759071AF51E" name="Burthorpe Mine.trx" dlsize="34015" size="34160" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="AE320AA4769727F7824B749D31F01D053C12880F" downloadHash="1D7EC8ABC33B28825C4F2E4EE1CAB1072EB50420" name="Burthorpe Mine.trx" dlsize="44148" size="44435" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2161,11 +2161,6 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="90550C4F2F8D8B32C018505CC540BFA46A59C9BE" downloadHash="C40C59F5DD2E3D5D16BA31718264393F6E39DA3D" name="throne room of scorpia {q}.trx" dlsize="217112" size="225611" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
-  <resource type="DirectoryEntry" hash="18F78EC5E84E44B52EC87F7F72EB1C10D13CC1C9" downloadHash="652137358FF15E12E784C7EC9BDABE3A1137C9EF" name="warriors guild courtyard.trx" dlsize="1302692" size="8364703" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2456,6 +2451,111 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="36F18EC2709798E193F0F9B8621E5E713C2A29FC" downloadHash="05390D745AC6E06505D986CF0A89093F920FD298" name="glass.SEF" dlsize="322" size="838" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="372BF691BFC7A492414402C2106EB03AA27F5A9C" downloadHash="41DA75C6C31C30239DB65443E23F94C1017B6A51" name="warriors guild courtyard - addy.trx" dlsize="1331838" size="8370169" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="8D8645F83BEED7D25E64251CD863562997086C27" downloadHash="89A4D6993DAD6B269A52B6270428600D757102C5" name="trollheim.trx" dlsize="2600126" size="11924462" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="AD925EAB5857D02793F46E8FBC3966B5A27C8420" downloadHash="7D3740C9534B44332E4C7DFBF4FF2FB5EE37BAB0" name="trollheim - shortcut.trx" dlsize="1074211" size="7353907" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="8072E5EE51F28057B49F97A25B95295BC7B0FC9C" downloadHash="8C827DC892D7DCDC0D2D50E699B939BA9180F6BF" name="grey mountain tavern.trx" dlsize="48877" size="48920" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="6B3F1E5C1AFE292D370FECD41F5C98FF4012B8B4" downloadHash="BAC71423AF3939CD63EED2716FDC98CD61EBBA1D" name="Burthorpe Keep.trx" dlsize="41114" size="41136" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="5C8CD3391E1943B723836DBFF3559AEDCFD8E3B4" downloadHash="845D6C77ADDB048AFED24E459EBBB324F0605D6C" name="warriors guild courtyard - iron.trx" dlsize="1332864" size="8370169" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="3727D90BD5ABEB87DA5EE0E6FDDA58C660D99375" downloadHash="9912FCAA98D979C5DFFFDF02B104D98F403E8F80" name="warriors guild courtyard - mith.trx" dlsize="1325758" size="8368998" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="A20CA64DA0E73C5AE35F7E9323F4C82E4CE11265" downloadHash="60884C71F22BC1390ABE79AD22B0A144B0776CDF" name="trollheim - passway.trx" dlsize="16408" size="16436" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="3C79291283D392A2BB6FE9FE3B247AB66C798965" downloadHash="8EA30D98924D314182C2117913D84C9A0940AAC2" name="Sherpa's home.trx" dlsize="15591" size="15578" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="D3A89B2DF5C5E1A6F1E3665EFBEDF0893FA413C0" downloadHash="D52A7C4B065078D8B6F4C6B616483D73CEC60F41" name="death plateau - cavern pass.trx" dlsize="553989" size="7268157" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="B84D4E2A305480889E675BE693F2EF0BFC1A20AC" downloadHash="6E603135E1BB206E9081375024423C7143699DE6" name="warriors guild courtyard - rune.trx" dlsize="1335040" size="8370168" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="780BE40EAB2E77290C3EB142CDC7AD2DE8D6E9DE" downloadHash="E09FA807A138B4E1C7C36822A07B3E1DF48CA0AA" name="taverly house {1}.trx" dlsize="19095" size="19036" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="0D2663B1F1E45E582BE82BC22E2784BAF737B674" downloadHash="3EDBEC017ECF4D194F7717F208E0C41197247569" name="warriors guild courtyard - steel.trx" dlsize="1323025" size="8370169" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="3324C30456D3ABAAA751E45E1ADAEC4C0410C15F" downloadHash="2833E8113469A7EB3B43EDDFF1320AC6DE3F4D69" name="warriors guild courtyard - bron.trx" dlsize="1345625" size="8381019" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="0F8F555FD4370065AF0CB0C689747B4CC22015E6" downloadHash="8B5CA4268FB89DB5EE777DC179995D604F2C3F7D" name="troll stronghold - upper level.trx" dlsize="1448071" size="12061414" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="59945542E84B8B104D52D2752270D52154913B04" downloadHash="FF5FB8A4F9F2F766D42AFC6726799BE0F9ECB6E1" name="death plateu.trx" dlsize="12469198" size="47711925" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="534F823F2EEC3F7BF29A956C9542AEE0EFD3AC78" downloadHash="BDA23F6A09DC30755C404395354C68638DFC092B" name="taverly house {2}.trx" dlsize="17865" size="17853" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="8CE06F0C495A590B29214F33ED7DF7E7E52C5A20" downloadHash="BF4E6EA2A7699EA07DEAAF6F58F0A07EA5D92558" name="trollheim - arena.trx" dlsize="2172160" size="10469951" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="A192542CF85785A560DB5FCBD2748C36D5CA9EF7" downloadHash="1710515E4DAA29DA805DA06F570E60F41280426F" name="troll stronghold - middle level.trx" dlsize="615645" size="11244183" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="C0D87F913252AA893C98A07A4AA780159B3EA6B2" downloadHash="7931801BD9C94EC5203096F26006BB1285F813E0" name="troll stronghold - lower level.trx" dlsize="681665" size="11284433" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="5BD4954CBFD9355BB963A764DFBE9A8FF2501DBA" downloadHash="C02357592D79DB768233C2E3685EB2EC2EDAC9E2" name="taverly house {3}.trx" dlsize="21948" size="21958" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
