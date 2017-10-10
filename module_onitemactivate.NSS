@@ -143,18 +143,124 @@ void BuryBones(object oPC, string sITEM)
 
 void PrayerPotion(object oPC, string sITEM)
 {
-	object oESSENCE = GetLocalObject(oPC, "PLAYER_ESSENCE");
-	if (oESSENCE == OBJECT_INVALID)
-	{
-		oESSENCE = GetItemPossessedBy(oPC, "player_essence");
-		SetLocalObject(oPC, "PLAYER_ESSENCE", oESSENCE);
-	}
+	object oESSENCE = GetItemPossessedBy(oPC, "player_essence");
 	int nRESTORE = StringToInt(GetStringRight(sITEM, 2));
 	int nPRAY = GetSkillRank(SKILL_PRAYER, oPC, TRUE);
 	int nPOINTS = GetLocalInt(oESSENCE, "PRAYER_POINTS");
 	int nNEW = nPOINTS + nRESTORE;
 	if (nNEW > nPRAY) nNEW = nPRAY;
 	SetLocalInt(oESSENCE, "PRAYER_POINTS", nNEW);
+}
+
+void AdjustPlant(object oPLANT, string sNAME, float fTIME, int nXP)
+{
+	SetFirstName(oPLANT, sNAME + " (planted)");
+	SetLocalInt(oPLANT, "PLANT_STAGE", 1);
+	SetLocalInt(oPLANT, "PLANT_XP", nXP);
+	SetLocalFloat(oPLANT, "PLANT_TIME", fTIME);
+}
+
+void PlantSeed(object oPC, object oITEM, string sITEM)
+{
+	object oAREA = GetArea(oPC);
+	if (GetIsAreaInterior(oAREA) == TRUE)
+	{
+		SendMessageToPC(oPC, "Seeds may not be planted in underground or interior areas.");
+		return;
+	}
+	string sSEED = GetStringRight(sITEM, 3);
+	string sBLUEPRINT;
+	string sNAME;
+	float fTIME = 600.0;
+	int nFARM;
+	int nSEED = StringToInt(sSEED);
+	switch (nSEED)
+	{
+		//Allotments
+		case 100: sNAME = "Potato";		sBLUEPRINT = "cabbage";		nFARM = 1;	break;
+		case 101: sNAME = "Onion";		sBLUEPRINT = "onion";		nFARM = 5;	break;
+		case 102: sNAME = "Cabbage";	sBLUEPRINT = "cabbage";		nFARM = 7; 	break;
+		case 103: sNAME = "Tomato";		sBLUEPRINT = "cabbage";		nFARM = 12;	break;
+		case 104: sNAME = "Sweetcorn";	sBLUEPRINT = "cabbage";		nFARM = 20;	break;
+		case 105: sNAME = "Strawberry";	sBLUEPRINT = "cabbage";		nFARM = 31;	break;
+		case 106: sNAME = "Watermelon";	sBLUEPRINT = "cabbage";		nFARM = 47;	break;
+		
+		//Flowers
+		case 205: sNAME = "Limpwurt";	sBLUEPRINT = "cabbage";		nFARM = 26; break;
+		
+		//Herbs
+		case 300: sNAME = "Guam";		sBLUEPRINT = "cabbage"; 	nFARM = 9;	fTIME = 1800.0; break;
+		case 301: sNAME = "Marrentil";	sBLUEPRINT = "cabbage";		nFARM = 14;	fTIME = 1800.0; break;
+		case 302: sNAME = "Tarromin";	sBLUEPRINT = "cabbage";		nFARM = 19;	fTIME = 1800.0; break;
+		case 303: sNAME = "Harralander";sBLUEPRINT = "cabbage";		nFARM = 26;	fTIME = 1800.0; break;
+		case 305: sNAME = "Ranarr";		sBLUEPRINT = "cabbage";		nFARM = 32;	fTIME = 1800.0; break;
+		
+		//Hops (Not Implemented yet)
+		case 400: sNAME = "Barley";		sBLUEPRINT = "cabbage";		nFARM = 3;	break;
+		
+		//Bushes
+		case 500: sNAME = "Redberry";	sBLUEPRINT = "cabbage";		nFARM = 10; break;
+		case 501: sNAME = "Cadava";		sBLUEPRINT = "cabbage";		nFARM = 22; break;
+		
+		//Trees
+		case 600: sNAME = "Oak Tree";		sBLUEPRINT = "cabbage";	nFARM = 15;	fTIME = 3600.0; break;
+		case 601: sNAME = "Willow Tree";	sBLUEPRINT = "cabbage";	nFARM = 30; fTIME = 3600.0; break;
+		case 602: sNAME = "Maple Tree";		sBLUEPRINT = "cabbage";	nFARM = 45; fTIME = 3600.0; break;
+		case 603: sNAME = "Yew Tree";		sBLUEPRINT = "cabbage";	nFARM = 60; fTIME = 3600.0; break;
+		case 604: sNAME = "Magic Tree";		sBLUEPRINT = "cabbage";	nFARM = 75; fTIME = 3600.0; break;
+		
+		default: return;
+	}
+	if (GetSkillRank(SKILL_FARMING, oPC) < nFARM)
+	{
+		SendMessageToPC(oPC, "You must have at least " + IntToString(nFARM) + "ranks in Farming to be able to plant that seed.");
+		return;
+	}
+	int nTIME = FloatToInt(fTIME);
+	int nXP = nFARM * 10 * (nTIME / 60);
+	int nSTACK = GetItemStackSize(oITEM);
+	if (nSTACK > 1) SetItemStackSize(oITEM, nSTACK - 1);
+	else DestroyObject(oITEM);
+	object oPLANT = CreateObject(OBJECT_TYPE_PLACEABLE, sBLUEPRINT, GetLocation(oPC), FALSE, sNAME);
+	DelayCommand(0.0f, AdjustPlant(oPLANT, sNAME, fTIME, nXP));
+}
+
+void Compost(object oPC, object oITEM, object oPLANT)
+{
+	int nSTAGE = GetLocalInt(oPLANT, "PLANT_STAGE");
+	if (nSTAGE != 1)
+	{
+		SendMessageToPC(oPC, "Composts may be used only on plants that are not growing yet.");
+		return;
+	}
+	int nSUPER = GetLocalInt(oITEM, "SUPER");
+	float fTIME = GetLocalFloat(oPLANT, "PLANT_TIME");
+	if (nSUPER == 1) fTIME = fTIME / 2.0;
+	SetLocalInt(oPLANT, "PLANT_STAGE", 2);
+	DelayCommand(fTIME, SetLocalInt(oPLANT, "PLANT_STAGE", 3));
+	FloatingTextStringOnCreature("This plant is now growing. It will take " + FloatToString(fTIME) + " seconds before it can be harvested.", oPC, FALSE);
+	int nITEM = GetItemStackSize(oITEM);
+	if (nITEM > 1) SetItemStackSize(oITEM, nITEM - 1);
+	else DestroyObject(oITEM);
+}
+
+void PlantCure(object oPC, object oITEM, object oPLANT)
+{
+	int nSTAGE = GetLocalInt(oPLANT, "PLANT_STAGE");
+	if (nSTAGE != 4)
+	{
+		SendMessageToPC(oPC, "Plant Cures may be used only on ill plants.");
+		return;
+	}
+	int nXP = GetLocalInt(oPLANT, "PLANT_XP");
+	string sITEM = GetLocalString(oPLANT, "PLANT_ITEM");
+	if (sITEM == "") sITEM = GetTag(oPLANT);
+	GiveCraftXP(oPC, SKILL_FARMING, nXP);
+	CreateItemOnObject(sITEM, oPC);
+	DestroyObject(oPLANT);
+	int nITEM = GetItemStackSize(oITEM);
+	if (nITEM > 1) SetItemStackSize(oITEM, nITEM - 1);
+	else DestroyObject(oITEM);
 }
 
 void main()
@@ -173,6 +279,9 @@ void main()
 		int nHEAL = FloatToInt(fHEAL);
 		ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(nHEAL), oPC, 0.0);
 	}
+	else if (GetStringLeft(sITEM, 5) == "seed_") PlantSeed(oPC, oITEM, sITEM);
+	else if (GetStringRight(sITEM, 7) == "compost") Compost(oPC, oITEM, oTARGET);
+	else if (sITEM == "plantcure") PlantCure(oPC, oITEM, oTARGET);
 	else if (GetStringLeft(sITEM, 4) == "logs") UseLogs(oPC, oITEM, oTARGET);
 	else if (sITEM == "tinderbox") UseTinderbox(oPC, oTARGET);
 	else if (sITEM == "shears") UseShears(oPC, sTARGET);
