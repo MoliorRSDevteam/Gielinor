@@ -1335,7 +1335,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="83D022B794F36FC915022B99B38947382C57B0EA" downloadHash="06C3AE2304EA666C0D107EFAD8DAEE537E9A1E92" name="0burthorpe.trx" dlsize="8314792" size="34635963" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="CFA4B92EB65A4A6ECEB485D9165639AAFFD0A476" downloadHash="4EF6775BCCFACA9BC7B6E22B059407B26F7002E7" name="0burthorpe.trx" dlsize="8305152" size="34635201" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1430,7 +1430,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="1E9EA2C3451FCF4B1DF52D5BC0D7B8B8D06263DF" downloadHash="2D847BBD6CB68CEAA5EBC1BF23283CA3C6D4C00C" name="0taverly.trx" dlsize="8952605" size="42671785" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="294EF03B6A83E43E8FD0836F4605EA30F07ACDF2" downloadHash="27140822F7A92D8595D446CCC54C0723053A12B7" name="0taverly.trx" dlsize="8984250" size="42677413" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1735,7 +1735,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="012112E6E63DF619582D6494BCCAA15E14055E76" downloadHash="6A74FDF4609F592A6064871F16AFF3E6354EE7B1" name="2da_loadingscreens.hak" dlsize="232480864" size="727530576" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="8D11F3C79485D8F8D2F05BD1FF2351A5E6F92EB4" downloadHash="F0DBEB7AB2471E8AB70E59698A556F6E3B6618AC" name="2da_loadingscreens.hak" dlsize="232851177" size="728744917" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2100,7 +2100,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="EB548480517C27EB830C0A2FDC9CCC28301EE470" downloadHash="1DD2A3831F607BD9009B525BA03171D3D6E5AD83" name="Warriors Guild.trx" dlsize="167377" size="1756231" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="954BBFD3F8C225500B49DD574A33C0C544EFBBA1" downloadHash="3708F0F446988B652961E218479812375872FF71" name="Warriors Guild.trx" dlsize="163938" size="1751694" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2126,11 +2126,6 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="90550C4F2F8D8B32C018505CC540BFA46A59C9BE" downloadHash="C40C59F5DD2E3D5D16BA31718264393F6E39DA3D" name="throne room of scorpia.trx" dlsize="217112" size="225611" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
-  <resource type="DirectoryEntry" hash="F2FBED51FE436571E85246887F3B78118E746385" downloadHash="D6A413745023B6F1F43247AD3CA088526584F991" name="temple of scorpia - level 2.trx" dlsize="313347" size="317404" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2475,7 +2470,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="77E89E9450F1395308CB7E7F9E00287F37A55A44" downloadHash="4CFFDB89B8452F4795E79A25BF61D0699CE276E6" name="Burthorpe Keep.trx" dlsize="44236" size="44219" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="9FDA721A77FEF6BF9407460249F07BEA79C738BB" downloadHash="04674073FDA5759D77DF322D8922FA5A187671E0" name="Burthorpe Keep.trx" dlsize="44214" size="44250" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2510,7 +2505,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="780BE40EAB2E77290C3EB142CDC7AD2DE8D6E9DE" downloadHash="E09FA807A138B4E1C7C36822A07B3E1DF48CA0AA" name="taverly house {1}.trx" dlsize="19095" size="19036" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="9C76AB53B3E8AF8D034AA3EF04A170D327C33C27" downloadHash="B1E07ADF8BE527749ABD47C8E05C81034CAC6BA8" name="taverly house {1}.trx" dlsize="17961" size="17943" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2520,7 +2515,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="3324C30456D3ABAAA751E45E1ADAEC4C0410C15F" downloadHash="2833E8113469A7EB3B43EDDFF1320AC6DE3F4D69" name="warriors guild courtyard - bron.trx" dlsize="1345625" size="8381019" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="F4C4B754DB3DE83CA4D641A73BFF78F6340830D6" downloadHash="F8594C738DCD23797FA7762F162C6D8FF6DC035B" name="warriors guild courtyard - bron.trx" dlsize="1338303" size="8381019" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2566,6 +2561,21 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="E6DD2B85B9964600DAAAAD1642C59CE3A69F1165" downloadHash="6E5513EB2E9C4CCFA6B3A18DC07AB184762B58D5" name="Paterdomus - Temple.trx" dlsize="87394" size="87862" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="1EC040CB3771459B164D20855810E576E57A4FB4" downloadHash="6E501619E9178B4A09666093241E3BC68611A100" name="Paterdomus - Crypt.trx" dlsize="124996" size="125859" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="F2FBED51FE436571E85246887F3B78118E746385" downloadHash="D6A413745023B6F1F43247AD3CA088526584F991" name="Temple of Scorpia - Level 2.trx" dlsize="313347" size="317404" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="2897FF218D9C35550EA74E55CE29DD87A9B2864D" downloadHash="BF28369E3DA1974638CF34E8D01CE32996D1882C" name="canifis.trx" dlsize="6142432" size="33920291" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
