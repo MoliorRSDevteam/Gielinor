@@ -5,8 +5,7 @@ void CheckPlant(object oPLANT, object oPC)
 	if (Random(100) > 49)
 	{
 		int nXP = GetLocalInt(oPLANT, "PLANT_XP");
-		string sITEM = GetLocalString(oPLANT, "PLANT_ITEM");
-		if (sITEM == "") sITEM = GetTag(oPLANT);
+		string sITEM = GetTag(oPLANT);
 		GiveCraftXP(oPC, SKILL_FARMING, nXP);
 		CreateItemOnObject(sITEM, oPC);
 		DestroyObject(oPLANT);
