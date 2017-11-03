@@ -1735,7 +1735,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="8D11F3C79485D8F8D2F05BD1FF2351A5E6F92EB4" downloadHash="F0DBEB7AB2471E8AB70E59698A556F6E3B6618AC" name="2da_loadingscreens.hak" dlsize="232851177" size="728744917" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="4BDBF5B078337786C1B3D41B978BF7F80DB78BC6" downloadHash="07BA0B46B3276FFFB5558AFB5075D488E03099CD" name="2da_loadingscreens.hak" dlsize="232977370" size="729185030" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2120,7 +2120,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="DC26138183D4F45C3474217E086A1A1E12920FEB" downloadHash="55A7CA6BAC8C222F9055BB6D86A276F46BBDE5DA" name="temple of scorpia - level 2 {q2}.trx" dlsize="301044" size="304996" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="1C6139691B97852228261026D66FD29A07158EE5" downloadHash="8875317ACD5CE46A07209FF6CB820DFE01BF1A0C" name="temple of scorpia - level 2 {q2}.trx" dlsize="300089" size="303943" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2150,7 +2150,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="1CA97FEC123730C027ACC00ECA6049B401D0D9C0" downloadHash="7276C030E123F337E5EAD14BE29BD78550B35040" name="temple of scorpia - level 2 {q}.trx" dlsize="303630" size="307445" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="CB0D046AF2118A34CCF1249D28434CD5201B4299" downloadHash="B090BBDB1B372B2E92F4623A509A739F35B01D51" name="temple of scorpia - level 2 {q}.trx" dlsize="301173" size="304895" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2605,7 +2605,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="D7014B4097B006AA7DC420E8FF66B3BC36A78DE9" downloadHash="FAEEBB218152B343667F70B6EAC16DB2CA98DEDA" name="Temple of Scorpia - Level 3.trx" dlsize="312145" size="316246" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="D7014B4097B006AA7DC420E8FF66B3BC36A78DE9" downloadHash="FAEEBB218152B343667F70B6EAC16DB2CA98DEDA" name="temple of scorpia - level 3.trx" dlsize="312145" size="316246" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
