@@ -155,7 +155,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="E93D1FB8B3BA56709E3CC910C7264766C47E61F6" downloadHash="749C2DDC8DFD854D3DAED66D7447C645DCCF1A87" name="lumbridge - west.trx" dlsize="4652143" size="26031638" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="978EC20DEB4A326EB90CFF03A8CB7612853919DD" downloadHash="556F955DCECFD187726526E6C0AEFA61A2E7FC1B" name="lumbridge - west.trx" dlsize="4624669" size="26018093" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -295,7 +295,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="D41F87AC2C9F6CCE706BA19CA0114CE7CB73DB32" downloadHash="14D6C791C6D4413FAD4CCA31FCC89C6E683B38D3" name="stronghold of safety.trx" dlsize="1600884" size="1668945" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="9463D0CF634BBDA52263D9C4F3183623663B699B" downloadHash="4B401E33C3F2B85D8DC73DA10E1B07F0B62A3FF9" name="stronghold of safety.trx" dlsize="1691812" size="1761131" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -405,7 +405,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="D7A579743CD0D99523C380D725EA7A2C6595607B" downloadHash="28259818C53F4145168D188A0C088E59C7CA011F" name="Varrock - Sewers.trx" dlsize="1360198" size="42216476" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="5F0F95674B540CB0067E5FD5901820B49011A836" downloadHash="21A1BE98CF435E6CA1737CB7B747FCCD88B0F27E" name="Varrock - Sewers.trx" dlsize="1183047" size="41965435" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -880,7 +880,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="80DEC1713EF0B29CCCC59C0F6C2897ADCEF4D690" downloadHash="116759DB809D99820DDB338E680EA64C71FCD515" name="lumbridge swamp - mine.trx" dlsize="41997" size="671619" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="2C01DB802602C0D4C50828FB49EB1EA495F642E7" downloadHash="D5625AA030247528C7501853482152B88E5C087C" name="lumbridge swamp - mine.trx" dlsize="94131" size="724642" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1165,7 +1165,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="2C11D122274E912FEFA9C1D241287FF72EAA1499" downloadHash="AF6F90496777068A69A2B216ADB3D117B931BE9D" name="edgeville cave.trx" dlsize="13053" size="13035" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="58D9A06603D67414758CE77FB88683CD320FBCB7" downloadHash="58BC1B0AFF187513B1B8054A1CC6A8372B68235E" name="edgeville cave.trx" dlsize="184724" size="2457005" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1400,7 +1400,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="EBEDDE5B6EC02C7A014114EE560C5A3EC6635795" downloadHash="7966EA421748C6C9A7DF967DBB718D96AE879FCA" name="draynor.trx" dlsize="9147422" size="53952069" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="A5303D4C1910C2D07EA50585FBDDDBAE54FA1219" downloadHash="D5BA8C0211CDBADB0DDFF9B1694C63B8ED1B1A15" name="draynor.trx" dlsize="9205611" size="54043152" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1650,7 +1650,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="0158F87FB93278CEBF184F4C9DDECDD14AB6A2E3" downloadHash="E838EE2D903530608B27C0B2BEE5E7F12768D9F7" name="paterdomus.trx" dlsize="5724728" size="28257787" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="C83C64BA03C3E078BFC376B219960D193BA25E1A" downloadHash="65B8928CA722ED74E38DDBAE2C824FF3498DF58C" name="paterdomus.trx" dlsize="5687330" size="27956004" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2120,7 +2120,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="F2FBED51FE436571E85246887F3B78118E746385" downloadHash="D6A413745023B6F1F43247AD3CA088526584F991" name="temple of scorpia - level 2 {q2}.trx" dlsize="313347" size="317404" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="DC26138183D4F45C3474217E086A1A1E12920FEB" downloadHash="55A7CA6BAC8C222F9055BB6D86A276F46BBDE5DA" name="temple of scorpia - level 2 {q2}.trx" dlsize="301044" size="304996" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2150,7 +2150,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="F2FBED51FE436571E85246887F3B78118E746385" downloadHash="D6A413745023B6F1F43247AD3CA088526584F991" name="temple of scorpia - level 2 {q}.trx" dlsize="313347" size="317404" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="1CA97FEC123730C027ACC00ECA6049B401D0D9C0" downloadHash="7276C030E123F337E5EAD14BE29BD78550B35040" name="temple of scorpia - level 2 {q}.trx" dlsize="303630" size="307445" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2160,7 +2160,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="300F0B08616641234C1CB705C9A8FB33FF9A9AD1" downloadHash="2AC37F8B05298FCDEF44473C9C39D19939B73627" name="kharidian - south desert.trx" dlsize="5826379" size="31133863" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="58C7C1E32FAA05C7F092A127939CE4D674A8C6FA" downloadHash="3B36E2E8A40BEAC94F4700337970A24CAED9FF47" name="kharidian - south desert.trx" dlsize="5832120" size="31133818" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2170,7 +2170,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="CCF29F98E57C7D3005ED1F0B189CD5407A5829EB" downloadHash="E22D3202AE9464466A1EC6B86953A87CA315AFEA" name="kharidian - north-west.trx" dlsize="6767963" size="36835094" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="EFF80664972B7A82AD73614927DE22CE00C2B1CF" downloadHash="DF223E07A774395737B0E43D9F5934B3AEBC69C1" name="kharidian - north-west.trx" dlsize="6768072" size="36837545" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2215,7 +2215,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="A3AA13605112F470C679B776974612EFBF7396D4" downloadHash="F6265186270AF8767780719107B7E8B8CA88BFD1" name="kharidian - north desert.trx" dlsize="7614278" size="37988459" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="89AA8A65B9164A27604713D6DD84671E71632C6A" downloadHash="4A8BDCDE8DAD57746752940DE453CA3822C125BF" name="kharidian - north desert.trx" dlsize="7595636" size="37976081" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2560,22 +2560,52 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="E6DD2B85B9964600DAAAAD1642C59CE3A69F1165" downloadHash="6E5513EB2E9C4CCFA6B3A18DC07AB184762B58D5" name="Paterdomus - Temple.trx" dlsize="87394" size="87862" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="335CE71E345521C2AE98AD1D562ACCC092FDE5BD" downloadHash="C3CA54F1087BA93024076E6826721E48B54034A9" name="Paterdomus - Temple.trx" dlsize="110315" size="153520" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="1EC040CB3771459B164D20855810E576E57A4FB4" downloadHash="6E501619E9178B4A09666093241E3BC68611A100" name="Paterdomus - Crypt.trx" dlsize="124996" size="125859" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="5EE398230DF48B6749FCF28BC1D91990EA468F27" downloadHash="C9660294FBD9AA096193C3C63C638A8309DBA809" name="Paterdomus - Crypt.trx" dlsize="125066" size="125949" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="F2FBED51FE436571E85246887F3B78118E746385" downloadHash="D6A413745023B6F1F43247AD3CA088526584F991" name="Temple of Scorpia - Level 2.trx" dlsize="313347" size="317404" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="66572F16EDF349A02445C956377D819402DA648C" downloadHash="2F9FB8D538059242AA4390AB96587BD6A69F238B" name="canifis.trx" dlsize="7031958" size="36215581" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="2897FF218D9C35550EA74E55CE29DD87A9B2864D" downloadHash="BF28369E3DA1974638CF34E8D01CE32996D1882C" name="canifis.trx" dlsize="6142432" size="33920291" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="83CA85E6409D58224C96A767C673731C6C722DE9" downloadHash="CA033E1EAAEC38F9988F33A9441E51C3581F83D6" name="Ship graveyard.trx" dlsize="1778297" size="14484121" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="D3A73B852B11ABBA7ABAE91166C6073F94DD002F" downloadHash="40FBD91B5BAB073AC323790649E9FAC6031B0F68" name="Wilderness - Bone pit.trx" dlsize="98761" size="99267" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="CB40A0E9FA7E1EFC1FCC7406EDE4D406A0730670" downloadHash="8F9CBAFDF34D1DC40DF9FA46CCD936662D2A6FF3" name="canifis - kharyrll ruins.trx" dlsize="413366" size="6355053" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="35048C085BF4B6834C91EAC601936AE9174BB87E" downloadHash="D452453162BF5DF6577A92571B4AB94FA2B87CA9" name="Varrock sewers - West.trx" dlsize="397702" size="3623198" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="42F1C9AFFEC7FF26850E7DA3FC737ACEBB96B2A7" downloadHash="7E6BE1E2E9EAA9A45888A8A18E77A5A41D7B9E70" name="Edgeville - Deep dungeon.trx" dlsize="668951" size="1034761" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="51C1B7F1502CBC3724FF4655BC2352D0B75E4CD5" downloadHash="357ED55204C627C52DBFE794CB07642348CB320E" name="Kobold cave.trx" dlsize="15421" size="15406" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="D7014B4097B006AA7DC420E8FF66B3BC36A78DE9" downloadHash="FAEEBB218152B343667F70B6EAC16DB2CA98DEDA" name="Temple of Scorpia - Level 3.trx" dlsize="312145" size="316246" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
