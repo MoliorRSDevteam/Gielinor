@@ -289,6 +289,79 @@ void Henchman(object oPC, string sITEM)
 	DelayCommand(0.0f, AddHenchman(oPC, oHENCH));
 }
 
+void Pickpocket(object oPC, object oTARGET, int nTHIEF)
+{
+	int nXP = GetLocalInt(oTARGET, "THIEF_XP");
+	if (nXP < 1)
+	{
+		SendMessageToPC(oPC, "This creature cannot be pickpocketed.");
+		return;
+	}
+	string sTHIEF = GetBicFileName(oPC);
+	if (sTHIEF == "") return;
+	if (GetLocalInt(oTARGET, sTHIEF) == TRUE)
+	{
+		SendMessageToPC(oPC, "You have already pickpocketed this creature.");
+		return;
+	}
+	int nCHECK = GetLocalInt(oTARGET, "THIEF_REQ");
+	if (nCHECK > nTHIEF)
+	{
+		SendMessageToPC(oPC, "You will need at least " + IntToString(nCHECK) + " ranks in Thievery to be able to pickpocket this creature.");
+		return;
+	}
+	SetLocalInt(oTARGET, sTHIEF, TRUE);
+	int nGP = GetLocalInt(oTARGET, "THIEF_GP");
+	if (nGP > 0) GiveGoldToCreature(oPC, nGP);
+	string sSTEAL = GetLocalString(oTARGET, "THIEF_ITEM");
+	if (sSTEAL != "") CreateItemOnObject(sSTEAL, oPC);
+	GiveCraftXP(oPC, SKILL_THIEVING, nXP);
+	float fRESPAWN = GetLocalFloat(oTARGET, "THIEF_RESPAWN");
+	if (fRESPAWN > 0.0f) DelayCommand(fRESPAWN, DeleteLocalInt(oTARGET, sTHIEF));
+}
+
+void ThiefSteal(object oPC, object oTARGET, int nTHIEF)
+{
+	int nCHECK;
+	float fRESPAWN = GetLocalFloat(oTARGET, "THIEF_RESPAWN");
+	if (GetLocked(oTARGET) == TRUE)
+	{
+		nCHECK = GetLockUnlockDC(oTARGET);
+		if (nCHECK > nTHIEF) SendMessageToPC(oPC, "You will need at least " + IntToString(nCHECK) + " ranks in Thievery to be able to unlock this.");
+		else
+		{
+			SendMessageToPC(oPC, "Successfully unlocked!");
+			SetLocked(oTARGET, FALSE);
+			if (fRESPAWN > 0.0f) DelayCommand(fRESPAWN, SetLocked(oTARGET, TRUE));
+		}
+	}
+	if (GetIsTrapped(oTARGET) == TRUE)
+	{
+		nCHECK = GetTrapDisarmDC(oTARGET);
+		if (nCHECK > nTHIEF) SendMessageToPC(oPC, "You will need at least " + IntToString(nCHECK) + " ranks in Thievery to be able to disarm the trap.");
+		else
+		{
+			SendMessageToPC(oPC, "Trap successfully disarmed!");
+			SetTrapActive(oTARGET, FALSE);
+			if (fRESPAWN > 0.0f) DelayCommand(fRESPAWN, SetTrapActive(oTARGET, TRUE));
+		}
+	}
+}
+
+void Thievery(object oPC, object oTARGET)
+{
+	if (GetIsPC(oPC) == FALSE) return;
+	int nTHIEF = GetSkillRank(SKILL_THIEVING, oPC);
+	int nTYPE = GetObjectType(oTARGET);
+	switch (nTYPE)
+	{
+		case OBJECT_TYPE_CREATURE: Pickpocket(oPC, oTARGET, nTHIEF); break;
+		case OBJECT_TYPE_DOOR: ThiefSteal(oPC, oTARGET, nTHIEF); break;
+		case OBJECT_TYPE_PLACEABLE: ThiefSteal(oPC, oTARGET, nTHIEF); break;
+		case OBJECT_TYPE_TRIGGER: ThiefSteal(oPC, oTARGET, nTHIEF); break;
+	}
+}
+
 void main()
 {
 	object oMOD = GetModule();
@@ -305,6 +378,7 @@ void main()
 		int nHEAL = FloatToInt(fHEAL);
 		ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(nHEAL), oPC, 0.0);
 	}
+	else if (sITEM == "thieftools") Thievery(oPC, oTARGET);
 	else if (GetStringLeft(sITEM, 9) == "henchman_") Henchman(oPC, sITEM);
 	else if (GetStringLeft(sITEM, 5) == "seed_") PlantSeed(oPC, oITEM, sITEM);
 	else if (GetStringRight(sITEM, 7) == "compost") Compost(oPC, oITEM, oTARGET);
