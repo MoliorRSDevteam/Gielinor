@@ -203,11 +203,11 @@ void PlantSeed(object oPC, object oITEM, string sITEM)
 		case 501: sNAME = "Cadava";		sBLUEPRINT = "cabbage";		nFARM = 22; break;
 		
 		//Trees
-		case 600: sNAME = "Oak Tree";		sBLUEPRINT = "cabbage";	nFARM = 15;	fTIME = 3600.0; break;
-		case 601: sNAME = "Willow Tree";	sBLUEPRINT = "cabbage";	nFARM = 30; fTIME = 3600.0; break;
-		case 602: sNAME = "Maple Tree";		sBLUEPRINT = "cabbage";	nFARM = 45; fTIME = 3600.0; break;
-		case 603: sNAME = "Yew Tree";		sBLUEPRINT = "cabbage";	nFARM = 60; fTIME = 3600.0; break;
-		case 604: sNAME = "Magic Tree";		sBLUEPRINT = "cabbage";	nFARM = 75; fTIME = 3600.0; break;
+		case 600: sNAME = "Oak Tree";		sBLUEPRINT = "oakstump";	nFARM = 15;	fTIME = 3600.0; break;
+		case 601: sNAME = "Willow Tree";	sBLUEPRINT = "willowstump";	nFARM = 30; fTIME = 3600.0; break;
+		case 602: sNAME = "Maple Tree";		sBLUEPRINT = "maplestump";	nFARM = 45; fTIME = 3600.0; break;
+		case 603: sNAME = "Yew Tree";		sBLUEPRINT = "yewstump";	nFARM = 60; fTIME = 3600.0; break;
+		case 604: sNAME = "Magic Tree";		sBLUEPRINT = "magicstump";	nFARM = 75; fTIME = 3600.0; break;
 		
 		default: return;
 	}
@@ -238,7 +238,7 @@ void Compost(object oPC, object oITEM, object oPLANT)
 	if (nSUPER == 1) fTIME = fTIME / 2.0;
 	SetLocalInt(oPLANT, "PLANT_STAGE", 2);
 	DelayCommand(fTIME, SetLocalInt(oPLANT, "PLANT_STAGE", 3));
-	FloatingTextStringOnCreature("This plant is now growing. It will take " + FloatToString(fTIME) + " seconds before it can be harvested.", oPC, FALSE);
+	FloatingTextStringOnCreature("This plant is now growing. It will take " + FloatToString(fTIME, 18, 0) + " seconds before it can be harvested.", oPC, FALSE);
 	int nITEM = GetItemStackSize(oITEM);
 	if (nITEM > 1) SetItemStackSize(oITEM, nITEM - 1);
 	else DestroyObject(oITEM);
@@ -246,21 +246,47 @@ void Compost(object oPC, object oITEM, object oPLANT)
 
 void PlantCure(object oPC, object oITEM, object oPLANT)
 {
-	int nSTAGE = GetLocalInt(oPLANT, "PLANT_STAGE");
-	if (nSTAGE != 4)
+	if (GetLocalInt(oPLANT, "PLANT_STAGE") != 4)
 	{
 		SendMessageToPC(oPC, "Plant Cures may be used only on ill plants.");
 		return;
 	}
-	int nXP = GetLocalInt(oPLANT, "PLANT_XP");
-	string sITEM = GetLocalString(oPLANT, "PLANT_ITEM");
-	if (sITEM == "") sITEM = GetTag(oPLANT);
-	GiveCraftXP(oPC, SKILL_FARMING, nXP);
-	CreateItemOnObject(sITEM, oPC);
-	DestroyObject(oPLANT);
 	int nITEM = GetItemStackSize(oITEM);
 	if (nITEM > 1) SetItemStackSize(oITEM, nITEM - 1);
 	else DestroyObject(oITEM);
+	int nXP = GetLocalInt(oPLANT, "PLANT_XP");
+	GiveCraftXP(oPC, SKILL_FARMING, nXP);
+	if (GetLocalInt(oPLANT, "PLANT_STUMP") == TRUE)
+	{
+		SendMessageToPC(oPC, "The tree stump may now be harvested.");
+		DeleteLocalInt(oPLANT, "PLANT_STAGE");
+		return;
+	}
+	string sITEM = GetLocalString(oPLANT, "PLANT_ITEM");
+	if (sITEM == "") sITEM = GetTag(oPLANT);
+	CreateItemOnObject(sITEM, oPC);
+	DestroyObject(oPLANT);
+}
+
+void Henchman(object oPC, string sITEM)
+{
+	string sTYPE = GetStringRight(sITEM, 3);
+	int nTYPE = StringToInt(sTYPE);
+	string sHENCH;
+	switch (nTYPE) //Add the ResRef of the various henchmen here. Make sure it has three digits (ie 002, 003, ecc.)
+	{
+		case 001: sHENCH = "alkharidbodyguard"; break;
+		default: return;
+	}
+	object oHENCH = GetHenchman(oPC);
+	if (oHENCH != OBJECT_INVALID)
+	{
+		RemoveHenchman(oPC, oHENCH);
+		DestroyObject(oHENCH);
+		if (GetTag(oHENCH) == sHENCH) return;
+	}
+	oHENCH = CreateObject(OBJECT_TYPE_CREATURE, sHENCH, GetLocation(oPC));
+	DelayCommand(0.0f, AddHenchman(oPC, oHENCH));
 }
 
 void main()
@@ -279,6 +305,7 @@ void main()
 		int nHEAL = FloatToInt(fHEAL);
 		ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(nHEAL), oPC, 0.0);
 	}
+	else if (GetStringLeft(sITEM, 9) == "henchman_") Henchman(oPC, sITEM);
 	else if (GetStringLeft(sITEM, 5) == "seed_") PlantSeed(oPC, oITEM, sITEM);
 	else if (GetStringRight(sITEM, 7) == "compost") Compost(oPC, oITEM, oTARGET);
 	else if (sITEM == "plantcure") PlantCure(oPC, oITEM, oTARGET);

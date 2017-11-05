@@ -1,10 +1,39 @@
 #include "profession_include"
 
+void CheckStump(object oPLANT, object oPC)
+{
+	if (Random(100) > 49) DeleteLocalInt(oPLANT, "PLANT_STAGE");
+	else 
+	{
+		FloatingTextStringOnCreature("This plant is ill. You will need a Plant Cure to harvest it.", oPC, FALSE);
+		SetLocalInt(oPLANT, "PLANT_STAGE", 4);
+		SetLocalInt(oPLANT, "PLANT_STUMP", TRUE);
+	}
+}
+
+void HandlePlant(object oPC, object oPLANT, int nSTAGE)
+{
+	switch (nSTAGE)
+	{
+		case 1: FloatingTextStringOnCreature("This plant has been recently planted. Compost is needed to make it grow.", oPC, FALSE); break;
+		case 2: FloatingTextStringOnCreature("This plant is growing.", oPC, FALSE); break;
+		case 3: CheckStump(oPLANT, oPC); break;
+		case 4: FloatingTextStringOnCreature("This plant is ill. You will need to use a Plant Cure to harvest it.", oPC, FALSE); break;
+	}
+}
+
 void main()
 {
 	object oPC = GetLastUsedBy();
+	if (GetIsPC(oPC) == FALSE) return;
 	if (GetLocalInt(oPC, "PROF_SKILL") > 0) return;
 	object oPOOL = OBJECT_SELF;
+	int nSTAGE = GetLocalInt(oPOOL, "PLANT_STAGE");
+	if (nSTAGE > 0)
+	{
+		HandlePlant(oPC, oPOOL, nSTAGE);
+		return;
+	}
 	string sTOOL = GetLocalString(oPOOL, "TOOL");
 	string sADD = GetLocalString(oPOOL, "ADD");
 	string sWARN = HSS_FEEDBACK_COLOUR + GetLocalString(oPOOL, "WARN");
