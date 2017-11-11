@@ -13,7 +13,7 @@ void main(string sPOOL, string sREQ, string sOUTPUT, string sMULT, string sSKILL
 	if (sOUTPUT == "woodenhandle")
 	{
 		int nQUEST = GetJournalEntry("25", oPC);
-		if ((nQUEST !=8) || (nQUEST != 11))
+		if ((nQUEST !=8) && (nQUEST != 11))
 		{
 			SendMessageToPC(oPC, "You must have completed the quest 'Scheme of Schematics' to be able to produce this item.");
 			return;
