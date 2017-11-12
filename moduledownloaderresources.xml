@@ -1430,7 +1430,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="294EF03B6A83E43E8FD0836F4605EA30F07ACDF2" downloadHash="27140822F7A92D8595D446CCC54C0723053A12B7" name="0taverly.trx" dlsize="8984250" size="42677413" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="D961563498DB458B685AEB4B980073EC6CE4BA8F" downloadHash="8DD71C9AB3FD6DCF106C34FEB3CCB1289418A134" name="0taverly.trx" dlsize="8976758" size="42639468" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1735,7 +1735,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="4BDBF5B078337786C1B3D41B978BF7F80DB78BC6" downloadHash="07BA0B46B3276FFFB5558AFB5075D488E03099CD" name="2da_loadingscreens.hak" dlsize="232977370" size="729185030" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="F754F31A9D9F00F7FFF25E0ED5AF08E97661AB18" downloadHash="0E6FE590B3C3B356751F24ECAB7E426470956DB9" name="2da_loadingscreens.hak" dlsize="232958642" size="729185234" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2565,7 +2565,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="5EE398230DF48B6749FCF28BC1D91990EA468F27" downloadHash="C9660294FBD9AA096193C3C63C638A8309DBA809" name="Paterdomus - Crypt.trx" dlsize="125066" size="125949" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="3FC7B784074CEC85517963C503FB8213A3310086" downloadHash="F58A8BB60B8AB727A127AAD605EA627BC00CEA6D" name="Paterdomus - Crypt.trx" dlsize="131607" size="132266" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2606,6 +2606,26 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="D7014B4097B006AA7DC420E8FF66B3BC36A78DE9" downloadHash="FAEEBB218152B343667F70B6EAC16DB2CA98DEDA" name="temple of scorpia - level 3.trx" dlsize="312145" size="316246" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="4C775C13ADE1F6C47EDE495A883FE8A806D718AF" downloadHash="9356FF4ADBFA43BEA3A8D939E46B0F74B45E9DE2" name="mus_burthorpe.bmu" dlsize="7537722" size="7592478" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="0D3522A24416C126D467685FEBB3FB6F0CB27979" downloadHash="C37CE27C37C07BEF859A03CD815DC26C1135A0BD" name="mus_canifis.bmu" dlsize="6076694" size="6201301" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="BF9A88274D07B0C47D26BD7BB6B193910447C35F" downloadHash="C9F2CEF91DF152592F28835FA975793F511F3341" name="mus_paterbasement.bmu" dlsize="9039352" size="9124821" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="944D1DCA95B9F186A83A7FF60565300FD38FB6C0" downloadHash="323CA8164C66EA60909995A0E08598C1C446E53C" name="mus_taverly.bmu" dlsize="5522626" size="5614695" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
