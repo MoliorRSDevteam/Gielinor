@@ -203,11 +203,11 @@ void PlantSeed(object oPC, object oITEM, string sITEM)
 		case 501: sNAME = "Cadava";		sBLUEPRINT = "cabbage";		nFARM = 22; break;
 		
 		//Trees
-		case 600: sNAME = "Oak Tree";		sBLUEPRINT = "cabbage";	nFARM = 15;	fTIME = 3600.0; break;
-		case 601: sNAME = "Willow Tree";	sBLUEPRINT = "cabbage";	nFARM = 30; fTIME = 3600.0; break;
-		case 602: sNAME = "Maple Tree";		sBLUEPRINT = "cabbage";	nFARM = 45; fTIME = 3600.0; break;
-		case 603: sNAME = "Yew Tree";		sBLUEPRINT = "cabbage";	nFARM = 60; fTIME = 3600.0; break;
-		case 604: sNAME = "Magic Tree";		sBLUEPRINT = "cabbage";	nFARM = 75; fTIME = 3600.0; break;
+		case 600: sNAME = "Oak Tree";		sBLUEPRINT = "oakstump";	nFARM = 15;	fTIME = 3600.0; break;
+		case 601: sNAME = "Willow Tree";	sBLUEPRINT = "willowstump";	nFARM = 30; fTIME = 3600.0; break;
+		case 602: sNAME = "Maple Tree";		sBLUEPRINT = "maplestump";	nFARM = 45; fTIME = 3600.0; break;
+		case 603: sNAME = "Yew Tree";		sBLUEPRINT = "yewstump";	nFARM = 60; fTIME = 3600.0; break;
+		case 604: sNAME = "Magic Tree";		sBLUEPRINT = "magicstump";	nFARM = 75; fTIME = 3600.0; break;
 		
 		default: return;
 	}
@@ -238,7 +238,7 @@ void Compost(object oPC, object oITEM, object oPLANT)
 	if (nSUPER == 1) fTIME = fTIME / 2.0;
 	SetLocalInt(oPLANT, "PLANT_STAGE", 2);
 	DelayCommand(fTIME, SetLocalInt(oPLANT, "PLANT_STAGE", 3));
-	FloatingTextStringOnCreature("This plant is now growing. It will take " + FloatToString(fTIME) + " seconds before it can be harvested.", oPC, FALSE);
+	FloatingTextStringOnCreature("This plant is now growing. It will take " + FloatToString(fTIME, 18, 0) + " seconds before it can be harvested.", oPC, FALSE);
 	int nITEM = GetItemStackSize(oITEM);
 	if (nITEM > 1) SetItemStackSize(oITEM, nITEM - 1);
 	else DestroyObject(oITEM);
@@ -246,21 +246,120 @@ void Compost(object oPC, object oITEM, object oPLANT)
 
 void PlantCure(object oPC, object oITEM, object oPLANT)
 {
-	int nSTAGE = GetLocalInt(oPLANT, "PLANT_STAGE");
-	if (nSTAGE != 4)
+	if (GetLocalInt(oPLANT, "PLANT_STAGE") != 4)
 	{
 		SendMessageToPC(oPC, "Plant Cures may be used only on ill plants.");
 		return;
 	}
-	int nXP = GetLocalInt(oPLANT, "PLANT_XP");
-	string sITEM = GetLocalString(oPLANT, "PLANT_ITEM");
-	if (sITEM == "") sITEM = GetTag(oPLANT);
-	GiveCraftXP(oPC, SKILL_FARMING, nXP);
-	CreateItemOnObject(sITEM, oPC);
-	DestroyObject(oPLANT);
 	int nITEM = GetItemStackSize(oITEM);
 	if (nITEM > 1) SetItemStackSize(oITEM, nITEM - 1);
 	else DestroyObject(oITEM);
+	int nXP = GetLocalInt(oPLANT, "PLANT_XP");
+	GiveCraftXP(oPC, SKILL_FARMING, nXP);
+	if (GetLocalInt(oPLANT, "PLANT_STUMP") == TRUE)
+	{
+		SendMessageToPC(oPC, "The tree stump may now be harvested.");
+		DeleteLocalInt(oPLANT, "PLANT_STAGE");
+		return;
+	}
+	string sITEM = GetLocalString(oPLANT, "PLANT_ITEM");
+	if (sITEM == "") sITEM = GetTag(oPLANT);
+	CreateItemOnObject(sITEM, oPC);
+	DestroyObject(oPLANT);
+}
+
+void Henchman(object oPC, string sITEM)
+{
+	string sTYPE = GetStringRight(sITEM, 3);
+	int nTYPE = StringToInt(sTYPE);
+	string sHENCH;
+	switch (nTYPE) //Add the ResRef of the various henchmen here. Make sure it has three digits (ie 002, 003, ecc.)
+	{
+		case 001: sHENCH = "alkharidbodyguard"; break;
+		default: return;
+	}
+	object oHENCH = GetHenchman(oPC);
+	if (oHENCH != OBJECT_INVALID)
+	{
+		RemoveHenchman(oPC, oHENCH);
+		DestroyObject(oHENCH);
+		if (GetTag(oHENCH) == sHENCH) return;
+	}
+	oHENCH = CreateObject(OBJECT_TYPE_CREATURE, sHENCH, GetLocation(oPC));
+	DelayCommand(0.0f, AddHenchman(oPC, oHENCH));
+}
+
+void Pickpocket(object oPC, object oTARGET, int nTHIEF)
+{
+	int nXP = GetLocalInt(oTARGET, "THIEF_XP");
+	if (nXP < 1)
+	{
+		SendMessageToPC(oPC, "This creature cannot be pickpocketed.");
+		return;
+	}
+	string sTHIEF = GetBicFileName(oPC);
+	if (sTHIEF == "") return;
+	if (GetLocalInt(oTARGET, sTHIEF) == TRUE)
+	{
+		SendMessageToPC(oPC, "You have already pickpocketed this creature.");
+		return;
+	}
+	int nCHECK = GetLocalInt(oTARGET, "THIEF_REQ");
+	if (nCHECK > nTHIEF)
+	{
+		SendMessageToPC(oPC, "You will need at least " + IntToString(nCHECK) + " ranks in Thievery to be able to pickpocket this creature.");
+		return;
+	}
+	SetLocalInt(oTARGET, sTHIEF, TRUE);
+	int nGP = GetLocalInt(oTARGET, "THIEF_GP");
+	if (nGP > 0) GiveGoldToCreature(oPC, nGP);
+	string sSTEAL = GetLocalString(oTARGET, "THIEF_ITEM");
+	if (sSTEAL != "") CreateItemOnObject(sSTEAL, oPC);
+	GiveCraftXP(oPC, SKILL_THIEVING, nXP);
+	float fRESPAWN = GetLocalFloat(oTARGET, "THIEF_RESPAWN");
+	if (fRESPAWN > 0.0f) DelayCommand(fRESPAWN, DeleteLocalInt(oTARGET, sTHIEF));
+}
+
+void ThiefSteal(object oPC, object oTARGET, int nTHIEF)
+{
+	int nCHECK;
+	float fRESPAWN = GetLocalFloat(oTARGET, "THIEF_RESPAWN");
+	if (GetLocked(oTARGET) == TRUE)
+	{
+		nCHECK = GetLockUnlockDC(oTARGET);
+		if (nCHECK > nTHIEF) SendMessageToPC(oPC, "You will need at least " + IntToString(nCHECK) + " ranks in Thievery to be able to unlock this.");
+		else
+		{
+			SendMessageToPC(oPC, "Successfully unlocked!");
+			SetLocked(oTARGET, FALSE);
+			if (fRESPAWN > 0.0f) DelayCommand(fRESPAWN, SetLocked(oTARGET, TRUE));
+		}
+	}
+	if (GetIsTrapped(oTARGET) == TRUE)
+	{
+		nCHECK = GetTrapDisarmDC(oTARGET);
+		if (nCHECK > nTHIEF) SendMessageToPC(oPC, "You will need at least " + IntToString(nCHECK) + " ranks in Thievery to be able to disarm the trap.");
+		else
+		{
+			SendMessageToPC(oPC, "Trap successfully disarmed!");
+			SetTrapActive(oTARGET, FALSE);
+			if (fRESPAWN > 0.0f) DelayCommand(fRESPAWN, SetTrapActive(oTARGET, TRUE));
+		}
+	}
+}
+
+void Thievery(object oPC, object oTARGET)
+{
+	if (GetIsPC(oPC) == FALSE) return;
+	int nTHIEF = GetSkillRank(SKILL_THIEVING, oPC);
+	int nTYPE = GetObjectType(oTARGET);
+	switch (nTYPE)
+	{
+		case OBJECT_TYPE_CREATURE: Pickpocket(oPC, oTARGET, nTHIEF); break;
+		case OBJECT_TYPE_DOOR: ThiefSteal(oPC, oTARGET, nTHIEF); break;
+		case OBJECT_TYPE_PLACEABLE: ThiefSteal(oPC, oTARGET, nTHIEF); break;
+		case OBJECT_TYPE_TRIGGER: ThiefSteal(oPC, oTARGET, nTHIEF); break;
+	}
 }
 
 void main()
@@ -279,6 +378,8 @@ void main()
 		int nHEAL = FloatToInt(fHEAL);
 		ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(nHEAL), oPC, 0.0);
 	}
+	else if (sITEM == "thieftools") Thievery(oPC, oTARGET);
+	else if (GetStringLeft(sITEM, 9) == "henchman_") Henchman(oPC, sITEM);
 	else if (GetStringLeft(sITEM, 5) == "seed_") PlantSeed(oPC, oITEM, sITEM);
 	else if (GetStringRight(sITEM, 7) == "compost") Compost(oPC, oITEM, oTARGET);
 	else if (sITEM == "plantcure") PlantCure(oPC, oITEM, oTARGET);

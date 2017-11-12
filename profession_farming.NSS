@@ -17,7 +17,7 @@ void CheckPlant(object oPLANT, object oPC)
 	}
 }
 
-void main(int nCOMMAND)
+void main()
 {
 	object oPLANT = OBJECT_SELF;
 	object oPC = GetLastUsedBy();

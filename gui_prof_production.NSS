@@ -10,6 +10,15 @@
 void main(string sPOOL, string sREQ, string sOUTPUT, string sMULT, string sSKILL, string sXP, string sTAG_A, string sQTY_A, string sTAG_B, string sQTY_B, string sSUCCESS_CHANCE, string sFAIL_PRODUCT, string sQTY_O)
 {
 	object oPC = OBJECT_SELF;
+	if (sOUTPUT == "woodenhandle")
+	{
+		int nQUEST = GetJournalEntry("25", oPC);
+		if ((nQUEST !=8) && (nQUEST != 11))
+		{
+			SendMessageToPC(oPC, "You must have completed the quest 'Scheme of Schematics' to be able to produce this item.");
+			return;
+		}
+	}
 	object oINVALID = OBJECT_INVALID;
 	object oPOOL = oINVALID;
 	if (sPOOL != "")
