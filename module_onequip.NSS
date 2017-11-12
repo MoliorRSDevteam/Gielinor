@@ -29,7 +29,7 @@ void main()
         // prevent players from reequipping their weapon in
         if (IWGetIsInIntelligentWeaponConversation(oPC))
         {
-                object oConv =   GetLocalObject(oPC,"X2_O_INTWEAPON_SPIRIT");
+                object oConv = GetLocalObject(oPC,"X2_O_INTWEAPON_SPIRIT");
                 IWEndIntelligentWeaponConversation(oConv, oPC);
         }
         else
@@ -52,7 +52,7 @@ void main()
      if (GetModuleSwitchValue(MODULE_SWITCH_ENABLE_TAGBASED_SCRIPTS) == TRUE)
      {
         SetUserDefinedItemEventNumber(X2_ITEM_EVENT_EQUIP);
-        int nRet =   ExecuteScriptAndReturnInt(GetUserDefinedItemEventScriptName(oItem),OBJECT_SELF);
+        int nRet = ExecuteScriptAndReturnInt(GetUserDefinedItemEventScriptName(oItem),OBJECT_SELF);
         if (nRet == X2_EXECUTE_SCRIPT_END) return;
      }
 }

@@ -1,4 +1,5 @@
 #include "nw_i0_spells"
+#include "profession_include"
 
 const int FX_EQUIP = -9004;
 
@@ -41,9 +42,21 @@ void SpellResistanceFix(object oPC, string s2DA = "iprp_srcost", string sCOL = "
 
 int CheckRequirements(object oPC, object oITEM)
 {
+	int nSKILL = GetLocalInt(oITEM, "skill_id");
+	int nRANK = GetLocalInt(oITEM, "skill_rank");
+	string sFEED;
+	if (nSKILL > 0)
+	{
+		if (GetSkillRank(nSKILL, oPC) < nRANK)
+		{
+			string sPROF = ConvertProfIDToName(nSKILL);
+			sFEED = "You need at least " + IntToString(nRANK) + " ranks in " + sPROF + " profession to be able to wear this item.";
+			SendMessageToPC(oPC, sFEED);
+			return FALSE;
+		}
+	}
 	int nLVL = GetLocalInt(oITEM, "level");
 	if (nLVL < 1) return TRUE;
-	string sFEED;
 	string sCLASS;
 	string sVAR = "class";
 	int nCLASS;
@@ -65,7 +78,7 @@ int CheckRequirements(object oPC, object oITEM)
 	else if (GetHitDice(oPC) < nLVL) sFEED = "You need to be level " + IntToString(nLVL) + " ";
 	else return TRUE; 
 	sFEED = sFEED + "to be able to wear this item.";
-	SetLocalString(oPC, "EQUIP_FEEDBACK", sFEED);	
+	SendMessageToPC(oPC, sFEED);
 	return FALSE;
 }
 
@@ -77,9 +90,6 @@ void BeginHandlingEquipment(object oPC, object oITEM, int nUNEQUIP = FALSE)
 		{
 			AssignCommand(oPC, ClearAllActions(TRUE));
 			AssignCommand(oPC, ActionUnequipItem(oITEM));
-			string sFEED = GetLocalString(oPC, "EQUIP_FEEDBACK");
-			SendMessageToPC(oPC, sFEED);
-			DeleteLocalString(oPC, "EQUIP_FEEDBACK");
 			return;
 		}
 	}

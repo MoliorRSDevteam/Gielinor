@@ -20,6 +20,15 @@ const int SKILL_FARMING = 46;
 
 const string HSS_FEEDBACK_COLOUR = "<color=white>";
 
+string ConvertProfIDToName(int nSKILL)
+{
+	string s2DA = "skills";
+	int nCACHE = GetNum2DARows(s2DA);
+	int nNAME = StringToInt(Get2DAString(s2DA, "Name", nSKILL));
+	string sPROF = GetStringByStrRef(nNAME);
+	return sPROF;
+}
+
 void RemoveItems(object oPC, string sTAG, int nQTY, int nFEED = TRUE)
 {
 	if (sTAG == "") return;
@@ -149,27 +158,7 @@ void GiveCraftXP(object oPC, int nSKILL, int nXP, int nOVER = FALSE)
 {
 	object oITEM = GetItemPossessedBy(oPC, "player_essence");
 	string sVAR = "SKILLXP_" + IntToString(nSKILL);
-	string sPROF;
-	switch (nSKILL)
-	{
-		case SKILL_AGILITY: sPROF = "Agility"; break;
-		case SKILL_FISHING: sPROF = "Fishing"; break;
-		case SKILL_COOKING: sPROF = "Cooking"; break;
-		case SKILL_FIREMAKING: sPROF = "Firemaking"; break;
-		case SKILL_SMITHING: sPROF = "Smithing"; break;
-		case SKILL_WOODCUTTING: sPROF = "Woodcutting"; break;
-		case SKILL_MINING: sPROF = "Mining"; break;
-		case SKILL_RUNECRAFTING: sPROF = "Runecrafting"; break;
-		case SKILL_CRAFTING: sPROF = "Crafting"; break;
-		case SKILL_PRAYER: sPROF = "Prayer"; break;
-		case SKILL_FLETCHING: sPROF = "Fletching"; break;
-		case SKILL_SLAYER: sPROF = "Slayer"; break;
-		case SKILL_FARMING: sPROF = "Farming"; break;
-		case SKILL_THIEVING: sPROF = "Thieving"; break;
-		case SKILL_HUNTER: sPROF = "Hunting"; break;
-		case SKILL_CONSTRUCTION: sPROF = "Construction"; break;
-		case SKILL_HERBLORE: sPROF = "Herb Lore"; break;
-	}
+	string sPROF = ConvertProfIDToName(nSKILL);
 	int nTOTXP = GetLocalInt(oITEM, sVAR) + nXP;
 	int nBASE = GetSkillRank(nSKILL, oPC, TRUE);
 	int nNEED = GetSkillXPNeeded(nBASE + 1);
