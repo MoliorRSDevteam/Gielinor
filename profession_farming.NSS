@@ -2,12 +2,18 @@
 
 void CheckPlant(object oPLANT, object oPC)
 {
-	if (Random(100) > 49)
+	int nSKILL = GetSkillRank(SKILL_FARMING, oPC);
+	int nREQ = GetLocalInt(oPLANT, "PLANT_REQ");
+	int nCHANCE = 49 - (nSKILL - nREQ);
+	if (Random(100) > nCHANCE)
 	{
+		int nITEMS = 1 + (nSKILL - nREQ) / 2;
+		if (nITEMS > 30) nITEMS = 30;
+		else if (nITEMS < 1) nITEMS = 1;
 		int nXP = GetLocalInt(oPLANT, "PLANT_XP");
 		string sITEM = GetTag(oPLANT);
 		GiveCraftXP(oPC, SKILL_FARMING, nXP);
-		CreateItemOnObject(sITEM, oPC);
+		object oITEM = CreateItemOnObject(sITEM, oPC, nITEMS);
 		DestroyObject(oPLANT);
 	}
 	else 

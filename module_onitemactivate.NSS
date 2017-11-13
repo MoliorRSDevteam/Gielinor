@@ -152,11 +152,12 @@ void PrayerPotion(object oPC, string sITEM)
 	SetLocalInt(oESSENCE, "PRAYER_POINTS", nNEW);
 }
 
-void AdjustPlant(object oPLANT, string sNAME, float fTIME, int nXP)
+void AdjustPlant(object oPLANT, string sNAME, float fTIME, int nXP, int nFARM)
 {
 	SetFirstName(oPLANT, sNAME + " (planted)");
 	SetLocalInt(oPLANT, "PLANT_STAGE", 1);
 	SetLocalInt(oPLANT, "PLANT_XP", nXP);
+	SetLocalInt(oPLANT, "PLANT_REQ", nFARM);
 	SetLocalFloat(oPLANT, "PLANT_TIME", fTIME);
 }
 
@@ -222,7 +223,7 @@ void PlantSeed(object oPC, object oITEM, string sITEM)
 	if (nSTACK > 1) SetItemStackSize(oITEM, nSTACK - 1);
 	else DestroyObject(oITEM);
 	object oPLANT = CreateObject(OBJECT_TYPE_PLACEABLE, sBLUEPRINT, GetLocation(oPC), FALSE, sNAME);
-	DelayCommand(0.0f, AdjustPlant(oPLANT, sNAME, fTIME, nXP));
+	DelayCommand(0.0f, AdjustPlant(oPLANT, sNAME, fTIME, nXP, nFARM));
 }
 
 void Compost(object oPC, object oITEM, object oPLANT)
@@ -262,9 +263,13 @@ void PlantCure(object oPC, object oITEM, object oPLANT)
 		DeleteLocalInt(oPLANT, "PLANT_STAGE");
 		return;
 	}
-	string sITEM = GetLocalString(oPLANT, "PLANT_ITEM");
-	if (sITEM == "") sITEM = GetTag(oPLANT);
-	CreateItemOnObject(sITEM, oPC);
+	int nSKILL = GetSkillRank(SKILL_FARMING, oPC);
+	int nREQ = GetLocalInt(oPLANT, "PLANT_REQ");
+	int nITEMS = 1 + (nSKILL - nREQ) / 2;
+	if (nITEMS > 30) nITEMS = 30;
+	else if (nITEMS < 1) nITEMS = 1;
+	string sITEM = GetTag(oPLANT);
+	CreateItemOnObject(sITEM, oPC, nITEMS);
 	DestroyObject(oPLANT);
 }
 
