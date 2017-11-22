@@ -2120,7 +2120,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="1C6139691B97852228261026D66FD29A07158EE5" downloadHash="8875317ACD5CE46A07209FF6CB820DFE01BF1A0C" name="temple of scorpia - level 2 {q2}.trx" dlsize="300089" size="303943" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="25E4D2E016C8CACCBF235B6E9E09D999764D9387" downloadHash="B4A69BE9BDD19F563E84BC311D2837C7D1AC65F8" name="temple of scorpia - level 2 {q2}.trx" dlsize="310682" size="314633" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2150,7 +2150,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="CB0D046AF2118A34CCF1249D28434CD5201B4299" downloadHash="B090BBDB1B372B2E92F4623A509A739F35B01D51" name="temple of scorpia - level 2 {q}.trx" dlsize="301173" size="304895" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="6020881EA9A1CED54592EBE4DF67DC1C32F9062C" downloadHash="3E824E6790B9EF5C6ACE52AEAFD108B8A12BCBB2" name="temple of scorpia - level 2 {q}.trx" dlsize="310086" size="314039" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2215,7 +2215,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="89AA8A65B9164A27604713D6DD84671E71632C6A" downloadHash="4A8BDCDE8DAD57746752940DE453CA3822C125BF" name="kharidian - north desert.trx" dlsize="7595636" size="37976081" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="847BFDEBA8CFB989445D5BE02393E8D46947E7C9" downloadHash="2DAFE9308C9CE864DA0BEB56BC522B255A22C041" name="kharidian - north desert.trx" dlsize="7572844" size="37944008" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2605,7 +2605,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="D7014B4097B006AA7DC420E8FF66B3BC36A78DE9" downloadHash="FAEEBB218152B343667F70B6EAC16DB2CA98DEDA" name="temple of scorpia - level 3.trx" dlsize="312145" size="316246" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="BD573A2462F2ACD10E9D7AADA832F6D3932E29B0" downloadHash="519C061BF8F36BA19A20B06CA655303B56B90B0F" name="temple of scorpia - level 3.trx" dlsize="310540" size="314585" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2626,6 +2626,11 @@
     </server-ref>
   </resource>
   <resource type="Music" hash="944D1DCA95B9F186A83A7FF60565300FD38FB6C0" downloadHash="323CA8164C66EA60909995A0E08598C1C446E53C" name="mus_taverly.bmu" dlsize="5522626" size="5614695" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Hak" hash="80255766F271D09B09FDA2BA71AAED482E3AD595" downloadHash="26F7DD382B46223DDC300FA752251CB95E3C7D35" name="bth_weapons_v131.hak" dlsize="6199399" size="21933106" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
