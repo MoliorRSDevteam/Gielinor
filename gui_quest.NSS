@@ -161,12 +161,22 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 		case 31: 
 			sNAME = "Troll Stronghold";
 			sDESC = "Trolls have begun to muster their forces in the North, I should speak to the Captain of the Guard.";
-			sREQU = "Death Plateau, spiked boots, the ability to fight a Troll General";
+			sREQU = "Death Plateau and the ability to fight medium levels.";
 			break;
 		case 32: 
 			sNAME = "Witch's House";
 			sDESC = "A young boy who lives in Taverley has kicked his ball into the garden of a scary old lady.";
 			sREQU = "None.";
+			break;
+		case 33: 
+			sNAME = "Priest in Peril";
+			sDESC = "Drezel, a Saradomin priest, has vanished during the night from his post at Paterdomus. King Roald is looking for help in finding him.";
+			sREQU = "None.";
+			break;
+		case 34: 
+			sNAME = "All Fired Up";
+			sDESC = "King Roald has taken matters into his own hands and has commissioned a network of beacons to be built across the Wilderness and Paterdomus.";
+			sREQU = "23 Firemaking.";
 			break;
 	}
 	if (nTYPE == 1) return sNAME;

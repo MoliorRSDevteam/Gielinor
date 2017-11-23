@@ -965,7 +965,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="88D062CEAD1D0DF51F1FE5BDFE43695926DAECC9" downloadHash="5AD8409A9381DBB60FD4975FCBC9FED1B085757C" name="varrock.trx" dlsize="11352261" size="48906960" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="450BB13C0F68E96CEA8FB4C4BDD37581E27CD81C" downloadHash="49598C2EB798237393BB8BAD4DF982CAB802CF66" name="varrock.trx" dlsize="11380115" size="48923599" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1646,11 +1646,6 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="6FD5F4D9A9BCD48BE26254B1D06F5805CF536CAD" downloadHash="43D15043778FEBD0B401105694C3D5FC17D38FB6" name="abyssal ring1.trx" dlsize="1085580" size="14446395" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
-  <resource type="DirectoryEntry" hash="C83C64BA03C3E078BFC376B219960D193BA25E1A" downloadHash="65B8928CA722ED74E38DDBAE2C824FF3498DF58C" name="paterdomus.trx" dlsize="5687330" size="27956004" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2560,7 +2555,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="335CE71E345521C2AE98AD1D562ACCC092FDE5BD" downloadHash="C3CA54F1087BA93024076E6826721E48B54034A9" name="Paterdomus - Temple.trx" dlsize="110315" size="153520" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="3F460BB19FE0761914C5C8E4B9E0B2B5FD60BC45" downloadHash="96C228C097685B6EBB2A7037305A23FE9305E816" name="Paterdomus - Temple.trx" dlsize="110351" size="153520" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2570,7 +2565,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="66572F16EDF349A02445C956377D819402DA648C" downloadHash="2F9FB8D538059242AA4390AB96587BD6A69F238B" name="canifis.trx" dlsize="7031958" size="36215581" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="03B118C787280A078F26C07C84D30D4DA1735B60" downloadHash="D9D3E2DDB1287BE833784BF857820A0D4CC99EEE" name="canifis.trx" dlsize="6873185" size="35632067" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2631,6 +2626,21 @@
     </server-ref>
   </resource>
   <resource type="Hak" hash="80255766F271D09B09FDA2BA71AAED482E3AD595" downloadHash="26F7DD382B46223DDC300FA752251CB95E3C7D35" name="bth_weapons_v131.hak" dlsize="6199399" size="21933106" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="5D1E50DA2B78D4219B2F9C2C84B406BC7CB53ACF" downloadHash="8D7B5606A3CE9CE67FBB82AB0D6E8DED5BC5B205" name="Abandoned church.trx" dlsize="84443" size="84469" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="FB43D566F35B61B2C281EE2C4943A8A670B00B89" downloadHash="0BD0287A359BA88ACB43D7EB645ED6E09D118586" name="silvarea.trx" dlsize="5689848" size="27910931" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="F97837B4E5753365C5057F704BEF221D8DCCFE20" downloadHash="D3112C73ADF120FCA3C95D2AA5C914DFB9BEEE0E" name="abandoned church {post-quest}.trx" dlsize="85883" size="85942" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>

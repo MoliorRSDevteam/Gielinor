@@ -318,7 +318,10 @@ void Pickpocket(object oPC, object oTARGET, int nTHIEF)
 	SetLocalInt(oTARGET, sTHIEF, TRUE);
 	int nGP = GetLocalInt(oTARGET, "THIEF_GP");
 	if (nGP > 0) GiveGoldToCreature(oPC, nGP);
-	string sSTEAL = GetLocalString(oTARGET, "THIEF_ITEM");
+	int nSTEAL = GetLocalInt(oTARGET, "THIEF_TOTAL");
+	if (nSTEAL < 1) nSTEAL = 1;
+	int nROLL = Random(nSTEAL);
+	string sSTEAL = GetLocalString(oTARGET, "THIEF_ITEM_" + IntToString(nSTEAL));
 	if (sSTEAL != "") CreateItemOnObject(sSTEAL, oPC);
 	GiveCraftXP(oPC, SKILL_THIEVING, nXP);
 	float fRESPAWN = GetLocalFloat(oTARGET, "THIEF_RESPAWN");
