@@ -310,7 +310,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="4FCA6327934561DADF640F7F970EA0CDFA827BDA" downloadHash="B349D24BC59D2C4CDE64E90A724D1932CCEDEB54" name="varrock - museum.trx" dlsize="126797" size="127411" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="8E7E47765730E88C523F5C68CCF4992F2EF013AD" downloadHash="8AEDB78DA4BB8A71CCC74EF0588A6571FB7B0E33" name="varrock - museum.trx" dlsize="143884" size="144438" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
