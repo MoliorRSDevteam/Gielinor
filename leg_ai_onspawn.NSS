@@ -35,8 +35,8 @@ void main()
 	//If Passive, turn names to Aqua color
 	if (GetLocalInt(oNPC, "PASSIVE") == TRUE)
 	{
-		SetFirstName(oNPC, "<c=aqua>"+ GetFirstName(oNPC));
-		SetLastName(oNPC, "<c=aqua>"+ GetLastName(oNPC));
+		SetFirstName(oNPC, "<c=aqua>" + GetFirstName(oNPC));
+		SetLastName(oNPC, "<c=aqua>" + GetLastName(oNPC));
 	}
 	
 	// Run custom script
@@ -48,18 +48,11 @@ void main()
     int nSpecEvent = GetLocalInt(oNPC,"X2_USERDEFINED_ONSPAWN_EVENTS");
 
     // Pre Spawn Event requested
-    if (nSpecEvent == 1  || nSpecEvent == 3  )
-    {
-    SignalEvent(oNPC,EventUserDefined(EVENT_USER_DEFINED_PRESPAWN ));
-    }
+    if (nSpecEvent == 1  || nSpecEvent == 3) SignalEvent(oNPC, EventUserDefined(EVENT_USER_DEFINED_PRESPAWN));
 
     /*  Fix for the new golems to reduce their number of attacks */
-
     int nNumber = GetLocalInt(oNPC,CREATURE_VAR_NUMBER_OF_ATTACKS);
-    if (nNumber >0 )
-    {
-        SetBaseAttackBonus(nNumber);
-    }
+    if (nNumber > 0) SetBaseAttackBonus(nNumber);
 
 	// Setup default profile if we're using them - If we weren't calling for a change in profile then set default profile up
 	int iProfiles = GetLocalInt(oNPC, "LEG_AI_Profile");
@@ -67,14 +60,8 @@ void main()
 	
 	if (iProfiles)
 	{
-		if (!iChangeCalled)
-		{
-			LEG_AI_SetAIProfile(1);
-		}
-		else
-		{
-			LEG_AI_SetAIProfile(iChangeCalled);
-		}
+		if (!iChangeCalled) LEG_AI_SetAIProfile(1);
+		else LEG_AI_SetAIProfile(iChangeCalled);
 	}
 	
 	// Get Vars
@@ -88,8 +75,7 @@ void main()
 	string sWPTAG = GetLocalString(oNPC, "WP_TAG");
 	
 	// See if he is supposed to be on a Patrol Route or not.
-	if (iDayNight)
-		SetSpawnInCondition(NW_FLAG_DAY_NIGHT_POSTING);
+	if (iDayNight) SetSpawnInCondition(NW_FLAG_DAY_NIGHT_POSTING);
 		
 	if (sPatrolRoute != "" && iEscort == 0 && sWPTAG != sPatrolRoute)
 	{
@@ -101,8 +87,7 @@ void main()
 	// how they behave in a fight.
 
 	// Elevated AI?
-	if (GetLocalInt(oNPC, "LEG_AI_AILevel") == 3)
-		SetAILevel(oNPC, AI_LEVEL_NORMAL);
+	if (GetLocalInt(oNPC, "LEG_AI_AILevel") == 3) SetAILevel(oNPC, AI_LEVEL_NORMAL);
 
 	// Ok, let's do something about their spawn in condition.		
 	switch (iSpawnBehavior)
@@ -155,11 +140,7 @@ void main()
     //ExecuteScript("nw_c2_default9", oNPC);
 
     //Post Spawn event requeste
-    if (nSpecEvent == 2 || nSpecEvent == 3)
-    {
-    SignalEvent(oNPC,EventUserDefined(EVENT_USER_DEFINED_POSTSPAWN));
-    }
-	
+    if (nSpecEvent == 2 || nSpecEvent == 3) SignalEvent(oNPC,EventUserDefined(EVENT_USER_DEFINED_POSTSPAWN));
 	
 	// Here is our additional code.
 	// First, now that we've spawned, all mobs require that they have a home point, which is their spawn point
@@ -214,15 +195,11 @@ void main()
 	}  
 
 	// Last thing we want to do is to call our Master Spawn script!
-	if (iChangeCalled != TRUE)
-	{
-		ExecuteScript("leg_all_masterspawn", oNPC);
-	}
-	else
-		SetLocalInt(oNPC, "LEG_QUEST_SE_Called", FALSE);
+	if (iChangeCalled != TRUE) ExecuteScript("leg_all_masterspawn", oNPC);
+	else SetLocalInt(oNPC, "LEG_QUEST_SE_Called", FALSE);
 	
 	// Ok we are now spawned.  Equip our gear and make us ready.
-	DelayCommand(2.0, LEG_AI_Equip());	
+	DelayCommand(1.0, LEG_AI_Equip());	
 
 	// Start walking if I'm supposed to.
 	WalkWayPoints(FALSE, "spawn"); 
