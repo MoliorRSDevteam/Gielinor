@@ -100,11 +100,11 @@ void main()
     // * script called "test" when an item based event (equip, unequip, acquire, unacquire, activate,...)
     // * is triggered. Check "x2_it_example.nss" for an example.
     // * This feature is disabled by default.
-   SetModuleSwitch (MODULE_SWITCH_ENABLE_TAGBASED_SCRIPTS, TRUE);
+	SetModuleSwitch (MODULE_SWITCH_ENABLE_TAGBASED_SCRIPTS, TRUE);
 	// Enabling this causes tagbased scripting to use 7 different scripts for item events instead of 
 	// having them packaged all in one.  
 	// The scripts are postfixed with "_aq", "_ua", "_eq", "_ue", "_ac", "_ci", and "hc"
-   SetModuleSwitch (MODULE_SWITCH_ENABLE_SEPERATE_ITEM_SCRIPTS, TRUE);
+	SetModuleSwitch (MODULE_SWITCH_ENABLE_SEPERATE_ITEM_SCRIPTS, TRUE);
 
    if (GetModuleSwitchValue (MODULE_SWITCH_ENABLE_TAGBASED_SCRIPTS) == TRUE)
    {
@@ -117,9 +117,7 @@ void main()
         // * will result in the execution of a script called "test". If you uncomment the line below
         // * the script called will be "1_test.nss"
         SetUserDefinedItemEventPrefix("i_");
-
    }
-
 
    // * This initializes Bioware's wandering monster system as used in Hordes of the Underdark
    // * You can deactivate it, making your module load faster if you do not use it.
@@ -128,7 +126,6 @@ void main()
 
    if (GetModuleSwitchValue(MODULE_SWITCH_USE_XP2_RESTSYSTEM) == TRUE)
    {
-
        // * This allows you to specify a different 2da for the wandering monster system.
        // SetWanderingMonster2DAFile("des_restsystem");
 
@@ -154,5 +151,4 @@ void main()
 		// BMA-OEI 11/14/2006: Defaulted TRUE to enable spell targetting neutral PC associates (nw_i0_spells)
 		SetGlobalInt( CAMPAIGN_SWITCH_USE_PERSONAL_REPUTATION, TRUE );
 	}
-
 }

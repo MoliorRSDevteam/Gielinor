@@ -64,13 +64,34 @@ void UpdateQuest(object oPC, object oMOB)
 	AddScriptParameterInt(nQP);
 	AddScriptParameterInt(FALSE); //Not from Conversation
 	AddScriptParameterInt(TRUE); //Check all party members by default
-	ExecuteScriptEnhanced("quest_action", oPC);
+	ExecuteScriptEnhanced("quest_action", oPC);	
 }
 
 void main()
 {
+	object oMODULE = GetModule();
 	object oMOB = OBJECT_SELF;
 	object oPC = GetLastKiller();
 	UpdateQuest(oPC, oMOB);
 	DelayCommand(0.0f, SlayAndTeleportCheck(oPC, oMOB));
+	
+	// If the LOOT Plugin is active.
+	if (GetLocalInt(oMODULE, "LEG_LOOT_ACTIVE") == TRUE)
+	{
+		if (GetLocalInt(oMODULE, "LEG_LOOT_ONDEATH") == TRUE)
+		{
+			object oParent = GetLocalObject(oMOB, "SPAWN_Parent");
+			if (oParent == OBJECT_INVALID) oParent = oMOB;
+			else if (GetLocalString(oParent, "LEG_LOOT_ID") == "") oParent = oMOB;
+		
+			// If the Spawn plugin says to not Drop Loot on Death, then we don't make loot at all here.
+			// Of course if we are not using the spawn plugin at all, then go ahead and make loot.
+			if (!GetLocalInt(oMODULE, "LEG_SPAWN_ACTIVE") || !GetLocalInt(GetLocalObject(oMOB, "SPAWN_Parent"),"LEG_SPAWN_DoNotDropMyLoot"))
+			{
+				AddScriptParameterObject(oPC);
+				AddScriptParameterObject(oParent);
+				ExecuteScriptEnhanced("leg_loot_makeloot", oMOB);
+			}
+		}
+	}
 }

@@ -1,5 +1,4 @@
 /*
-
     Script:			Master Include file housing all common functions that may or may not be used by individual modular
 					systems.  Each module has its own include file that each script belonging to that module will call.
 					Each of those includes will include this Master Include.  Functions created that may have use in other
@@ -52,12 +51,9 @@
 // /////////////////////////////////////////////////////////////////////////////////////////////////////
 #include "nwnx_sql"										// nwnx functions
 
-
-
 // /////////////////////////////////////////////////////////////////////////////////////////////////////
 // FUNCTION DECLARATIONS
 // /////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 void LEG_COMMON_TimerBar(object oPC, int iDuration, string sTitle, object oTarget = OBJECT_SELF, int iClearActions = 1);
 
@@ -1132,7 +1128,6 @@ void LEG_COMMON_DestroyItemsByTag(object oTarget, string sItem, int nNumItems = 
     }
 }
 
-
 // //////////////////////////////////////////////////
 // LEG_COMMON_DestroyItemsByTag
 // //////////////////////////////////////////////////
@@ -1262,7 +1257,6 @@ void LEG_COMMON_ProgBar(object oPC, int iDuration, string sTitle, int iVisualEff
 	DelayCommand(IntToFloat(iCount) + 1.5, CloseGUIScreen(oPC, "leg_info_progbar"));
 }
 
-
 // //////////////////////////////////////////////////
 // LEG_COMMON_TimerBar_CleanVars
 // //////////////////////////////////////////////////
@@ -1318,7 +1312,6 @@ void LEG_COMMON_TimerBarUpdate(object oPC, float fProgress, float fIntervalSize,
 		SetGUIProgressBarPosition(oPC, "leg_info_timerbar", "TIME_BAR", fProgress + (fIntervalSize / 100.0 * fMicroInterval));
 }
 
-
 // //////////////////////////////////////////////////
 // LEG_COMMON_TimerBarSeconds
 // //////////////////////////////////////////////////
@@ -1327,7 +1320,6 @@ void LEG_COMMON_TimerBarSeconds(object oPC, int iSecond, int iNode)
 	if (GetLocalInt(oPC, "INFO_TimerBarNode") == iNode)
 		SetGUIObjectText(oPC, "leg_info_timerbar", "TIME_TEXT", -1, IntToString(iSecond) + " Seconds");
 }
-
 
 // //////////////////////////////////////////////////
 // LEG_COMMON_TimerBar
@@ -1395,8 +1387,6 @@ void LEG_COMMON_TimerBar(object oPC, int iDuration, string sTitle, object oTarge
 	
 }
 
-
-
 // //////////////////////////////////////////////////
 // LEG_COMMON_GetItemName
 // //////////////////////////////////////////////////
@@ -1422,8 +1412,6 @@ string LEG_COMMON_GetItemName(object oTarget, string sItem)
    // If we don't have an item by that name, then return something invalid.
    return "Invalid Item";
 }
-
-
 
 // //////////////////////////////////////////////////
 // LEG_COMMON_GetOldPCTable
@@ -1451,8 +1439,6 @@ string LEG_COMMON_GetPC2Table(object oPC)
 	sTableID = GetStringLowerCase(LEG_COMMON_StripBadChars(PCPREFIX) + "_" + sTablePlayer);
 	return "`" + sTableID + "`";
 }
-
-
 
 // //////////////////////////////////////////////////
 // LEG_COMMON_CheckTOD
@@ -1486,8 +1472,6 @@ int LEG_COMMON_CheckTOD(string sStartTOD, string sStopTOD)
 			return FALSE;
 	}
 }
-
-
 
 // //////////////////////////////////////////////////
 // LEG_COMMON_GetItemLevel
@@ -1559,8 +1543,6 @@ int LEG_COMMON_GetItemLevel(object oItem)
 		return 0;
 }
 
-
-
 // //////////////////////////////////////////////////
 // LEG_COMMON_GetMonthName
 // //////////////////////////////////////////////////
@@ -1585,8 +1567,6 @@ string LEG_COMMON_GetMonthName(int iMonth)
 	return "Unknown";
 }
 
-
-
 // //////////////////////////////////////////////////
 // LEG_COMMON_GetTimeNon24
 // //////////////////////////////////////////////////
@@ -1609,8 +1589,6 @@ string LEG_COMMON_GetTimeNon24(int iHour, int iMin)
 
 }
 
-
-
 // //////////////////////////////////////////////////
 // LEG_COMMON_AddArrayElement
 // //////////////////////////////////////////////////
@@ -1622,7 +1600,6 @@ void LEG_COMMON_AddArrayElement(object oObject, string sArrayName, string sValue
     SetLocalInt(oObject, sArrayName + "_Count", iArrayCount);
 	SetLocalString(oObject, sArrayName + "_Value" + IntToString(iArrayCount + 1), "#EOA#");
 }
-
 
 // //////////////////////////////////////////////////
 // LEG_COMMON_DeleteCurrentArrayElement
@@ -1642,7 +1619,6 @@ void LEG_COMMON_DeleteCurrentArrayElement(object oObject, string sArrayName)
     SetLocalString(oObject, sArrayName + "_Value" + IntToString(iPosition), "LEG_DELETED_ARRAY_ELEMENT");
 	LEG_COMMON_CompressArray(oObject, sArrayName);
 }
-
 
 // //////////////////////////////////////////////////
 // LEG_COMMON_GetFirstArrayElement
@@ -1705,7 +1681,6 @@ string LEG_COMMON_GetArrayElement(object oObject, string sArrayName, int iIndex)
 	return sElement = GetLocalString(oObject, sArrayName + "_Value" + IntToString(iIndex));
 }
 
-
 // //////////////////////////////////////////////////
 // LEG_COMMON_GetArrayElement
 // //////////////////////////////////////////////////
@@ -1721,7 +1696,6 @@ void LEG_COMMON_SetArrayElement(object oObject, string sArrayName, int iIndex, s
     SetLocalInt(oObject, sArrayName + "_Position", iIndex);
 	SetLocalString(oObject, sArrayName + "_Value" + IntToString(iIndex), sValue);
 }
-
 
 // //////////////////////////////////////////////////
 // LEG_COMMON_SearchArrayElement
@@ -1798,8 +1772,6 @@ void LEG_COMMON_CompressArray(object oObject, string sArrayName)
 	SetLocalInt(oObject, sArrayName + "_Position", 1);
 }
 
-
-
 // //////////////////////////////////////////////////
 // LEG_COMMON_RenameArray
 // //////////////////////////////////////////////////
@@ -1818,7 +1790,6 @@ void LEG_COMMON_RenameArray(object oObject, string sOldName, string sNewName)
 	LEG_COMMON_ClearArray(oObject, sOldName);
 }
 
-
 // //////////////////////////////////////////////////
 // LEG_COMMON_ClearArray
 // //////////////////////////////////////////////////
@@ -1836,7 +1807,6 @@ void LEG_COMMON_ClearArray(object oObject, string sArrayName)
     DeleteLocalInt(oObject, sArrayName + "_Position");
 }
 
-
 // //////////////////////////////////////////////////
 // LEG_COMMON_TextReplace
 // //////////////////////////////////////////////////
@@ -1848,15 +1818,13 @@ string LEG_COMMON_TextReplace(string sText, string sOld, string sNew)
 	while (iCounter <= iLength)
 	{
 		sChar = GetSubString(sText, iCounter, 1);
-		if (sChar == sOld)
-			sChar = sNew;
+		if (sChar == sOld) sChar = sNew;
 		sNewString = sNewString + sChar;
 		iCounter++;
 	}
 	
 	return sNewString;
 }
-
 
 // //////////////////////////////////////////////////
 // LEG_COMMON_TextRemoveBrace
@@ -1866,8 +1834,7 @@ string LEG_COMMON_TextRemoveBrace(string sText, int iClearWhiteSpaceLeft, int iC
 	int iBracesFound = 0;
 	int iBraceStart = FindSubString(sText, "{");
 	int iBraceEnd = FindSubString(sText, "}");
-	if (iBraceStart > 0 && iBraceEnd > 0)
-		iBracesFound = 1;
+	if (iBraceStart > 0 && iBraceEnd > 0) iBracesFound = 1;
 	
 	while (iBracesFound)
 	{
@@ -1879,32 +1846,19 @@ string LEG_COMMON_TextRemoveBrace(string sText, int iClearWhiteSpaceLeft, int iC
 			string sRightPart = GetStringRight(sText, GetStringLength(sText) - (iBraceEnd + 1));
 			
 			// If we need to remove any whitespace
-			if (iClearWhiteSpaceLeft && GetStringRight(sLeftPart, 1) == " ")
-			{
-				sLeftPart = GetStringLeft(sLeftPart, GetStringLength(sLeftPart) - 1);
-			}
-			if (iClearWhiteSpaceRight && GetStringLeft(sRightPart, 1) == " ")
-			{
-				sRightPart = GetStringRight(sRightPart, GetStringLength(sRightPart) - 1);
-			}
-			
+			if (iClearWhiteSpaceLeft && GetStringRight(sLeftPart, 1) == " ") sLeftPart = GetStringLeft(sLeftPart, GetStringLength(sLeftPart) - 1);
+			if (iClearWhiteSpaceRight && GetStringLeft(sRightPart, 1) == " ") sRightPart = GetStringRight(sRightPart, GetStringLength(sRightPart) - 1);
 			sText = sLeftPart + sRightPart;
 		}
-		else
-			iBracesFound = 0;
+		else iBracesFound = 0;
 			
 		iBraceStart = FindSubString(sText, "{");
 		iBraceEnd = FindSubString(sText, "}");
-		if (iBraceStart > 0 && iBraceEnd > 0)
-			iBracesFound = 1;
-		else
-			iBracesFound = 0;
+		if (iBraceStart > 0 && iBraceEnd > 0) iBracesFound = 1;
+		else iBracesFound = 0;
 	}
 	return sText;
-
-
 }
-
 
 // //////////////////////////////////////////////////
 // ActionPlayCustomAnimation (Wrapper)
@@ -1912,13 +1866,9 @@ string LEG_COMMON_TextRemoveBrace(string sText, int iClearWhiteSpaceLeft, int iC
 void LEG_COMMON_ActionPlayCustomAnimation(object oNPC, string sAnimationName, int nLooping, float fDuration = 0.0, float fSpeed = 1.0f)
 {
    	PlayCustomAnimation(oNPC, sAnimationName, nLooping, fSpeed);	
-	if (fDuration != 0.0)
-		DelayCommand(fDuration, LEG_COMMON_ActionPlayCustomAnimation(oNPC, "%", 0));
+	if (fDuration != 0.0) DelayCommand(fDuration, LEG_COMMON_ActionPlayCustomAnimation(oNPC, "%", 0));
 
 }
-
-
-
 
 float LEG_COMMON_GetDirectionAngle(object oTarget1, object oTarget2)
 {
@@ -1933,8 +1883,7 @@ float LEG_COMMON_GetDirectionAngle(object oTarget1, object oTarget2)
     int iOpposite = abs(yPCPoint - yPoint);
     int iAdjacent = abs(xTargetPoint - xPoint);
     float fPreTanAngle, fAngle;
-    if (iAdjacent == 0)
-        fAngle = 90.0;
+    if (iAdjacent == 0) fAngle = 90.0;
     else
     {
         fPreTanAngle = IntToFloat(iOpposite) / IntToFloat(iAdjacent);
@@ -1952,12 +1901,11 @@ float LEG_COMMON_GetDirectionAngle(object oTarget1, object oTarget2)
         fAngle = 180.0 + (90.0 - fAngle);
     // if x is neg and y is pos, I am in quad 4 so add 270
     else if (FloatToInt(vPos1.x - vPos2.x) < 0 && FloatToInt(vPos1.y - vPos2.y) >= 0)
-        fAngle = fAngle + 270.0;
+		fAngle = fAngle + 270.0;
 
     fAngle = GetOppositeDirection(fAngle);
     return fAngle;
 }
-
 
 // //////////////////////////////////////////////////
 // LEG_COMMON_VisualEffect
@@ -1969,8 +1917,7 @@ void LEG_COMMON_VisualEffect(int iEffect, object oTarget, object oSource, float 
 	{
 		int iRows = GetNum2DARows("visualeffects");
 	    string sType;
-		if (iEffect <= iRows - 1)
-        	sType = Get2DAString("visualeffects", "Type_FD", iEffect);
+		if (iEffect <= iRows - 1) sType = Get2DAString("visualeffects", "Type_FD", iEffect);
 		else
 		{
 			iEffect = iEffect - iRows;
@@ -1982,19 +1929,15 @@ void LEG_COMMON_VisualEffect(int iEffect, object oTarget, object oSource, float 
 	    {
 	        // beams
 	        effect eEffect = EffectBeam(iEffect, oSource, BODY_NODE_CHEST);
-			if (fDuration == -1.0)
-				ApplyEffectToObject(DURATION_TYPE_PERMANENT, eEffect, oTarget); 
-			else
-				ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eEffect, oTarget, fDuration); 
+			if (fDuration == -1.0) ApplyEffectToObject(DURATION_TYPE_PERMANENT, eEffect, oTarget); 
+			else ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eEffect, oTarget, fDuration); 
 	    }
 	    else if(sType == "D")
 	    {
 	        // duration VFXs
 	        effect eEffect = EffectVisualEffect(iEffect);
-			if (fDuration == -1.0)
-				ApplyEffectToObject(DURATION_TYPE_PERMANENT, eEffect, oTarget); 
-			else
-				ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eEffect, oTarget, fDuration); 
+			if (fDuration == -1.0) ApplyEffectToObject(DURATION_TYPE_PERMANENT, eEffect, oTarget); 
+			else ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eEffect, oTarget, fDuration); 
 	    }
 	    else if(sType == "F")
 	    {
@@ -2012,19 +1955,15 @@ void LEG_COMMON_VisualEffect(int iEffect, object oTarget, object oSource, float 
 	    {
 	        // circular and rectangular AOEs
 	        effect eEffect = EffectAreaOfEffect(iEffect, "null", "null", "null");
-			if (fDuration == -1.0)
-				ApplyEffectAtLocation(DURATION_TYPE_PERMANENT, eEffect, GetLocation(oTarget)); 
-			else
-	        	ApplyEffectAtLocation(DURATION_TYPE_TEMPORARY, eEffect, GetLocation(oTarget), fDuration); 
+			if (fDuration == -1.0) ApplyEffectAtLocation(DURATION_TYPE_PERMANENT, eEffect, GetLocation(oTarget)); 
+			else ApplyEffectAtLocation(DURATION_TYPE_TEMPORARY, eEffect, GetLocation(oTarget), fDuration); 
 	    }
 		else if (sType == "NWN2" || sType == "NX1" || sType == "NX2")
 		{
 			string sSefFile = Get2DAString("sj_sef_browser", "NAME", iEffect);
 			effect eEffect = EffectNWN2SpecialEffectFile(sSefFile, oSource);
-			if (fDuration == -1.0)
-				ApplyEffectToObject(DURATION_TYPE_PERMANENT, eEffect, oTarget);
-			else
-				ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eEffect, oTarget, fDuration);
+			if (fDuration == -1.0) ApplyEffectToObject(DURATION_TYPE_PERMANENT, eEffect, oTarget);
+			else ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eEffect, oTarget, fDuration);
 		}
 	}
 }
@@ -2035,27 +1974,16 @@ void LEG_COMMON_VisualEffect(int iEffect, object oTarget, object oSource, float 
 // //////////////////////////////////////////////////
 void LEG_COMMON_ExecuteScript(string sScript, object oTarget, object oObj1 = OBJECT_INVALID, object oObj2 = OBJECT_INVALID, string sStr1 = "", string sStr2 = "", int iInt1 = 0, int iInt2 = 0, float fFloat1 = 0.0, float fFloat2 = 0.0)
 {
-	if (GetIsObjectValid(oObj1))
-		AddScriptParameterObject(oObj1);
-	if (GetIsObjectValid(oObj2))
-		AddScriptParameterObject(oObj2);
-	if (sStr1 != "")
-		AddScriptParameterString(sStr1);
-	if (sStr2 != "")
-		AddScriptParameterString(sStr2);
-	if (iInt1 != 0)
-		AddScriptParameterInt(iInt1);
-	if (iInt2 != 0)
-		AddScriptParameterInt(iInt2);
-	if (fFloat1 != 0.0)	
-		AddScriptParameterFloat(fFloat1);
-	if (fFloat2 != 0.0)	
-		AddScriptParameterFloat(fFloat2);
-
+	if (GetIsObjectValid(oObj1)) AddScriptParameterObject(oObj1);
+	if (GetIsObjectValid(oObj2)) AddScriptParameterObject(oObj2);
+	if (sStr1 != "") AddScriptParameterString(sStr1);
+	if (sStr2 != "") AddScriptParameterString(sStr2);
+	if (iInt1 != 0) AddScriptParameterInt(iInt1);
+	if (iInt2 != 0)	AddScriptParameterInt(iInt2);
+	if (fFloat1 != 0.0)	AddScriptParameterFloat(fFloat1);
+	if (fFloat2 != 0.0)	AddScriptParameterFloat(fFloat2);
 	ExecuteScriptEnhanced(sScript, oTarget);
 }
-
-
 
 // //////////////////////////////////////////////////
 // LEG_COMMON_SkillToText
@@ -2097,9 +2025,6 @@ string LEG_COMMON_SkillToText(int iSkill)
 	return sSkill;
 }
 
-
-
-
 // //////////////////////////////////////////////////
 // LEG_COMMON_CreateTweeningObjects
 // //////////////////////////////////////////////////
@@ -2107,7 +2032,6 @@ void LEG_COMMON_CreateTweeningObjects(object oOriginal, int nCount, vector vDest
 {
 	int n;
 	object oNew;
-	
 	effect eCSI = EffectVisualEffect(VFX_DUR_CUTSCENE_INVISIBILITY);
 	
 	// decompose the original object
@@ -2117,8 +2041,7 @@ void LEG_COMMON_CreateTweeningObjects(object oOriginal, int nCount, vector vDest
     // decompose the original location
 	object oArea = GetArea(oOriginal);
 	vector vPosition = GetPosition(oOriginal);
-	if (fFacing == -1.0)
-		fFacing = GetFacing(oOriginal);
+	if (fFacing == -1.0) fFacing = GetFacing(oOriginal);
 
     // calculate the translation vector for each tween
     vector vTranslation = (vDestination - vPosition) / IntToFloat(nCount);
@@ -2137,8 +2060,6 @@ void LEG_COMMON_CreateTweeningObjects(object oOriginal, int nCount, vector vDest
 	}
 }
 
-
-
 // //////////////////////////////////////////////////
 // LEG_COMMON_DestroyTweeningObjects
 // //////////////////////////////////////////////////
@@ -2156,10 +2077,8 @@ void LEG_COMMON_DestroyTweeningObjects(object oOriginal, int nCount)
     for(n = nCount; n > 0; n--)
 	{
 		DestroyObject(GetObjectByTag(sTag, n));
-	}
-	
+	}	
 }
-
 
 // //////////////////////////////////////////////////
 // LEG_COMMON_RemoveCutsceneInvisibility
@@ -2179,7 +2098,6 @@ void LEG_COMMON_RemoveCutsceneInvisibility(object oObject)
 		eEffect = GetNextEffect(oObject);
 	}
 }
-
 
 // //////////////////////////////////////////////////
 // LEG_COMMON_RevealTweeningObjects
@@ -2207,10 +2125,8 @@ void LEG_COMMON_RevealTweeningObjects(object oTarget, int nCount, float fDuratio
 		DelayCommand(fInterval * (nCount - n), LEG_COMMON_RemoveCutsceneInvisibility(oObjB));
 		//DelayCommand(fInterval * (nCount - n), AssignCommand(oObjA, SpeakString("Invisible")));
 		//DelayCommand(fInterval * (nCount - n), AssignCommand(oObjB, SpeakString("Visible")));
-
 	}
 }
-
 
 // //////////////////////////////////////////////////
 // LEG_COMMON_MovePlaceableToLocation
@@ -2230,7 +2146,6 @@ void LEG_COMMON_MovePlaceableToLocation(object oPlaceable, location lDestination
 	}
 }
 
-
 // //////////////////////////////////////////////////
 // LEG_COMMON_MovePlaceableToObject
 // //////////////////////////////////////////////////
@@ -2238,7 +2153,6 @@ void LEG_COMMON_MovePlaceableToObject(object oPlaceable, object oDestination, in
 {
     LEG_COMMON_MovePlaceableToLocation(oPlaceable, GetLocation(oDestination), nSteps, fDelay, fDuration, oSound);
 }
-
 
 void LEG_COMMON_ForceFacing(float fDesiredFacing, object oObject = OBJECT_SELF)
 {
@@ -2249,13 +2163,9 @@ void LEG_COMMON_ForceFacing(float fDesiredFacing, object oObject = OBJECT_SELF)
 	vector vTarget = Vector(fRadiusX, fRadiusY);
 	
 	int iObjType = GetObjectType(oObject);
-	if (iObjType == OBJECT_TYPE_CREATURE)
- 			ActionDoCommand(SetFacingPoint(GetPosition(oObject) + vTarget));
-	else
-		SetFacingPoint(GetPosition(oObject) + vTarget);
+	if (iObjType == OBJECT_TYPE_CREATURE) ActionDoCommand(SetFacingPoint(GetPosition(oObject) + vTarget));
+	else SetFacingPoint(GetPosition(oObject) + vTarget);
 }
-
-
 
 int LEG_COMMON_Round(int iNumber, int iNearest)
 {

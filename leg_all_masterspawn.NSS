@@ -1,5 +1,4 @@
 /*
-
     Script:			This is the MASTER on spawn script.  It goes on all NPC's and monsters or is called from an
 					existing script via ExecuteScript function.  Like all Master Run Scripts, this script examines which
 					plugins are available and active and calls them.
@@ -22,18 +21,14 @@ void main()
 	// on death event for monsters or called from a custom on death event script or optionally called directly AS
 	// the on death script.  First we determine if we were passed from another script or if we are called be the event.	
 	object oTarget = OBJECT_SELF;
+	object oMODULE = GetModule();
 
 	// If the LOOT Plugin is active.
-	if (GetLocalInt(GetModule(), "LEG_LOOT_ACTIVE") && GetLocalInt(GetModule(), "LEG_LOOT_ONSPAWN"))
+	if (GetLocalInt(oMODULE, "LEG_LOOT_ACTIVE") && GetLocalInt(oMODULE, "LEG_LOOT_ONSPAWN"))
 	{
-		object oParent = GetLocalObject(OBJECT_SELF, "SPAWN_Parent");
-		if (!GetIsObjectValid(oParent))
-			oParent = OBJECT_SELF;
-		else
-		{
-			if (GetLocalString(oParent, "LEG_LOOT_ID") == "")
-				oParent = OBJECT_SELF;
-		}
+		object oParent = GetLocalObject(oTarget, "SPAWN_Parent");
+		if (!GetIsObjectValid(oParent)) oParent = oTarget;
+		else if (GetLocalString(oParent, "LEG_LOOT_ID") == "") oParent = oTarget;
 		AddScriptParameterObject(oTarget);
 		AddScriptParameterObject(oParent);
 		ExecuteScriptEnhanced("leg_loot_makeloot", oTarget);
