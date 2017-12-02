@@ -155,7 +155,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="978EC20DEB4A326EB90CFF03A8CB7612853919DD" downloadHash="556F955DCECFD187726526E6C0AEFA61A2E7FC1B" name="lumbridge - west.trx" dlsize="4624669" size="26018093" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="112C02DEFC8F76CDF5CD6989D5BCCE4E187C2045" downloadHash="FA198E364558F352147B86A88FA014A59A27152E" name="lumbridge - west.trx" dlsize="4595216" size="26007663" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -425,7 +425,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="7FC56AB10EF443352D6956BE5E5EFDDF1C8DBBAB" downloadHash="5AD2B8C764E61F0D2510523545FC76BCEB577D02" name="east varrock.trx" dlsize="6537919" size="28614675" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="0B176DA99709CA1FFDE7E7C1A6A9552FC9B63A09" downloadHash="6A4737D280E219BF5CBF20B754AE9EDA2FDD2B9D" name="east varrock.trx" dlsize="6759359" size="28839936" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -965,7 +965,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="450BB13C0F68E96CEA8FB4C4BDD37581E27CD81C" downloadHash="49598C2EB798237393BB8BAD4DF982CAB802CF66" name="varrock.trx" dlsize="11380115" size="48923599" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="8C3BEBEAC4297AA99762A37723576BFFB9B2EAA7" downloadHash="1A791032064DB7D08FFD323F8A0425C7CAC4819A" name="varrock.trx" dlsize="11523097" size="49258837" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1135,7 +1135,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="098152452732680A9F4A3FD5D65AA435A541426C" downloadHash="902EE36FC73D628718CB0D20FC9BF2139FA45F90" name="tutorial island.trx" dlsize="10028778" size="49300484" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="08DBC6A2074FA456016562CF201FC6ECF2876D14" downloadHash="52C5EDE2E28EFEEE9CE2D53326EA2B68482CA9B7" name="tutorial island.trx" dlsize="9931172" size="49253395" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1335,7 +1335,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="CFA4B92EB65A4A6ECEB485D9165639AAFFD0A476" downloadHash="4EF6775BCCFACA9BC7B6E22B059407B26F7002E7" name="0burthorpe.trx" dlsize="8305152" size="34635201" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="7BD329165694BBF82F8A20F6BBC1F923CE9F93A8" downloadHash="27055471F671E1A3D02F083C074013DF36577277" name="0burthorpe.trx" dlsize="8277046" size="34640116" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1400,7 +1400,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="A5303D4C1910C2D07EA50585FBDDDBAE54FA1219" downloadHash="D5BA8C0211CDBADB0DDFF9B1694C63B8ED1B1A15" name="draynor.trx" dlsize="9205611" size="54043152" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="54015E68727E9C740C3764E2D5246A21EFE84FF1" downloadHash="83C6B42A2C6B2408E3611825A32D74ABD445BE7C" name="draynor.trx" dlsize="9172565" size="54010703" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1485,7 +1485,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="F1FC7CF4E40309E57532BF7873D8F10AF63BF329" downloadHash="933C5EE3BF7BBA1373C68D1F018D14E57BBD697F" name="guide's home.trx" dlsize="27972" size="28018" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="C51AA751808A6EF09E2CBB7C8B5A9EDADFD1DA00" downloadHash="E9E721F3F87DB5EFC9F66DB67C39C659707E5D7B" name="guide's home.trx" dlsize="28185" size="28213" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
