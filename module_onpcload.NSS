@@ -69,10 +69,37 @@ void UpdateSkills(object oPC)
 	DelayCommand(0.0f, FixStuck(oPC));
 }
 
+int CheckCDKey(object oPC)
+{
+	int nRETURN = FALSE;
+	string sKEY = GetPCPublicCDKey(oPC);
+	string sPLAYER = GetPCPlayerName(oPC);
+	string sMSG = "Player Account: " + sPLAYER + " - Public CD Key: " + sKEY;
+	string sDATA = "cd_keys";
+	string sVAR = GetCampaignString(sDATA, sPLAYER);
+	if (sVAR == sKEY) sMSG = sMSG + " - Welcome back.";
+	else if (sVAR == "")
+	{
+		sMSG = sMSG + " - This account has just been associated to its unique CD key to protect you from account theft.";
+		SetCampaignString(sDATA, sPLAYER, sKEY);
+	}
+	else
+	{
+		sMSG = sMSG + " - This account has already been registered under another CD key. You will be booted from server in 10 seconds. If you believe that this is a mistake (or if you recently changed the CD key and wish to resume playing this account), please contact the server admin.";
+		nRETURN = TRUE;
+	}
+	SendMessageToPC(oPC, sMSG);
+	return nRETURN;
+}
+
 void main()
 {
 	object oPC = GetEnteringObject();
-	if (GetIsOwnedByPlayer(oPC) == FALSE) return;
+	if (CheckCDKey(oPC) == TRUE)
+	{
+		DelayCommand(10.0, BootPC(oPC));
+		return;
+	}
 	object oITEM = GetItemPossessedBy(oPC, "player_essence");
 	if (oITEM == OBJECT_INVALID) CreateEssence(oPC);
 	else UpdateQuests(oPC, oITEM);
