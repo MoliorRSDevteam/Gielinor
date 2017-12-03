@@ -10,7 +10,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="8919301C2FAAA184C94BD52B91366A3AE3161B21" downloadHash="E1B60B65A4AC255B8D9AF70B05C43CFF9D08B426" name="wilderness - bandit camp.trx" dlsize="863986" size="7313775" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="8919301C2FAAA184C94BD52B91366A3AE3161B21" downloadHash="CCD60DDD13F1BC9A2E66EFE5CA2760BB8520A3B0" name="wilderness - bandit camp.trx" dlsize="869337" size="7313775" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -280,7 +280,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="3032DF054D864C446037B01DDF4D5AF7F2B2C0F6" downloadHash="AB0DA8AF5631AFADCE3E1713E7D3192F0FA6CA50" name="edgeville dungeon.trx" dlsize="734166" size="1148207" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="3032DF054D864C446037B01DDF4D5AF7F2B2C0F6" downloadHash="BA9D032DFD78E846FF6A219AFE9330D4973F7DE5" name="edgeville dungeon.trx" dlsize="744088" size="1148207" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -295,7 +295,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="8ED721FE0E2D3E7DE398EDE3C681F8D3C4F855EF" downloadHash="9C8F304FC69E82BE9CA69F5D5512F8507C4825F8" name="stronghold of safety.trx" dlsize="1880774" size="1945774" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="8ED721FE0E2D3E7DE398EDE3C681F8D3C4F855EF" downloadHash="4B401E33C3F2B85D8DC73DA10E1B07F0B62A3FF9" name="stronghold of safety.trx" dlsize="1691812" size="1945774" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -315,7 +315,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="E7C6348C94D7C68959193C79B95251DE8EBBB7D5" downloadHash="C98463D862801EAB34071FE2CD0ECDD33B1CB4FC" name="al-kharid - bank.trx" dlsize="17142" size="17193" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="E7C6348C94D7C68959193C79B95251DE8EBBB7D5" downloadHash="8E7750CDFA0869138E28D0DD41AF169F272DBD42" name="al-kharid - bank.trx" dlsize="17256" size="17193" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -615,7 +615,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="F4D9CCEB7712C39DAC19BF91870DD17A3B497200" downloadHash="8EAFC1C1E2AF4208B9C8FB47B4CFD6A541DC154E" name="falador - house1.trx" dlsize="5628" size="5624" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="F4D9CCEB7712C39DAC19BF91870DD17A3B497200" downloadHash="EF8187914A694B0AE13943FE2E9838B40EC30B27" name="falador - house1.trx" dlsize="5693" size="5624" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -700,7 +700,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="0CEF0EE775C13B3D7BDFE75AE5DFA3520CD5EDEC" downloadHash="41CD6A7D4E7830134B45CF9C1FEBFE9057FCCA04" name="musa point.trx" dlsize="6711574" size="42453634" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="FA1E9457E447333A702B8BE552BF11657FD4E7E8" downloadHash="54F78949E5FA8D6E46F4B412583DC472176E15D4" name="musa point.trx" dlsize="6681914" size="42386946" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -965,7 +965,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="47EA63498D1C0C0B0535B269233AD6AB0678686E" downloadHash="FA8175269525F0FDE5FF5DBDE647696C94889B99" name="varrock.trx" dlsize="11047405" size="47511801" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="03221C6CDE60898F45376C3004E1ED59F25E7A32" downloadHash="B6D386B0CF552269BA86C3C2AEC05389A8BE7EEB" name="varrock.trx" dlsize="11141820" size="47798932" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1130,7 +1130,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="FA23B114F33AAF609A7760F74FA16EE62DC0F591" downloadHash="E36B253B6A610D12F6899D4CCDA403E6635DA6AC" name="falador.trx" dlsize="5975414" size="31465984" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="FA23B114F33AAF609A7760F74FA16EE62DC0F591" downloadHash="A49EC06E11C615B5575E4B4A7F6724CC961BAB1F" name="falador.trx" dlsize="5997300" size="31465984" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1295,7 +1295,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="04A6FC2285D1B816E36F17F2633507E0AB0B7D44" downloadHash="45D0B82F81C391FD0BB4FEADE31439DC5B8D9CCF" name="al-kharid.trx" dlsize="4432112" size="22165793" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="04A6FC2285D1B816E36F17F2633507E0AB0B7D44" downloadHash="A5C103477A0C4D94120C432F4E18A9300BE6B937" name="al-kharid.trx" dlsize="4429955" size="22165793" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1500,7 +1500,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="FDB885D81742C492536FACB2AED29E864E8AF425" downloadHash="771129D5BF26906DE32719D128530F994176BE8D" name="varrock - magic shop.trx" dlsize="8019" size="7993" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="FDB885D81742C492536FACB2AED29E864E8AF425" downloadHash="069D9D75E72D5E01DC247574631320882E35A338" name="varrock - magic shop.trx" dlsize="7767" size="7993" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2100,7 +2100,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="C530014876DE04D3B84A20E09E54358F297B3B24" downloadHash="FB47100C1832A09BEA9C62436055D0AAE67FE2E5" name="Burthorpe Mine.trx" dlsize="44718" size="44883" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="C530014876DE04D3B84A20E09E54358F297B3B24" downloadHash="8046930D8461A08EF8662BE6C6ACEAFF083FACC4" name="Burthorpe Mine.trx" dlsize="44728" size="44883" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2290,7 +2290,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="E988639284E0DC91C32410300BAEB79C3A45609C" downloadHash="A20ED77B204136AE60378D8C371EED30D2E23497" name="al-kharid mine {ruby}.trx" dlsize="110317" size="111200" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="E988639284E0DC91C32410300BAEB79C3A45609C" downloadHash="D5C085169EF3115EE6F84D8631389320D48AC9AB" name="al-kharid mine {ruby}.trx" dlsize="110340" size="111200" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2315,7 +2315,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="65EB855C1F2D6B5B234F9187543E7CFE1E363B5A" downloadHash="05E61C6EC4322DD3920BCC406349E140C2E204E2" name="al-kharid mine {dia}.trx" dlsize="81502" size="82180" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="65EB855C1F2D6B5B234F9187543E7CFE1E363B5A" downloadHash="7566E205B6F3A7150A9B46872533C9F600AB15D3" name="al-kharid mine {dia}.trx" dlsize="81560" size="82180" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2330,7 +2330,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="32EC7057E2A6407D073D428A98EA242218790E94" downloadHash="498B46F9A8714DAEB80E3DE8F189C49CA8554E29" name="al-kharid mine {sapph}.trx" dlsize="140398" size="141175" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="32EC7057E2A6407D073D428A98EA242218790E94" downloadHash="B384BD07D5472847BB11EC40F1AE72E7FAC387DF" name="al-kharid mine {sapph}.trx" dlsize="140402" size="141175" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2340,7 +2340,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="7F3DF82FEF23F682FE4A2C3FD92B920A0D8BB51D" downloadHash="0C5BD12C44419861A50A9A458A19F49060778824" name="al-kharid mine {emer}.trx" dlsize="127132" size="127945" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="7F3DF82FEF23F682FE4A2C3FD92B920A0D8BB51D" downloadHash="1209CB91F6E5C41C8FF5802474AA8DC33AF2A6CC" name="al-kharid mine {emer}.trx" dlsize="127465" size="127945" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2641,6 +2641,11 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="F97837B4E5753365C5057F704BEF221D8DCCFE20" downloadHash="D3112C73ADF120FCA3C95D2AA5C914DFB9BEEE0E" name="abandoned church {post-quest}.trx" dlsize="85883" size="85942" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="A0D48C675D9BED29838C5B51F43E2142BB962B9A" downloadHash="D74D61F56FFF910660A30B892B50F4E247A1FD33" name="00000testing.trx" dlsize="59326" size="63783" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
