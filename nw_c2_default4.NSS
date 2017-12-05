@@ -25,7 +25,7 @@ void main()
     }
 
     // * If dead, exit directly.
-    if (GetIsDead(OBJECT_SELF) == TRUE)
+    if (GetIsDead(OBJECT_SELF))
     {
         return;
     }
@@ -37,20 +37,20 @@ void main()
     object oShouter = GetLastSpeaker();
     object oIntruder;
     int iFocused = GetIsFocused();
-//	 FloatingTextStringOnCreature("conv conv",GetFirstPC());
+
     if (nMatch == -1 && GetCommandable(OBJECT_SELF))
     {
         if (GetCommandable(OBJECT_SELF))
         {
-			if (GetLocalInt(OBJECT_SELF,"NPCPC")==1)
+            ClearAllActions();
+			// hack to detect SoZ
+			if (GetStringLength(GetGlobalString("co_beluethHangOut")) > 1)
 			{
-				ClearAllActions();
-	            BeginConversation("diag_npc_pc");	 
+            	BeginConversation("", OBJECT_INVALID, TRUE);
 			}
 			else
 			{
-	            ClearAllActions();
-	            BeginConversation();
+            	BeginConversation();
 			}
         }
         else
@@ -61,7 +61,15 @@ void main()
         if (GetHasEffect(EFFECT_TYPE_CHARMED) == TRUE)
         {
             ClearActions(CLEAR_NW_C2_DEFAULT4_29);
-            BeginConversation();
+			// hack to detect SoZ
+			if (GetStringLength(GetGlobalString("co_beluethHangOut")) > 1)
+			{
+            	BeginConversation("", OBJECT_INVALID, TRUE);
+			}
+			else
+			{
+            	BeginConversation();
+			}
         }
 
     }
@@ -94,7 +102,12 @@ void main()
             }
         }
 //		Jug_Debug(GetName(OBJECT_SELF) + " respond to shout " + GetName(oShouter) + " match " + IntToString(nMatch) + " intruder " + GetName(oIntruder));
-        HenchMonRespondToShout(oShouter, nMatch, oIntruder);
+		if (GetObjectSeen(oShouter) || LineOfSightObject(oShouter, OBJECT_SELF) ||
+			((GetDistanceToObject(oShouter) < 10.0) && !HenchEnemyOnOtherSideOfDoor(oShouter)))
+		{
+//			Jug_Debug(GetName(OBJECT_SELF) + " really respond to shout");
+        	HenchMonRespondToShout(oShouter, nMatch, oIntruder);
+		}
     }
 
     if(GetSpawnInCondition(NW_FLAG_ON_DIALOGUE_EVENT))
