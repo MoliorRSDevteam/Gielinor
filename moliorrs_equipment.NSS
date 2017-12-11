@@ -42,11 +42,27 @@ void SpellResistanceFix(object oPC, string s2DA = "iprp_srcost", string sCOL = "
 
 int CheckRequirements(object oPC, object oITEM)
 {
-	int nSKILL = GetLocalInt(oITEM, "skill_id");
-	int nRANK = GetLocalInt(oITEM, "skill_rank");
 	string sFEED;
+	
+	//Quest requirements
+	string sQUEST = GetLocalString(oITEM, "quest_id");
+	if (sQUEST != "")
+	{
+		string sNAME = GetLocalString(oITEM, "quest_name");
+		int nSTATE = GetLocalInt(oITEM, "quest_state");
+		if (GetJournalEntry(sQUEST, oPC) < nSTATE)
+		{
+			sFEED = "You must have completed the " + sNAME + " quest to be able to equip this item.";
+			SendMessageToPC(oPC, sFEED);
+			return FALSE;
+		}
+	}
+	
+	//Skill ranks requirements
+	int nSKILL = GetLocalInt(oITEM, "skill_id");
 	if (nSKILL > 0)
 	{
+		int nRANK = GetLocalInt(oITEM, "skill_rank");
 		if (GetSkillRank(nSKILL, oPC) < nRANK)
 		{
 			string sPROF = ConvertProfIDToName(nSKILL);
@@ -55,6 +71,8 @@ int CheckRequirements(object oPC, object oITEM)
 			return FALSE;
 		}
 	}
+	
+	//Level or class level requirements
 	int nLVL = GetLocalInt(oITEM, "level");
 	if (nLVL < 1) return TRUE;
 	string sCLASS;
