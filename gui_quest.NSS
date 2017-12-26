@@ -165,7 +165,7 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			break;
 		case 32: 
 			sNAME = "Witch's House";
-			sDESC = "A young boy who lives in Taverley has kicked his ball into the garden of a scary old lady.";
+			sDESC = "A young boy who lives in Taverly has kicked his ball into the garden of a scary, old lady.";
 			sREQU = "None.";
 			break;
 		case 33: 
