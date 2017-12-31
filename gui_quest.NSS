@@ -178,6 +178,11 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			sDESC = "King Roald has taken matters into his own hands and has commissioned a network of beacons to be built across the Wilderness and Paterdomus.";
 			sREQU = "23 Firemaking.";
 			break;
+		case 35: 
+			sNAME = "The Feud";
+			sDESC = "Word has it that Ali Morrisane is on the lookout for someone; someone who can recruit some help from his home town Pollnivneach - a somewhat anarchic place, south of the Shantay pass.";
+			sREQU = "30 Thieving";
+			break;
 	}
 	if (nTYPE == 1) return sNAME;
 	else if (nTYPE == 2) return sDESC;

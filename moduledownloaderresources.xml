@@ -2245,7 +2245,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="133E6CF4F2101B6110CAFD4BDA44BA5597148C43" downloadHash="5AEEAD3B6E63D022A01F380D7EB7773CB86D0EA6" name="kharidian - pollnivneach.trx" dlsize="3286123" size="18715055" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="F5E20AEAE874F82BE841D7C079BF443245B2FC83" downloadHash="3D94A26A7ACB66F07B7A3014C9C51A499076429C" name="kharidian - pollnivneach.trx" dlsize="3025292" size="17100054" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2270,11 +2270,6 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="00EF4031D685CFCE55752F5726ADE54ACD77E446" downloadHash="9BCF8470800A7D63E7720EEC6F8B11ADCF489B02" name="Pollnivneach - Manor.trx" dlsize="40537" size="40791" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
   <resource type="DirectoryEntry" hash="65EB855C1F2D6B5B234F9187543E7CFE1E363B5A" downloadHash="05E61C6EC4322DD3920BCC406349E140C2E204E2" name="al-kharid mine {dia}.trx" dlsize="81502" size="82180" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
@@ -2285,7 +2280,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="5BB36BC7052AB4ED03861BE9981A07DF0A872475" downloadHash="86419D16B46E0221370CFEF5E2AB5FCA305B7B98" name="Pollnivneach - Pub.trx" dlsize="19408" size="19379" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="DBF3753C8E6EF5B808276AE9F216D0D8BDB7BDA7" downloadHash="E345546B79E072D88C66089AC0459619A1378703" name="Pollnivneach - Pub.trx" dlsize="19703" size="19704" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2641,6 +2636,11 @@
     </server-ref>
   </resource>
   <resource type="Music" hash="1224B8FF4C5392DED5851CFA3AC04B42EBBC6241" downloadHash="3929CA1FE0CAE7376D8E38C4EC8D8EBC0ABD7F71" name="mus_ruinsofuzer.bmu" dlsize="4840118" size="4920638" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="00EF4031D685CFCE55752F5726ADE54ACD77E446" downloadHash="9BCF8470800A7D63E7720EEC6F8B11ADCF489B02" name="pollnivneach - villa.trx" dlsize="40537" size="40791" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
