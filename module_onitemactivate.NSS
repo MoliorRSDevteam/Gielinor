@@ -317,6 +317,17 @@ void Pickpocket(object oPC, object oTARGET, int nTHIEF)
 		SendMessageToPC(oPC, "You will need at least " + IntToString(nCHECK) + " ranks in Thievery to be able to pickpocket this creature.");
 		return;
 	}
+	ReallyPlayCustomAnimation(oPC, "search");
+	int nSUCCESS = 50 + (nTHIEF - nCHECK) * 2;
+	if (Random(100) >= nSUCCESS)
+	{
+		int nDMG = GetMaxHitPoints(oPC) / 10;
+		effect eDAMAGE = EffectDamage(nDMG, DAMAGE_TYPE_BLUDGEONING, DAMAGE_POWER_NORMAL, TRUE);
+		ApplyEffectToObject(DURATION_TYPE_INSTANT, eDAMAGE, oPC);
+		ApplyEffectToObject(DURATION_TYPE_TEMPORARY, EffectStunned(), oPC, 5.0);
+		SendMessageToPC(oPC, "Your pickpocket attempt failed!");
+		return;
+	}
 	SetLocalInt(oTARGET, sTHIEF, TRUE);
 	int nGP = GetLocalInt(oTARGET, "THIEF_GP");
 	if (nGP > 0) GiveGoldToCreature(oPC, nGP);

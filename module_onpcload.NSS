@@ -97,11 +97,14 @@ void main()
 	object oPC = GetEnteringObject();
 	if (CheckCDKey(oPC) == TRUE)
 	{
-		DelayCommand(10.0, BootPC(oPC));
+		DelayCommand(5.0, BootPC(oPC));
 		return;
 	}
-	object oITEM = GetItemPossessedBy(oPC, "player_essence");
-	if (oITEM == OBJECT_INVALID) CreateEssence(oPC);
-	else UpdateQuests(oPC, oITEM);
+	object oINVALID = OBJECT_INVALID;
+	object oESSENCE = GetItemPossessedBy(oPC, "player_essence");
+	if (oESSENCE == oINVALID) CreateEssence(oPC);
+	else UpdateQuests(oPC, oESSENCE);
+	object oTHIEF = GetItemPossessedBy(oPC, "thieftools");
+	if (oTHIEF == oINVALID) CreateItemOnObject("thieftools", oPC);
 	DelayCommand(0.0f, UpdateSkills(oPC));
 }
