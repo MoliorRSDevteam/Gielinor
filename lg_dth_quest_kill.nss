@@ -64,7 +64,7 @@ void UpdateQuest(object oPC, object oMOB)
 	AddScriptParameterInt(nQP);
 	AddScriptParameterInt(FALSE); //Not from Conversation
 	AddScriptParameterInt(TRUE); //Check all party members by default
-	ExecuteScriptEnhanced("quest_action", oPC);
+	ExecuteScriptEnhanced("quest_action", oPC);	
 }
 
 void main()

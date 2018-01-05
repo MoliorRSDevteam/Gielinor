@@ -165,7 +165,7 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			break;
 		case 32: 
 			sNAME = "Witch's House";
-			sDESC = "A young boy who lives in Taverley has kicked his ball into the garden of a scary old lady.";
+			sDESC = "A young boy who lives in Taverly has kicked his ball into the garden of a scary, old lady.";
 			sREQU = "None.";
 			break;
 		case 33: 
@@ -177,6 +177,11 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			sNAME = "All Fired Up";
 			sDESC = "King Roald has taken matters into his own hands and has commissioned a network of beacons to be built across the Wilderness and Paterdomus.";
 			sREQU = "23 Firemaking.";
+			break;
+		case 35: 
+			sNAME = "The Feud";
+			sDESC = "Word has it that Ali Morrisane is on the lookout for someone; someone who can recruit some help from his home town Pollnivneach - a somewhat anarchic place, south of the Shantay pass.";
+			sREQU = "30 Thieving";
 			break;
 	}
 	if (nTYPE == 1) return sNAME;
