@@ -180,8 +180,13 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			break;
 		case 35: 
 			sNAME = "The Feud";
-			sDESC = "Word has it that Ali Morrisane is on the lookout for someone; someone who can recruit some help from his home town Pollnivneach - a somewhat anarchic place, south of the Shantay pass.";
+			sDESC = "Word has it that Ali Morrisane is on the lookout for someone who can recruit some help from his home town Pollnivneach.";
 			sREQU = "30 Thieving";
+			break;
+		case 36: 
+			sNAME = "Gertrude's Cat";
+			sDESC = "Gertrude has lost her cat Fluffs and desperately wants to find her. Can you help bring her home?";
+			sREQU = "None.";
 			break;
 	}
 	if (nTYPE == 1) return sNAME;

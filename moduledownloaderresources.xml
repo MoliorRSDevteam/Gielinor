@@ -420,7 +420,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="0B176DA99709CA1FFDE7E7C1A6A9552FC9B63A09" downloadHash="6A4737D280E219BF5CBF20B754AE9EDA2FDD2B9D" name="east varrock.trx" dlsize="6759359" size="28839936" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="C8EA96AB12F9E38D4A3AF113205CB48ADC5F436D" downloadHash="CBF1062D1361DFD402B38AB28D2FDACFFCBA6E96" name="east varrock.trx" dlsize="6745965" size="28812569" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1690,7 +1690,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="CFC2E6DB6C95D60EA80BCF8BDC90E62B79D29768" downloadHash="2E3A83D120B96D6B6907E86D52F0A65AA0A0FA80" name="2da_loadingscreens.hak" dlsize="231856612" size="741818640" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="28A44914CEF52D7314EC03080EAA1B5C38D6CF34" downloadHash="BE252CE2B57CA79B0A7E029845C5A16C945C5FED" name="2da_loadingscreens.hak" dlsize="231904044" size="741897819" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2245,7 +2245,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="F5E20AEAE874F82BE841D7C079BF443245B2FC83" downloadHash="3D94A26A7ACB66F07B7A3014C9C51A499076429C" name="kharidian - pollnivneach.trx" dlsize="3025292" size="17100054" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="238D4AB3E9E363E8078879B42941BD0561B89ADD" downloadHash="F0E9F7D2A2C0C684D739954466558402C119191B" name="kharidian - pollnivneach.trx" dlsize="3024644" size="17101299" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
