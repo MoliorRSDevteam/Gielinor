@@ -5,6 +5,7 @@
 #include "nw_i0_spells"
 #include "x2_inc_switches"
 #include "profession_include"
+#include "summoned_table"
 
 void RenewFire(object oFIRE, int nLIGHT, string sFLAME, float fDUR)
 {
@@ -279,12 +280,7 @@ void Henchman(object oPC, string sITEM)
 {
 	string sTYPE = GetStringRight(sITEM, 3);
 	int nTYPE = StringToInt(sTYPE);
-	string sHENCH;
-	switch (nTYPE) //Add the ResRef of the various henchmen here. Make sure it has three digits (ie 002, 003, ecc.)
-	{
-		case 001: sHENCH = "alkharidbodyguard"; break;
-		default: return;
-	}
+	string sHENCH = RetrieveSummonedCreature(nTYPE, 1);
 	object oHENCH = GetHenchman(oPC);
 	if (oHENCH != OBJECT_INVALID)
 	{
@@ -294,6 +290,16 @@ void Henchman(object oPC, string sITEM)
 	}
 	oHENCH = CreateObject(OBJECT_TYPE_CREATURE, sHENCH, GetLocation(oPC));
 	DelayCommand(0.0f, AddHenchman(oPC, oHENCH));
+}
+
+void SummonPet(object oPC, string sITEM)
+{
+	string sTYPE = GetStringRight(sITEM, 3);
+	int nTYPE = StringToInt(sTYPE);
+	string sPET = RetrieveSummonedCreature(nTYPE);
+	effect ePET = EffectSummonCreature(sPET);
+	ePET = SupernaturalEffect(ePET);
+	ApplyEffectAtLocation(DURATION_TYPE_PERMANENT, ePET, GetLocation(oPC));
 }
 
 void Pickpocket(object oPC, object oTARGET, int nTHIEF)
@@ -399,6 +405,7 @@ void main()
 		int nHEAL = FloatToInt(fHEAL);
 		ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(nHEAL), oPC, 0.0);
 	}
+	else if (GetStringLeft(sITEM, 11) == "summoncomp_") SummonPet(oPC, sITEM);
 	else if (sITEM == "thieftools") Thievery(oPC, oTARGET);
 	else if (GetStringLeft(sITEM, 9) == "henchman_") Henchman(oPC, sITEM);
 	else if (GetStringLeft(sITEM, 5) == "seed_") PlantSeed(oPC, oITEM, sITEM);

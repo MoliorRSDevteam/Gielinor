@@ -15,14 +15,12 @@ void main()
 
          switch(c) // display the corresponding line
          { 
-                      case 0 : s = "Spices for sale! Fresh hot tangy spices!"; break;
-                      case 1 : s = "Come try our secret recipe!"; break;
-					  case 2 : s = "Add a kick to your food!"; break;
-					
+                      case 0 : s = "Hail mighty Icthlarin!"; break;
+                      case 1 : s = "Hail mighty Icthlarin!"; break;
          }
 
         c++; // increment counter
-        if (c > 2) c = 0; // loop back when all lines exhausted
+        if (c > 1) c = 0; // loop back when all lines exhausted
         SetLocalInt(oNPC, "Counter", c); // store the counter
 		SpeakString(s);
         ExecuteScript("nw_c2_default1", oNPC); // execute NWN2 default script

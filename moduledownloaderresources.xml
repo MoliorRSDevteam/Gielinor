@@ -1285,7 +1285,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="F7D259375CDF6C5EAFB8B9F99242149D4A56F7DC" downloadHash="EDD72069F47A12203508475F042629AEFA2521F0" name="rellekka shore.trx" dlsize="3155245" size="14672366" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="A4CB4C8E17D930D457E4C1C86D43CBFCAC8B59A1" downloadHash="C3122E167CBC00A863594AEA85BBCB9BB9D176A2" name="rellekka shore.trx" dlsize="3229108" size="14743306" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2205,7 +2205,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="118EC92219BACA697E14645B6222946C42FB65C9" downloadHash="3043DE0ECA9C4E0E2027D9ABE69B972EF76CF46E" name="kharidian - sophanem.trx" dlsize="4700747" size="29937976" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="29887E6F5795DBC04E93F09141907AD9CB1C1CA0" downloadHash="BD69DB94859F5FE66F59D35B30AF4B8526CEFE20" name="kharidian - sophanem.trx" dlsize="4846162" size="30147687" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2641,6 +2641,46 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="00EF4031D685CFCE55752F5726ADE54ACD77E446" downloadHash="9BCF8470800A7D63E7720EEC6F8B11ADCF489B02" name="pollnivneach - villa.trx" dlsize="40537" size="40791" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="74C8943A3D0033BD9938E057FE6804C1B99700F5" downloadHash="1041D18E5D42707B232748D0112D0FD174932C24" name="Varrock - Gertude's House.trx" dlsize="26810" size="26952" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="FC73DFE2DEC01E61F047B37D614F221511F3B9A9" downloadHash="868C635F25875F1CEA1CD76A99240F0DE2AEFA69" name="kharidian - sophanem {qilh}.trx" dlsize="922628" size="7695872" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="BF47B11B6109827FBDD7D3168181A59FE85B360C" downloadHash="2A74E07BAC160828444627A2E039FB4F6B0D8BB6" name="Sophenam - Pyramid {Vision}.trx" dlsize="300669" size="309310" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="85DD8BAFDFD3A4978C73F41CA6C4C51891C43841" downloadHash="C9EBE58517E656C6B077EEAFC0DB7E893AEA45D6" name="pyramid - ceremonial room {1}.trx" dlsize="59377" size="59938" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="38FAFE5B2C9FD4D90C4C98B0AC56B614ACD35CC2" downloadHash="026C4D6249C4FFE672D41872AB657A3801AA070A" name="sophenam - pyramid {real}.trx" dlsize="304389" size="312690" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="9C0B35BD57EE9E740E0933DAE0E05D43A07BBBAF" downloadHash="FF9C42054B78DDBB9126A16A351B9A80602DFA2F" name="pyramid - ceremonial room {3}.trx" dlsize="59541" size="60108" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="B254D8003AFF5DE5E337F36C7B26A5740A751DFF" downloadHash="1958962FA8F3F875C5F4BD7165E581E761DAE60A" name="pyramid - ceremonial room {2}.trx" dlsize="59603" size="60168" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="29B0DC03A117B27BB07E3AA638FBF2AE9E2A743F" downloadHash="D0C2C0758FF1459095D14C30DE4C8D617DA160EB" name="sophenam - pyramid {vision2}.trx" dlsize="44618" size="45833" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>

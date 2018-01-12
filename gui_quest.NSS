@@ -187,6 +187,11 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			sNAME = "Gertrude's Cat";
 			sDESC = "Gertrude has lost her cat Fluffs and desperately wants to find her. Can you help bring her home?";
 			sREQU = "None.";
+			break;	
+		case 37: 
+			sNAME = "Icthlarin's Little Helper";
+			sDESC = "The cities of the Menaphites have barred their gates to all. An unsettling desert wanderer may know of a secret entrance to Sophenam, the city of the dead.";
+			sREQU = "Gertrude's Cat";
 			break;
 	}
 	if (nTYPE == 1) return sNAME;
