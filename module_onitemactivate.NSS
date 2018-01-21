@@ -297,9 +297,9 @@ void SummonPet(object oPC, string sITEM)
 	string sTYPE = GetStringRight(sITEM, 3);
 	int nTYPE = StringToInt(sTYPE);
 	string sPET = RetrieveSummonedCreature(nTYPE);
-	effect ePET = EffectSummonCreature(sPET);
-	ePET = SupernaturalEffect(ePET);
-	ApplyEffectAtLocation(DURATION_TYPE_PERMANENT, ePET, GetLocation(oPC));
+	object oPET = CreateObject(OBJECT_TYPE_CREATURE, sPET, GetLocation(oPC));
+	AddRosterMemberByCharacter(sPET, oPET);
+	AddRosterMemberToParty(sPET, oPC);
 }
 
 void Pickpocket(object oPC, object oTARGET, int nTHIEF)
@@ -405,9 +405,9 @@ void main()
 		int nHEAL = FloatToInt(fHEAL);
 		ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(nHEAL), oPC, 0.0);
 	}
+	else if (GetStringLeft(sITEM, 9) == "henchman_") Henchman(oPC, sITEM);
 	else if (GetStringLeft(sITEM, 11) == "summoncomp_") SummonPet(oPC, sITEM);
 	else if (sITEM == "thieftools") Thievery(oPC, oTARGET);
-	else if (GetStringLeft(sITEM, 9) == "henchman_") Henchman(oPC, sITEM);
 	else if (GetStringLeft(sITEM, 5) == "seed_") PlantSeed(oPC, oITEM, sITEM);
 	else if (GetStringRight(sITEM, 7) == "compost") Compost(oPC, oITEM, oTARGET);
 	else if (sITEM == "plantcure") PlantCure(oPC, oITEM, oTARGET);
@@ -449,6 +449,6 @@ void main()
 	{
 		SetUserDefinedItemEventNumber(X2_ITEM_EVENT_ACTIVATE);
 		int nRet = ExecuteScriptAndReturnInt(GetUserDefinedItemEventScriptName(oITEM), oMOD);
-		if (nRet == X2_EXECUTE_SCRIPT_END) return;
+		//if (nRet == X2_EXECUTE_SCRIPT_END) return;
 	}
 }

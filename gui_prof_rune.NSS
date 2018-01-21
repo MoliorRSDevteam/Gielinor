@@ -1,11 +1,20 @@
 #include "profession_include"
 
-void RuneTeleport(object oPC, int nINPUT)
+void RuneTeleport(object oPC, string sINPUT)
 {
+	string sTXT;
+	object oAREA = GetArea(oPC);
+	if (GetLocalInt(oAREA, "PREVENT_TELEPORT") == TRUE)
+	{
+		sTXT = "You cannot use teleport in this zone.";
+		DisplayMessageBox(oPC, 0, sTXT);
+		return;
+	}
 	int nXP;
 	int nREQ;
 	string sRUNE;
 	string sLOC;
+	int nINPUT = StringToInt(sINPUT);
 	switch (nINPUT)
 	{
 		case 1: nXP = 35; nREQ = 25; sLOC = "Varrock"; sRUNE = "Fire"; break;
@@ -13,7 +22,6 @@ void RuneTeleport(object oPC, int nINPUT)
 		case 3: nXP = 48; nREQ = 37; sLOC = "Falador"; sRUNE = "Water"; break;
 		default: return;
 	}
-	string sTXT;
 	int nRANK = GetSkillRank(SKILL_RUNECRAFTING, oPC);
 	if (nRANK < nREQ)
 	{
@@ -42,7 +50,7 @@ void RuneTeleport(object oPC, int nINPUT)
 	DisplayMessageBox(oPC, 0, sTXT, "gui_prof_rune", "", TRUE);
 }
 
-void RuneEnchant(object oPC, int nINPUT)
+void RuneEnchant(object oPC, string sINPUT)
 {
 	object oITEM = GetPlayerCurrentTarget(oPC);
 	string sTXT;
@@ -59,6 +67,7 @@ void RuneEnchant(object oPC, int nINPUT)
 	string sRUNE_A;
 	string sRUNE_B;
 	string sMAT;
+	int nINPUT = StringToInt(sINPUT);
 	switch (nINPUT)
 	{
 		case 1: nXP = 17; nREQ = 7; sMAT = "Sapphire"; sRUNE_A = "Water"; sRUNE_B = "Mind"; nRUNE_A = 1; nRUNE_B = 1; break;
@@ -166,8 +175,7 @@ void RuneExecute(object oPC)
 void main(string sCOMMAND, string sINPUT)
 {
 	object oPC = OBJECT_SELF;
-	int nINPUT = StringToInt(sINPUT);
-	if (sCOMMAND == "TELEPORT") RuneTeleport(oPC, nINPUT);
-	else if (sCOMMAND == "ENCHANT") RuneEnchant(oPC, nINPUT);
+	if (sCOMMAND == "TELEPORT") RuneTeleport(oPC, sINPUT);
+	else if (sCOMMAND == "ENCHANT") RuneEnchant(oPC, sINPUT);
 	else RuneExecute(oPC);
 }

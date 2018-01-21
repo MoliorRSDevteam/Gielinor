@@ -1160,7 +1160,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="7766AF0E9783C82C3306C80D7BF6BA7A878F406C" downloadHash="9F3B2894F89EA1B8818108F5939FC4AB3C781F65" name="crandor.trx" dlsize="7555786" size="42793575" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="98C067CDAB08FA5CCE05CA46F60B7C518ECB95D9" downloadHash="2A4C8E94F4F9A1A3054CE8443BBCE1AC9C139CF1" name="crandor.trx" dlsize="7877431" size="43676233" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1400,7 +1400,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="D961563498DB458B685AEB4B980073EC6CE4BA8F" downloadHash="8DD71C9AB3FD6DCF106C34FEB3CCB1289418A134" name="0taverly.trx" dlsize="8976758" size="42639468" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="0C9DB884EAB87B90DAD0EDE5BDAEACE84C1FF565" downloadHash="4EAF5DE4A8AFF24A7F999E1F69223C0959677FAD" name="0taverly.trx" dlsize="9028276" size="42670089" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1690,12 +1690,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="28A44914CEF52D7314EC03080EAA1B5C38D6CF34" downloadHash="BE252CE2B57CA79B0A7E029845C5A16C945C5FED" name="2da_loadingscreens.hak" dlsize="231904044" size="741897819" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="C9AE4EA60B5EB520F8ED9A090485FC88628F2D55" downloadHash="F38EC4AB403397F5E7D8C16F23A7147F70B1D6A3" name="2da_loadingscreens.hak" dlsize="232466226" size="743935390" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="C1F5F0CE309B816D560CAC83FE2C7C20B294D393" downloadHash="1C81E14DF7B7CE76E5553DF4E0C8CE25D26ACFDD" name="xmls.hak" dlsize="53101" size="1377022" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="ACD038EB69E824FBC48A4B1417331AD2719AF353" downloadHash="0095EB612276E9665478464205BF37C91B9C152C" name="xmls.hak" dlsize="53703" size="1385853" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>

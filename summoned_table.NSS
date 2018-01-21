@@ -13,7 +13,7 @@ string RetrieveSummonedCreature(int nTAG, int nTYPE = 0)
 		//Add the ResRef of the various SUMMONED PETS here. Make sure it has three digits (ie 002, 003, ecc.)
 		switch (nTAG)
 		{
-			case 001: return "qgckitten"; break;
+			case 001: return "cat_summon"; break;
 		}
 	}
 	return "";
