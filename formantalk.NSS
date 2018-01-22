@@ -8,9 +8,9 @@ void main()
 
          switch(c) // display the corresponding line
          { 
-                      case 0 : s = "That stone shipment should have arrived a week ago..."; break;
+                      case 0 : s = "Where is that stone shipment?..."; break;
                       case 1 : s = "Its been a long day..."; break;
-					  case 2 : s = "Lets get a move on boys, this wall isnt going to build itself!"; break;
+					  case 2 : s = "Damn beuracrats always halting wall construction..."; break;
 					
          }
 
