@@ -9,6 +9,25 @@
 
 #include "nw_i0_spells"
 
+void InitializeBank(object oPC, object oSTORAGE, string sID)
+{
+	effect eFX = EffectCutsceneImmobilize();
+	eFX = SupernaturalEffect(eFX);
+	ApplyEffectToObject(DURATION_TYPE_PERMANENT, eFX, oPC);
+	location lPC = GetLocation(oPC);
+	oSTORAGE = RetrieveCampaignObject("bank_items", sID, lPC, OBJECT_INVALID, oPC);
+    if (oSTORAGE == OBJECT_INVALID)
+	{
+		oSTORAGE = CreateObject(OBJECT_TYPE_CREATURE, "sfpb_storage", lPC, FALSE, sID);
+		SetFirstName(oSTORAGE, GetFirstName(oPC) + "'s Storage");
+	}
+	AddRosterMemberByCharacter(sID, oSTORAGE);
+	AddRosterMemberToParty(sID, oPC);
+	SetIsRosterMemberSelectable(sID, FALSE);
+	SetOwnersControlledCompanion(oPC, oSTORAGE);
+	DisplayGuiScreen(oPC, "SCREEN_INVENTORY", FALSE, "inventoryscreen.xml");
+}
+
 void main()
 {
     object oPC = GetLastUsedBy();
@@ -19,33 +38,11 @@ void main()
 	if (GetIsDM(oPC) == TRUE) return;
 	if (GetIsDMPossessed(oPC) == TRUE) return;
 	if (GetIsPossessedFamiliar(oPC) == TRUE) return;
-
-	string sDATA = "bank_items";
-	object oChest = OBJECT_SELF;
     string sID = GetPCPlayerName(oPC);
+	object oSTORAGE = GetObjectFromRosterName(sID);
+	if (oSTORAGE != OBJECT_INVALID) return;
 	
-	object oStorer = GetNearestObjectByTag(sID, oPC);
-	if (oStorer != OBJECT_INVALID)
-	{
-		SendMessageToPC(oPC, "Storage Saved.");
-		StoreCampaignObject(sDATA, sID, oStorer, oPC);
-		RemoveRosterMemberFromParty(sID, oPC);
-		RemoveRosterMember(sID);
-		RemoveSpecificEffect(EFFECT_TYPE_CUTSCENEIMMOBILIZE, oPC);
-		return;
-	}
-	
-	effect eFX = EffectCutsceneImmobilize();
-	eFX = SupernaturalEffect(eFX);
-	ApplyEffectToObject(DURATION_TYPE_PERMANENT, eFX, oPC);
-	SendMessageToPC(oPC, "You can now access your persistent storage. To save and dismiss it, use the chest again.");
-	oStorer = RetrieveCampaignObject(sDATA, sID, GetLocation(oChest), OBJECT_INVALID, oPC);
-    if (oStorer == OBJECT_INVALID)
-	{
-		oStorer = CreateObject(OBJECT_TYPE_CREATURE, "sfpb_storage", GetLocation(oChest), FALSE, sID);
-		SetFirstName(oStorer, GetFirstName(oPC) + "'s Storage");
-	}
-	AddRosterMemberByCharacter(sID, oStorer);
-	AddRosterMemberToParty(sID, oPC);
-	SetIsRosterMemberSelectable(sID, FALSE);
+	CloseGUIScreen(oPC, "SCREEN_INVENTORY");
+	RemoveSpecificEffect(EFFECT_TYPE_POLYMORPH, oPC);
+	DelayCommand(0.5f, InitializeBank(oPC, oSTORAGE, sID));
 }

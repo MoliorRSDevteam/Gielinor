@@ -110,7 +110,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="F8BA5212E620DEEA913C3B3968A449119FD2DF43" downloadHash="257B0564BBF1786E6E74197801C208B50C91E006" name="Artisans' Workshop.trx" dlsize="173923" size="262194" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="4E13FBCF340715B12BBB4891AE64B58D7EB59C09" downloadHash="D3FA3C72F8E6C2D0F9D366E5D42B22AE65E96206" name="Artisans' Workshop.trx" dlsize="164967" size="253125" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -295,7 +295,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="47FE0353E706068CF4BB902A480AC2AD7D487310" downloadHash="5A96AA68A28F4185F72E8E73CF8E4FE4A7E0B1BB" name="stronghold of safety.trx" dlsize="1839047" size="1904202" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="53A0F35B71D8E33775F34B38EADF240DC27B7612" downloadHash="B26F724E9BAFA04CB4A6630258AB3534DA4E5865" name="stronghold of safety.trx" dlsize="1826612" size="3339103" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -465,7 +465,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="DBE243501D789A282DAD39DD9DE10D3A0E13FEFD" downloadHash="EF671A32E3B8FE72F3065ECB5F03FCE9D615EEC9" name="falador - west bank.trx" dlsize="12019" size="12000" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="44A0487C4799338A0DDE851151577188FB58ECA5" downloadHash="5D78DEFEF344B4ECF060655E6659254323CCB09E" name="falador - west bank.trx" dlsize="12018" size="12001" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -560,7 +560,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="FAE82A5C4C5305E626ADAE3A0366FDB45BAA4DC5" downloadHash="F09263101D9A940B7C67F0DC09B22C658A6F5A66" name="draynor - bank.trx" dlsize="17238" size="17246" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="281CF631C45D51CA92AC636B8A4741440349F472" downloadHash="4C4BBDA37A46B75421884F225C17CE3FB97782FA" name="draynor - bank.trx" dlsize="17238" size="17246" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -625,7 +625,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="9BF4329F651DA53CFDDF275B8C22D112379FD1FD" downloadHash="E1068318819ED7BA869BA155369B59BF33CAE639" name="halls of camdozaal.trx" dlsize="1781426" size="17076349" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="D054163DD479DABCC2FFDD34F5B99014E700F481" downloadHash="D2CC6B2613AB4A6D6B925B7046322A9FB0735E79" name="halls of camdozaal.trx" dlsize="1786469" size="17076347" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -945,7 +945,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="B154D4D92FA7180381381DE2DB55692CDF101280" downloadHash="A9BF1E94322A764378C16290596224F9D5B4F085" name="varrock.trx" dlsize="11053446" size="47731415" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="DDDB400C481777083D4D16D418B489C21998E91C" downloadHash="4505A0C99E7B57315643130ABB6269086698D4D9" name="varrock.trx" dlsize="11097312" size="47756467" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -960,7 +960,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="F277A949252ED08A6563123CB43D012AA480F2B9" downloadHash="E1F2AC268246A71A0DF361E73699AEFD8193E4C1" name="lumbridge castle.trx" dlsize="134646" size="135341" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="55A237558D693010CAB6A8CA4F754BD56A989753" downloadHash="D381F02D99D5C30337BAE5716B3E4AB8F47331AD" name="lumbridge castle.trx" dlsize="133933" size="134673" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1105,7 +1105,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="769BDA1DFEB4EEBD6BFA506512C479958429BF1E" downloadHash="0D437534B1B17667C4EE0A2FF4477E6964E41330" name="falador.trx" dlsize="5982466" size="31463838" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="57BA47FF47462C1F9A36AF6F5FDE9C6C4A895C9E" downloadHash="09237E93E3DDF9D3246BD6B90C6FC5EA7B773394" name="falador.trx" dlsize="5990597" size="31446334" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1270,7 +1270,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="A5C110D94B4763DA454BE4C2BB24A5859A1A23DB" downloadHash="725FFB9351276D51000C33403477A12439AB75C1" name="al-kharid.trx" dlsize="4447759" size="22178541" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="B9E0BB3D9B69ACBE663092349603FC2344C947E0" downloadHash="E8C3D9C0D5200D39EBB8A22F40C2035E8EC49CAE" name="al-kharid.trx" dlsize="4432776" size="22162957" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1375,7 +1375,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="AB45EE84A5A1FB0D24B78B34D0F5F50E80312751" downloadHash="5E9C5F1C3405F63674E6F2B03E123ABE9E9107D8" name="edgeville - bank.trx" dlsize="23400" size="23377" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="29B8DE2D31C47DF5B9D45B1E7E2E801A9ED3A960" downloadHash="7125722CA15D96A06CBEBBFF3EC6DDB2FECEE75A" name="edgeville - bank.trx" dlsize="23469" size="23456" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1400,7 +1400,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="0C9DB884EAB87B90DAD0EDE5BDAEACE84C1FF565" downloadHash="4EAF5DE4A8AFF24A7F999E1F69223C0959677FAD" name="0taverly.trx" dlsize="9028276" size="42670089" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="FB15F05FE8BBBBE8E0C866D9F54AA365DB12E542" downloadHash="4ECBEB33A06A86D37B3CDB6E8C54D27E9EBF4A97" name="0taverly.trx" dlsize="9017384" size="42670089" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1695,7 +1695,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="99DA21E50E5564087224C636397A7AD471960C60" downloadHash="93BE1234DCB91AB92D6291C50F6FB2814A3FF086" name="xmls.hak" dlsize="53832" size="1387387" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="6509D306405795FB8B4A068E1FBA5242A56723D7" downloadHash="56CC1CA1E00C7BFD525BF03D2AB865F036E3E0A3" name="xmls.hak" dlsize="54040" size="1389621" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2055,12 +2055,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="09E7BE6FF89A17F6F7B77528F53999426C390A36" downloadHash="D293C2E1CBB5A7AA7B25DD928AF86B327FC1DF38" name="Warriors Guild.trx" dlsize="167949" size="1755285" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="131E94B6D5246D7885FFADE0FA689C650BA8CD00" downloadHash="D51EAB4351D388862B80C1AD566CAE28B63E116B" name="Warriors Guild.trx" dlsize="169860" size="1755285" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="8CCE54D1EFC5C1746D326362E5BC7B57F055BFDA" downloadHash="4492B2132FCCCA0497347DE95EF333F7A0F50C9D" name="Burthorpe Mine.trx" dlsize="42977" size="43183" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="D6B48AE3521EE21B2A4E50A17C310CBDA75FA1C9" downloadHash="3151DBA49DD78463892664AEBA99850E5894ADA1" name="Burthorpe Mine.trx" dlsize="42116" size="42277" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2150,7 +2150,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="E10B0DEE4CB3755AEE6CE386FB4BE26C86E924C8" downloadHash="3A0D10CB3DA020A69D2AB09115A2530D85E51701" name="Nardah - Bank.trx" dlsize="19818" size="19827" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="E4EF8A614921AB0716020BD9D2E25A307BEB9CCA" downloadHash="1007B9BBB77848D11CD5D1FA8EF21B0286E8C557" name="Nardah - Bank.trx" dlsize="19804" size="19826" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2400,7 +2400,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="4A70D2EDEDB57CD7000828EA343A516F864E02D8" downloadHash="DC4A9AC372EFFD034137513879B82CE17C789B3D" name="warriors guild courtyard - addy.trx" dlsize="1334577" size="8372646" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="F658C39EEEA3AA5E75B1402375786E6F754045C3" downloadHash="C1AE6A36E8E9383D35FF73E781A17237CD44796E" name="warriors guild courtyard - addy.trx" dlsize="1332465" size="8372648" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2425,12 +2425,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="E3B5CBAC168B2C33EB8E7F3CC58B00B14653F1B3" downloadHash="EB104574EF588753B48194CD5E662A415DB102EB" name="warriors guild courtyard - iron.trx" dlsize="1327723" size="8370962" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="46C087E7BF92719BCDE58AF9CC53ABE7D8CB93A5" downloadHash="71ECCEF56FC45A274B5D9D16B6458DA46D723007" name="warriors guild courtyard - iron.trx" dlsize="1338853" size="8373290" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="198C99949DED3EC2291FD5991A1DFB7B4C3F6528" downloadHash="405B057C0C6F6E5AEF624392B5551991FFE64FA1" name="warriors guild courtyard - mith.trx" dlsize="1332799" size="8368997" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="9970B9975C2EC51051FF0BE473DBCFD77C0CCAAE" downloadHash="14117A64AC92D7DD0DD4252D96642C404FC9A9A0" name="warriors guild courtyard - mith.trx" dlsize="1331499" size="8368996" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2450,7 +2450,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="1F80B85F9B6CA2EF6839AA4696BBD9C293ED193C" downloadHash="6BD041C7312B25E809AAAFFA1406F7DE0260BAFC" name="warriors guild courtyard - rune.trx" dlsize="1330586" size="8370169" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="D3B556594B71840293FD6697D4892A5A963878A6" downloadHash="13D78C58D958AD859474599FA9B90EAC095A17E3" name="warriors guild courtyard - rune.trx" dlsize="1338103" size="8372608" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2460,12 +2460,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="EE6AE5BA73D8A1D8A0DB00D13A1C778D0847ED82" downloadHash="B4844A102B49DEB5A40488639BA2E5620E68221D" name="warriors guild courtyard - steel.trx" dlsize="1342065" size="8372606" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="2695B992C6AFFAA3F2397D254A94E41DBE8A4F77" downloadHash="42AE983211760FDF6D256A5B5FEC0CDD92B1D62D" name="warriors guild courtyard - steel.trx" dlsize="1341845" size="8374848" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="950470F1936A727B1D0FC8467940AE8E64313EE4" downloadHash="7D09C7F34CC566203C74B099B68EF639439DFF26" name="warriors guild courtyard - bron.trx" dlsize="1334197" size="8368029" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="D4BD9A9C7708B3669662071F717B33C2DCE752A3" downloadHash="A1D4B38C612A5B3E9E8E01B9A220E732F7CD1DC1" name="warriors guild courtyard - bron.trx" dlsize="1334111" size="8367855" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2520,7 +2520,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="03B118C787280A078F26C07C84D30D4DA1735B60" downloadHash="D9D3E2DDB1287BE833784BF857820A0D4CC99EEE" name="canifis.trx" dlsize="6873185" size="35632067" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="483BF35342FF5D7EB077B290316460D2356911C9" downloadHash="12BD2CC2B0787AACE3D1E67146616C90E13EC64A" name="canifis.trx" dlsize="6809340" size="35599023" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2625,7 +2625,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="4760C8CC6C0AA3C51FF854A20049BB5208823225" downloadHash="7EDB2D57B3243BBE9DEDA998ADF286D0E33C77ED" name="burthorpe.trx" dlsize="8257832" size="34609894" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="15307D8EE80D4F274586FC849F9361B53B57A533" downloadHash="A8A5507EE6DC5BFA971B916A17CE6A47408BF377" name="burthorpe.trx" dlsize="8279541" size="34619061" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>

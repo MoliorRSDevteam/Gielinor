@@ -1,97 +1,59 @@
 /*
-	1) Put it in the "On Death Script" slot of the intended creature.
-	2) Set the following local variables on said creature:
-     QUEST_ID (String) - The ID of the quest to progress
-     QUEST_STEP (Int) - The step of the quest to progress to.
-     QUEST_XP (Int) - Optional. The one-time XP bonus related to the quest.
-     QUEST_QP (Int) - Optional. The one-time QP bonus related to the quest.
-	 QUEST_WP (String) - Optional. The tag of destination waypoint (if any) after you have killed the creature.
+
+    Script:			AI Script for the Death Event to go NPC's and Mobs.  Mostly a copy of the built in
+					AI with minor modifications.
+	Version:		1.1
+	Plugin Version: 1.93
+	Author:			Marshall Vyper
+	Parameters:		N/A
+	
+	Change Log:		06/23/2011 - 1.00 MV - Initial Release
+					11/12/2012 - 1.1 MV - Added support to call optional Pre Scripts
+	
+	
 */
 
-#include "profession_include"
 
-void SlayerKill(object oPARTY, string sMOB, string sNAME)
-{
-	object oESSENCE = GetItemPossessedBy(oPARTY, "player_essence");
-	if (GetLocalString(oESSENCE, "SLAYER_TAG") != sMOB) return;
-	string sTXT;
-	int nTOTAL = GetLocalInt(oESSENCE, "SLAYER_TOTAL");
-	int nKILLS = GetLocalInt(oESSENCE, "SLAYER_KILLS") + 1;
-	if (nKILLS < nTOTAL)
-	{
-		sTXT = sNAME + "(s) killed: " + IntToString(nKILLS) + "/" + IntToString(nTOTAL);
-		SetLocalInt(oESSENCE, "SLAYER_KILLS", nKILLS);
-	}
-	else
-	{
-		int nXP = GetLocalInt(oESSENCE, "SLAYER_EXP");
-		GiveCraftXP(oPARTY, SKILL_SLAYER, nXP);
-		sTXT = "You have killed all the " + sNAME + "(s) required by the Slayer Master!";
-		DeleteLocalInt(oESSENCE, "SLAYER_KILLS");
-		DeleteLocalInt(oESSENCE, "SLAYER_TOTAL");
-		DeleteLocalInt(oESSENCE, "SLAYER_EXP");
-		DeleteLocalString(oESSENCE, "SLAYER_TAG");	
-	}
-	FloatingTextStringOnCreature(sTXT, oPARTY, FALSE);
-}
+// /////////////////////////////////////////////////////////////////////////////////////////////////////
+// INCLUDES
+// /////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "x2_inc_compon"
+#include "x0_i0_spawncond"
 
-void SlayAndTeleportCheck(object oPC, object oMOB)
-{
-	string sMOB = GetTag(oMOB);
-	string sNAME = GetName(oMOB);
-	string sWP = GetLocalString(oMOB, "QUEST_TP");
-	object oWP = GetObjectByTag(sWP);
-	object oINVALID = OBJECT_INVALID;
-	object oPARTY = GetFirstFactionMember(oPC, FALSE);
-	while (oPARTY != oINVALID)
-	{
-		if (GetIsOwnedByPlayer(oPARTY) == TRUE) SlayerKill(oPARTY, sMOB, sNAME);
-		if (oWP != oINVALID) AssignCommand(oPARTY, JumpToObject(oWP));
-		oPARTY = GetNextFactionMember(oPC, FALSE);
-	}	
-}
 
-void UpdateQuest(object oPC, object oMOB)
-{
-	string sQUEST = GetLocalString(oMOB, "QUEST_ID");
-	if (sQUEST == "") return;
-	int nSTEP = GetLocalInt(oMOB, "QUEST_STEP");
-	int nXP = GetLocalInt(oMOB, "QUEST_XP");
-	int nQP = GetLocalInt(oMOB, "QUEST_QP");
-	AddScriptParameterString(sQUEST);
-	AddScriptParameterInt(nSTEP);
-	AddScriptParameterInt(nXP);
-	AddScriptParameterInt(nQP);
-	AddScriptParameterInt(FALSE); //Not from Conversation
-	AddScriptParameterInt(TRUE); //Check all party members by default
-	ExecuteScriptEnhanced("quest_action", oPC);	
-}
 
+// /////////////////////////////////////////////////////////////////////////////////////////////////////
+// MAIN ROUTINE
+// /////////////////////////////////////////////////////////////////////////////////////////////////////
 void main()
 {
-	object oMODULE = GetModule();
-	object oMOB = OBJECT_SELF;
-	object oPC = GetLastKiller();
-	UpdateQuest(oPC, oMOB);
-	DelayCommand(0.0f, SlayAndTeleportCheck(oPC, oMOB));
+	// Run custom script
+	string sScript = GetLocalString(OBJECT_SELF, "LEG_AI_OnDeathScript");
+	if (sScript != "")
+		ExecuteScript(sScript, OBJECT_SELF);
 	
-	// If the LOOT Plugin is active.
-	if (GetLocalInt(oMODULE, "LEG_LOOT_ACTIVE") == TRUE)
-	{
-		if (GetLocalInt(oMODULE, "LEG_LOOT_ONDEATH") == TRUE)
-		{
-			object oParent = GetLocalObject(oMOB, "SPAWN_Parent");
-			if (oParent == OBJECT_INVALID) oParent = oMOB;
-			else if (GetLocalString(oParent, "LEG_LOOT_ID") == "") oParent = oMOB;
-		
-			// If the Spawn plugin says to not Drop Loot on Death, then we don't make loot at all here.
-			// Of course if we are not using the spawn plugin at all, then go ahead and make loot.
-			if (!GetLocalInt(oMODULE, "LEG_SPAWN_ACTIVE") || !GetLocalInt(GetLocalObject(oMOB, "SPAWN_Parent"),"LEG_SPAWN_DoNotDropMyLoot"))
-			{
-				AddScriptParameterObject(oPC);
-				AddScriptParameterObject(oParent);
-				ExecuteScriptEnhanced("leg_loot_makeloot", oMOB);
-			}
-		}
-	}
+	string sDeathScript = GetLocalString(OBJECT_SELF, "DeathScript");
+	if (sDeathScript != "")
+		ExecuteScript(sDeathScript, OBJECT_SELF);
+
+	
+    int nClass = GetLevelByClass(CLASS_TYPE_COMMONER);
+    int nAlign = GetAlignmentGoodEvil(OBJECT_SELF);
+    object oKiller = GetLastKiller();
+
+    // If we're a good/neutral commoner,
+    // adjust the killer's alignment evil
+    if(nClass > 0 && (nAlign == ALIGNMENT_GOOD || nAlign == ALIGNMENT_NEUTRAL))
+    {
+        AdjustAlignment(oKiller, ALIGNMENT_EVIL, 5);
+    }
+
+    // Call to allies to let them know we're dead
+    SpeakString("NW_I_AM_DEAD", TALKVOLUME_SILENT_TALK);
+
+    //Shout Attack my target, only works with the On Spawn In setup
+    SpeakString("NW_ATTACK_MY_TARGET", TALKVOLUME_SILENT_TALK);
+	
+	// Last thing we want to do is to call our Master Death script!
+	ExecuteScript("leg_all_masterdeath", OBJECT_SELF);
 }
