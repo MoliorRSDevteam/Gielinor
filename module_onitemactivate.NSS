@@ -297,9 +297,17 @@ void SummonPet(object oPC, string sITEM)
 	string sTYPE = GetStringRight(sITEM, 3);
 	int nTYPE = StringToInt(sTYPE);
 	string sPET = RetrieveSummonedCreature(nTYPE);
+	string sROSTER = "Pet_" + GetPCPlayerName(oPC);
+	object oCURRENT = GetObjectFromRosterName(sROSTER);
+	string sCURRENT = GetResRef(oCURRENT);
+	RemoveRosterMemberFromParty(sROSTER, oPC);
+	RemoveRosterMember(sROSTER);
+	if (sCURRENT == sPET) return;
+	
 	object oPET = CreateObject(OBJECT_TYPE_CREATURE, sPET, GetLocation(oPC));
-	AddRosterMemberByCharacter(sPET, oPET);
-	AddRosterMemberToParty(sPET, oPC);
+	AddRosterMemberByCharacter(sROSTER, oPET);
+	AddRosterMemberToParty(sROSTER, oPC);
+	SetIsRosterMemberSelectable(sROSTER, FALSE);
 }
 
 void Pickpocket(object oPC, object oTARGET, int nTHIEF)
