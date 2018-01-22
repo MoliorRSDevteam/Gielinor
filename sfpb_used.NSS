@@ -1,37 +1,51 @@
 //::///////////////////////////////////////////////
-//:: Scarface's Persistent Banking
+//:: Persistent Banking
 //:: sfpb_used
 //:://////////////////////////////////////////////
 /*
-    Written By Scarface
+    Written By by Clangeddin
 */
 //////////////////////////////////////////////////
 
-#include "sfpb_config"
+#include "nw_i0_spells"
+
 void main()
 {
-    // Vars
     object oPC = GetLastUsedBy();
-    object oChest = OBJECT_SELF;
-    string sID = SF_GetPlayerID(oPC);
-    string sUserID = GetLocalString(oChest, "USER_ID");
-    string sModName = GetName(GetModule());
+	
+	// End script if any of these conditions are met
+	if (GetIsOwnedByPlayer(oPC) == FALSE) return;
+    if (GetIsPC(oPC) == FALSE) return;
+	if (GetIsDM(oPC) == TRUE) return;
+	if (GetIsDMPossessed(oPC) == TRUE) return;
+	if (GetIsPossessedFamiliar(oPC) == TRUE) return;
 
-    // End script if any of these conditions are met
-    if (!GetIsPC(oPC) ||
-         GetIsDM(oPC) ||
-         GetIsDMPossessed(oPC) ||
-         GetIsPossessedFamiliar(oPC)) return;
-
-    // If the chest is already in use then this must be a thief
-    if (sUserID != "" && sUserID != sID)
-    {
-        AssignCommand(oPC, ClearAllActions());
-        SetCutsceneMode(oPC, TRUE);
-        AssignCommand(oPC, ActionMoveAwayFromObject(oChest, TRUE, 50.0));
-        FloatingTextStringOnCreature("Stop thief!!!!!", oPC);
-        SendMessageToAllDMs(GetName(oPC) + " is trying to steal from a bank " +
-                                           "chest that is already in use.");
-        DelayCommand(5.0, SetCutsceneMode(oPC, FALSE));
-    }
+	string sDATA = "bank_items";
+	object oChest = OBJECT_SELF;
+    string sID = GetPCPlayerName(oPC);
+	
+	object oStorer = GetNearestObjectByTag(sID, oPC);
+	if (oStorer != OBJECT_INVALID)
+	{
+		SendMessageToPC(oPC, "Storage Saved.");
+		StoreCampaignObject(sDATA, sID, oStorer, oPC);
+		RemoveRosterMemberFromParty(sID, oPC);
+		RemoveRosterMember(sID);
+		RemoveSpecificEffect(EFFECT_TYPE_CUTSCENEIMMOBILIZE, oPC);
+		return;
+	}
+	
+	effect eFX = EffectCutsceneImmobilize();
+	eFX = SupernaturalEffect(eFX);
+	ApplyEffectToObject(DURATION_TYPE_PERMANENT, eFX, oPC);
+	SendMessageToPC(oPC, "You can now access your persistent storage. To save and dismiss it, use the chest again.");
+	oStorer = RetrieveCampaignObject(sDATA, sID, GetLocation(oChest), OBJECT_INVALID, oPC);
+    if (oStorer == OBJECT_INVALID)
+	{
+		oStorer = CreateObject(OBJECT_TYPE_CREATURE, "sfpb_storage", GetLocation(oChest), FALSE, sID);
+		SetFirstName(oStorer, GetFirstName(oPC) + "'s Storage");
+	}
+	AddRosterMemberByCharacter(sID, oStorer);
+	AddRosterMemberToParty(sID, oPC);
+	SetIsRosterMemberSelectable(sID, FALSE);
 }
