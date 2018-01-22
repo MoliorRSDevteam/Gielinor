@@ -270,7 +270,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="9255570A766B2D8DC2372F4D0D7FE4DBF8487E5C" downloadHash="736ACD3F77CB0634FF1CC00FE764653BF99129EA" name="road to falador.trx" dlsize="12321340" size="49031475" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="D53FC1D16787EA536643773F6D10E2AAA8F5BA6D" downloadHash="F30059F711B9AFAA5A050046F3BCF8FDDA05053D" name="road to falador.trx" dlsize="12309287" size="49027293" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -420,7 +420,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="C8EA96AB12F9E38D4A3AF113205CB48ADC5F436D" downloadHash="CBF1062D1361DFD402B38AB28D2FDACFFCBA6E96" name="east varrock.trx" dlsize="6745965" size="28812569" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="09BBAC5C25501BED4085536D14AB31A1A0634D4D" downloadHash="4EE949E93BE06DDB9E8C74624405F834A08AEDA2" name="east varrock.trx" dlsize="6726606" size="28791931" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -685,7 +685,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="FA1E9457E447333A702B8BE552BF11657FD4E7E8" downloadHash="54F78949E5FA8D6E46F4B412583DC472176E15D4" name="musa point.trx" dlsize="6681914" size="42386946" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="AB0A4778E8D730343CC173D0B13DAE6406A68E8E" downloadHash="BD54F2AD753516DB1CF6A88E89EED39B41777DD8" name="musa point.trx" dlsize="6709219" size="42418974" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -945,7 +945,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="D59C89700CA0E32D6822A2C2B4422420C535F7FC" downloadHash="550E33C5B5244824A5D256DE68F4931DEFC38992" name="varrock.trx" dlsize="11136972" size="47805915" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="B154D4D92FA7180381381DE2DB55692CDF101280" downloadHash="A9BF1E94322A764378C16290596224F9D5B4F085" name="varrock.trx" dlsize="11053446" size="47731415" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -955,7 +955,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="D79FBF826C3C062F9C2F3FFE7749354B74946737" downloadHash="F47980820E19A6C47FDB0D09404BEA75397CFB36" name="road to varrock.trx" dlsize="8166969" size="35974158" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="7FA717CB3B8724A88A0877A92E05B26D3B1AD84D" downloadHash="3C671E1BF31125F1C016F10AEF76E3DC41C2B06E" name="road to varrock.trx" dlsize="8217588" size="36122697" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1105,7 +1105,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="4F00717CBAADE73FCD6C50016D0ACCCCCB06C4FE" downloadHash="A3503A1D746A73E6B973F9891544851B49E238E8" name="falador.trx" dlsize="6041886" size="31506026" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="769BDA1DFEB4EEBD6BFA506512C479958429BF1E" downloadHash="0D437534B1B17667C4EE0A2FF4477E6964E41330" name="falador.trx" dlsize="5982466" size="31463838" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1690,12 +1690,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="C9AE4EA60B5EB520F8ED9A090485FC88628F2D55" downloadHash="F38EC4AB403397F5E7D8C16F23A7147F70B1D6A3" name="2da_loadingscreens.hak" dlsize="232466226" size="743935390" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="5DF5B1E8CF6810E63FD4C83FCB412CA7A2F629E3" downloadHash="318B1D7F8B01F1BD7BD646EC8A3D69F644073ACC" name="2da_loadingscreens.hak" dlsize="232481264" size="743955399" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="ACD038EB69E824FBC48A4B1417331AD2719AF353" downloadHash="0095EB612276E9665478464205BF37C91B9C152C" name="xmls.hak" dlsize="53703" size="1385853" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="99DA21E50E5564087224C636397A7AD471960C60" downloadHash="93BE1234DCB91AB92D6291C50F6FB2814A3FF086" name="xmls.hak" dlsize="53832" size="1387387" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2055,7 +2055,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="954BBFD3F8C225500B49DD574A33C0C544EFBBA1" downloadHash="3708F0F446988B652961E218479812375872FF71" name="Warriors Guild.trx" dlsize="163938" size="1751694" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="09E7BE6FF89A17F6F7B77528F53999426C390A36" downloadHash="D293C2E1CBB5A7AA7B25DD928AF86B327FC1DF38" name="Warriors Guild.trx" dlsize="167949" size="1755285" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2400,7 +2400,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="372BF691BFC7A492414402C2106EB03AA27F5A9C" downloadHash="41DA75C6C31C30239DB65443E23F94C1017B6A51" name="warriors guild courtyard - addy.trx" dlsize="1331838" size="8370169" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="4A70D2EDEDB57CD7000828EA343A516F864E02D8" downloadHash="DC4A9AC372EFFD034137513879B82CE17C789B3D" name="warriors guild courtyard - addy.trx" dlsize="1334577" size="8372646" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2425,12 +2425,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="5C8CD3391E1943B723836DBFF3559AEDCFD8E3B4" downloadHash="845D6C77ADDB048AFED24E459EBBB324F0605D6C" name="warriors guild courtyard - iron.trx" dlsize="1332864" size="8370169" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="E3B5CBAC168B2C33EB8E7F3CC58B00B14653F1B3" downloadHash="EB104574EF588753B48194CD5E662A415DB102EB" name="warriors guild courtyard - iron.trx" dlsize="1327723" size="8370962" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="3727D90BD5ABEB87DA5EE0E6FDDA58C660D99375" downloadHash="9912FCAA98D979C5DFFFDF02B104D98F403E8F80" name="warriors guild courtyard - mith.trx" dlsize="1325758" size="8368998" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="198C99949DED3EC2291FD5991A1DFB7B4C3F6528" downloadHash="405B057C0C6F6E5AEF624392B5551991FFE64FA1" name="warriors guild courtyard - mith.trx" dlsize="1332799" size="8368997" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2450,7 +2450,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="B84D4E2A305480889E675BE693F2EF0BFC1A20AC" downloadHash="6E603135E1BB206E9081375024423C7143699DE6" name="warriors guild courtyard - rune.trx" dlsize="1335040" size="8370168" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="1F80B85F9B6CA2EF6839AA4696BBD9C293ED193C" downloadHash="6BD041C7312B25E809AAAFFA1406F7DE0260BAFC" name="warriors guild courtyard - rune.trx" dlsize="1330586" size="8370169" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2460,12 +2460,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="0D2663B1F1E45E582BE82BC22E2784BAF737B674" downloadHash="3EDBEC017ECF4D194F7717F208E0C41197247569" name="warriors guild courtyard - steel.trx" dlsize="1323025" size="8370169" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="EE6AE5BA73D8A1D8A0DB00D13A1C778D0847ED82" downloadHash="B4844A102B49DEB5A40488639BA2E5620E68221D" name="warriors guild courtyard - steel.trx" dlsize="1342065" size="8372606" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="F4C4B754DB3DE83CA4D641A73BFF78F6340830D6" downloadHash="F8594C738DCD23797FA7762F162C6D8FF6DC035B" name="warriors guild courtyard - bron.trx" dlsize="1338303" size="8381019" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="950470F1936A727B1D0FC8467940AE8E64313EE4" downloadHash="7D09C7F34CC566203C74B099B68EF639439DFF26" name="warriors guild courtyard - bron.trx" dlsize="1334197" size="8368029" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2625,7 +2625,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="1F8A151AEE69B1BB30D32E0D002C2955BE4CE492" downloadHash="0EE524E36A2BA9B1765ABF96C34446AF3DD57CD2" name="burthorpe.trx" dlsize="8275840" size="34609528" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="4760C8CC6C0AA3C51FF854A20049BB5208823225" downloadHash="7EDB2D57B3243BBE9DEDA998ADF286D0E33C77ED" name="burthorpe.trx" dlsize="8257832" size="34609894" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
