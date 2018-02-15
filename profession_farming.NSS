@@ -1,24 +1,14 @@
-#include "profession_include"
+#include "table_farming"
 
 void CheckPlant(object oPLANT, object oPC)
 {
 	int nSKILL = GetSkillRank(SKILL_FARMING, oPC);
 	int nREQ = GetLocalInt(oPLANT, "PLANT_REQ");
 	int nCHANCE = 49 - (nSKILL - nREQ);
-	if (Random(100) > nCHANCE)
-	{
-		int nITEMS = 1 + (nSKILL - nREQ) / 2;
-		if (nITEMS > 30) nITEMS = 30;
-		else if (nITEMS < 1) nITEMS = 1;
-		int nXP = GetLocalInt(oPLANT, "PLANT_XP");
-		string sITEM = GetTag(oPLANT);
-		GiveCraftXP(oPC, SKILL_FARMING, nXP);
-		object oITEM = CreateItemOnObject(sITEM, oPC, nITEMS);
-		DestroyObject(oPLANT);
-	}
+	if (Random(100) > nCHANCE) HarvestPlant(oPC, oPLANT);
 	else 
 	{
-		FloatingTextStringOnCreature("This plant is ill. You will need a Plant Cure to harvest it.", oPC, FALSE);
+		FloatingTextStringOnCreature("This plant is ill. You will need to use a Plant Cure to harvest it.", oPC, FALSE);
 		SetLocalInt(oPLANT, "PLANT_STAGE", 4);
 	}
 }

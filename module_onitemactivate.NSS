@@ -6,6 +6,7 @@
 #include "x2_inc_switches"
 #include "profession_include"
 #include "summoned_table"
+#include "table_farming"
 
 void RenewFire(object oFIRE, int nLIGHT, string sFLAME, float fDUR)
 {
@@ -130,10 +131,8 @@ void UseShears(object oPC, string sTARGET)
 		SetLocalInt(oPC, "SHEARS", TRUE);
 		if (d100() > 49) CreateItemOnObject("ballofwool", oPC);
 		else SendMessageToPC(oPC, "You failed to collect a ball of wool. (50% chance)");
-		DelayCommand(10.0, DeleteLocalInt(oPC, "SHEARS"));
-		
+		DelayCommand(10.0, DeleteLocalInt(oPC, "SHEARS"));	
 	}
-	
 }
 
 void BuryBones(object oPC, string sITEM)
@@ -155,78 +154,22 @@ void PrayerPotion(object oPC, string sITEM)
 	SetLocalInt(oESSENCE, "PRAYER_POINTS", nNEW);
 }
 
-void AdjustPlant(object oPLANT, string sNAME, float fTIME, int nXP, int nFARM)
-{
-	SetFirstName(oPLANT, sNAME + " (planted)");
-	SetLocalInt(oPLANT, "PLANT_STAGE", 1);
-	SetLocalInt(oPLANT, "PLANT_XP", nXP);
-	SetLocalInt(oPLANT, "PLANT_REQ", nFARM);
-	SetLocalFloat(oPLANT, "PLANT_TIME", fTIME);
-}
-
 void PlantSeed(object oPC, object oITEM, string sITEM)
 {
 	object oAREA = GetArea(oPC);
+	if (GetIsAreaNatural(oAREA) != AREA_NATURAL)
+	{
+		SendMessageToPC(oPC, "Seeds can be planted only in natural areas.");
+		return;
+	}
 	if (GetIsAreaInterior(oAREA) == TRUE)
 	{
-		SendMessageToPC(oPC, "Seeds may not be planted in underground or interior areas.");
+		SendMessageToPC(oPC, "Seeds cannot be planted in underground or interior areas.");
 		return;
 	}
 	string sSEED = GetStringRight(sITEM, 3);
-	string sBLUEPRINT;
-	string sNAME;
-	float fTIME = 600.0;
-	int nFARM;
 	int nSEED = StringToInt(sSEED);
-	switch (nSEED)
-	{
-		//Allotments
-		case 100: sNAME = "Potato";		sBLUEPRINT = "cabbage";		nFARM = 1;	break;
-		case 101: sNAME = "Onion";		sBLUEPRINT = "onion";		nFARM = 5;	break;
-		case 102: sNAME = "Cabbage";	sBLUEPRINT = "cabbage";		nFARM = 7; 	break;
-		case 103: sNAME = "Tomato";		sBLUEPRINT = "cabbage";		nFARM = 12;	break;
-		case 104: sNAME = "Sweetcorn";	sBLUEPRINT = "cabbage";		nFARM = 20;	break;
-		case 105: sNAME = "Strawberry";	sBLUEPRINT = "cabbage";		nFARM = 31;	break;
-		case 106: sNAME = "Watermelon";	sBLUEPRINT = "cabbage";		nFARM = 47;	break;
-		
-		//Flowers
-		case 205: sNAME = "Limpwurt";	sBLUEPRINT = "cabbage";		nFARM = 26; break;
-		
-		//Herbs
-		case 300: sNAME = "Guam";		sBLUEPRINT = "cabbage"; 	nFARM = 9;	fTIME = 1800.0; break;
-		case 301: sNAME = "Marrentil";	sBLUEPRINT = "cabbage";		nFARM = 14;	fTIME = 1800.0; break;
-		case 302: sNAME = "Tarromin";	sBLUEPRINT = "cabbage";		nFARM = 19;	fTIME = 1800.0; break;
-		case 303: sNAME = "Harralander";sBLUEPRINT = "cabbage";		nFARM = 26;	fTIME = 1800.0; break;
-		case 305: sNAME = "Ranarr";		sBLUEPRINT = "cabbage";		nFARM = 32;	fTIME = 1800.0; break;
-		
-		//Hops (Not Implemented yet)
-		case 400: sNAME = "Barley";		sBLUEPRINT = "cabbage";		nFARM = 3;	break;
-		
-		//Bushes
-		case 500: sNAME = "Redberry";	sBLUEPRINT = "cabbage";		nFARM = 10; break;
-		case 501: sNAME = "Cadava";		sBLUEPRINT = "cabbage";		nFARM = 22; break;
-		
-		//Trees
-		case 600: sNAME = "Oak Tree";		sBLUEPRINT = "oakstump";	nFARM = 15;	fTIME = 3600.0; break;
-		case 601: sNAME = "Willow Tree";	sBLUEPRINT = "willowstump";	nFARM = 30; fTIME = 3600.0; break;
-		case 602: sNAME = "Maple Tree";		sBLUEPRINT = "maplestump";	nFARM = 45; fTIME = 3600.0; break;
-		case 603: sNAME = "Yew Tree";		sBLUEPRINT = "yewstump";	nFARM = 60; fTIME = 3600.0; break;
-		case 604: sNAME = "Magic Tree";		sBLUEPRINT = "magicstump";	nFARM = 75; fTIME = 3600.0; break;
-		
-		default: return;
-	}
-	if (GetSkillRank(SKILL_FARMING, oPC) < nFARM)
-	{
-		SendMessageToPC(oPC, "You must have at least " + IntToString(nFARM) + "ranks in Farming to be able to plant that seed.");
-		return;
-	}
-	int nTIME = FloatToInt(fTIME);
-	int nXP = nFARM * 10 * (nTIME / 60);
-	int nSTACK = GetItemStackSize(oITEM);
-	if (nSTACK > 1) SetItemStackSize(oITEM, nSTACK - 1);
-	else DestroyObject(oITEM);
-	object oPLANT = CreateObject(OBJECT_TYPE_PLACEABLE, sBLUEPRINT, GetLocation(oPC), FALSE, sNAME);
-	DelayCommand(0.0f, AdjustPlant(oPLANT, sNAME, fTIME, nXP, nFARM));
+	RetrieveProperPlant(oPC, oITEM, nSEED);
 }
 
 void Compost(object oPC, object oITEM, object oPLANT)
@@ -258,22 +201,7 @@ void PlantCure(object oPC, object oITEM, object oPLANT)
 	int nITEM = GetItemStackSize(oITEM);
 	if (nITEM > 1) SetItemStackSize(oITEM, nITEM - 1);
 	else DestroyObject(oITEM);
-	int nXP = GetLocalInt(oPLANT, "PLANT_XP");
-	GiveCraftXP(oPC, SKILL_FARMING, nXP);
-	if (GetLocalInt(oPLANT, "PLANT_STUMP") == TRUE)
-	{
-		SendMessageToPC(oPC, "The tree stump may now be harvested.");
-		DeleteLocalInt(oPLANT, "PLANT_STAGE");
-		return;
-	}
-	int nSKILL = GetSkillRank(SKILL_FARMING, oPC);
-	int nREQ = GetLocalInt(oPLANT, "PLANT_REQ");
-	int nITEMS = 1 + (nSKILL - nREQ) / 2;
-	if (nITEMS > 30) nITEMS = 30;
-	else if (nITEMS < 1) nITEMS = 1;
-	string sITEM = GetTag(oPLANT);
-	CreateItemOnObject(sITEM, oPC, nITEMS);
-	DestroyObject(oPLANT);
+	HarvestPlant(oPC, oPLANT);
 }
 
 void Henchman(object oPC, string sITEM)
@@ -292,22 +220,20 @@ void Henchman(object oPC, string sITEM)
 	DelayCommand(0.0f, AddHenchman(oPC, oHENCH));
 }
 
+void SummonPet2(object oPC, string sPET)
+{
+	location lPET = CalcSafeLocation(oPC, GetLocation(oPC), RADIUS_SIZE_COLOSSAL, TRUE, TRUE);
+	effect eFX = EffectSummonCreature(sPET);
+	eFX = SupernaturalEffect(eFX);
+	ApplyEffectAtLocation(DURATION_TYPE_PERMANENT, eFX, lPET);
+}
+
 void SummonPet(object oPC, string sITEM)
 {
 	string sTYPE = GetStringRight(sITEM, 3);
 	int nTYPE = StringToInt(sTYPE);
 	string sPET = RetrieveSummonedCreature(nTYPE);
-	string sROSTER = "Pet_" + GetPCPlayerName(oPC);
-	object oCURRENT = GetObjectFromRosterName(sROSTER);
-	string sCURRENT = GetResRef(oCURRENT);
-	RemoveRosterMemberFromParty(sROSTER, oPC);
-	RemoveRosterMember(sROSTER);
-	if (sCURRENT == sPET) return;
-	
-	object oPET = CreateObject(OBJECT_TYPE_CREATURE, sPET, GetLocation(oPC));
-	AddRosterMemberByCharacter(sROSTER, oPET);
-	AddRosterMemberToParty(sROSTER, oPC);
-	SetIsRosterMemberSelectable(sROSTER, FALSE);
+	AssignCommand(oPC, SummonPet2(oPC, sPET));
 }
 
 void Pickpocket(object oPC, object oTARGET, int nTHIEF)

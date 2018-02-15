@@ -960,7 +960,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="55A237558D693010CAB6A8CA4F754BD56A989753" downloadHash="D381F02D99D5C30337BAE5716B3E4AB8F47331AD" name="lumbridge castle.trx" dlsize="133933" size="134673" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="F90DA50DED42C57431224F5BC4AD96407B97066C" downloadHash="65E6C6ADFABF6CBA56E7A99B85F9AF9A8FD959AC" name="lumbridge castle.trx" dlsize="134008" size="134679" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1400,7 +1400,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="FB15F05FE8BBBBE8E0C866D9F54AA365DB12E542" downloadHash="4ECBEB33A06A86D37B3CDB6E8C54D27E9EBF4A97" name="0taverly.trx" dlsize="9017384" size="42670089" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="910BD81117CC95391D728B09FFD99FCEFB6A8503" downloadHash="14AF38044E7F7AFBE28641FB6F13555D0DD994DA" name="0taverly.trx" dlsize="8989842" size="42670088" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1690,12 +1690,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="5DF5B1E8CF6810E63FD4C83FCB412CA7A2F629E3" downloadHash="318B1D7F8B01F1BD7BD646EC8A3D69F644073ACC" name="2da_loadingscreens.hak" dlsize="232481264" size="743955399" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="1F645B1480837122793D306ACAD72AE56BF1FEBF" downloadHash="5D7C26D3232011D9A81EAAA236A980E3EC09E3EA" name="2da_loadingscreens.hak" dlsize="232386728" size="743693896" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="6509D306405795FB8B4A068E1FBA5242A56723D7" downloadHash="56CC1CA1E00C7BFD525BF03D2AB865F036E3E0A3" name="xmls.hak" dlsize="54040" size="1389621" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="B4D7CE62B6CE933A64108C6D0DE9D312701B9E23" downloadHash="85930E5A2FEA923EF506B0C54094D9F62874E555" name="xmls.hak" dlsize="54181" size="1386422" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2430,7 +2430,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="9970B9975C2EC51051FF0BE473DBCFD77C0CCAAE" downloadHash="14117A64AC92D7DD0DD4252D96642C404FC9A9A0" name="warriors guild courtyard - mith.trx" dlsize="1331499" size="8368996" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="146BE71E86D53EFC438401BF237D4937C18EB0F3" downloadHash="2A8533DBD9ED9AF761852B5C62D0922346633F85" name="warriors guild courtyard - mith.trx" dlsize="1333582" size="8368998" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2665,7 +2665,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="38FAFE5B2C9FD4D90C4C98B0AC56B614ACD35CC2" downloadHash="026C4D6249C4FFE672D41872AB657A3801AA070A" name="sophenam - pyramid {real}.trx" dlsize="304389" size="312690" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="0AA150DB035A14330507A65DF343C817573C9EC5" downloadHash="EC72EFF1FDDE7E88070F91643EBF952E0929799B" name="sophenam - pyramid {real}.trx" dlsize="304397" size="312691" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>

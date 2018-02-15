@@ -15,13 +15,11 @@
 
 */
 
-
 // /////////////////////////////////////////////////////////////////////////////////////////////////////
 // INCLUDES
 // /////////////////////////////////////////////////////////////////////////////////////////////////////
+
 #include "leg_all_masteritem_def"
-
-
 
 // /////////////////////////////////////////////////////////////////////////////////////////////////////
 // MAIN ROUTINE
@@ -30,10 +28,8 @@ void main()
 {
 
 	// Let's get the Item, the person that acquired it and the ResRef/Tag of it.
-	object oItem = GetModuleItemAcquired();
-	object oPC = GetModuleItemAcquiredBy();	
-	string sItemRef = GetResRef(oItem);	
-	//string sItemTag = GetTag(oItem);
+	object oPC = GetModuleItemAcquiredBy();
+	if (GetResRef(oPC) == "sfpb_storage") return;
 
 	// Often times items that come from stores etc, will not have any variables saved on them.  This is an engine bug
 	// that REALLY REALLY sucks.  As a result, the only workaround is to identify the item the PC got and apply
@@ -44,26 +40,23 @@ void main()
 	//LEG_COMMON_ITEMACQUIRED_Defs(sItemRef, oItem);
 
 	// As long as we're a playah.
-	if (GetIsPC(oPC))
+	if (GetIsPC(oPC) == FALSE) return;
+	
+	object oItem = GetModuleItemAcquired();
+	string sItemRef = GetResRef(oItem);	
+	
+	// Check for NON Quest Items
+	LEG_COMMON_ITEMACQUIRED_Defs(sItemRef, oItem);
+		
+	// Check for the Quest Plugin and fire its script if it is.
+	if (GetLocalInt(GetModule(), "LEG_QUEST_ACTIVE"))
 	{
-		// Check for NON Quest Items
-		LEG_COMMON_ITEMACQUIRED_Defs(sItemRef, oItem);
-		
-		// Check for the Quest Plugin and fire its script if it is.
-		if (GetLocalInt(GetModule(), "LEG_QUEST_ACTIVE"))
-		{
-			AddScriptParameterObject(oPC);
-			AddScriptParameterObject(oItem);
-			ExecuteScriptEnhanced("leg_quest_itemacquired", oPC);		
-		}
-		
-		// Check for the Triston Quest System and fire its script if it is.
-		ExecuteScript("tb_itemacquired", oPC);
-		//if (GetLocalInt(GetModule(), "LEG_QUEST_ACTIVE"))
-		//{
-		//	AddScriptParameterObject(oPC);
-		//	AddScriptParameterObject(oItem);
-		//	ExecuteScriptEnhanced("tb_itemacquired", oPC);
-		//}
+		AddScriptParameterObject(oPC);
+		AddScriptParameterObject(oItem);
+		ExecuteScriptEnhanced("leg_quest_itemacquired", oPC);		
 	}
+		
+	// Check for the Triston Quest System and fire its script if it is.
+	ExecuteScript("tb_itemacquired", oPC);
+
 }

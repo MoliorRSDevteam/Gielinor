@@ -1,29 +1,13 @@
 #include "nw_i0_spells"
 
 void DoStats(object oPC, object oCONTROL)
-{
-	string sSCREEN = "SCREEN_INVENTORY";
-	if (GetResRef(oCONTROL) == "sfpb_storage")
-	{
-		SetGUIObjectHidden(oPC, sSCREEN, "CHARACTER_DATA", TRUE);
-		SetGUIObjectHidden(oPC, sSCREEN, "MENU_PAGES", TRUE);
-		return;
-	}
+{	
+	if (GetResRef(oCONTROL) != "sfpb_storage") return;
 	
-	SetGUIObjectText(oPC, sSCREEN, "FISHING", 		-1, IntToString(GetSkillRank(30, oPC, TRUE)));
-	SetGUIObjectText(oPC, sSCREEN, "COOKING", 		-1, IntToString(GetSkillRank(31, oPC, TRUE)));
-	SetGUIObjectText(oPC, sSCREEN, "FIREMAKING",	-1, IntToString(GetSkillRank(32, oPC, TRUE)));
-	SetGUIObjectText(oPC, sSCREEN, "SMITHING", 		-1, IntToString(GetSkillRank(33, oPC, TRUE)));
-	SetGUIObjectText(oPC, sSCREEN, "WOODCUTTING",	-1, IntToString(GetSkillRank(34, oPC, TRUE)));
-	SetGUIObjectText(oPC, sSCREEN, "MINING", 		-1, IntToString(GetSkillRank(35, oPC, TRUE)));
-	SetGUIObjectText(oPC, sSCREEN, "RUNECRAFTING", 	-1, IntToString(GetSkillRank(36, oPC, TRUE)));
-	SetGUIObjectText(oPC, sSCREEN, "CRAFTING", 		-1, IntToString(GetSkillRank(37, oPC, TRUE)));
-	SetGUIObjectText(oPC, sSCREEN, "PRAYER", 		-1, IntToString(GetSkillRank(38, oPC, TRUE)));
-	SetGUIObjectText(oPC, sSCREEN, "HERBLORE", 		-1, IntToString(GetSkillRank(41, oPC, TRUE)));
-	SetGUIObjectText(oPC, sSCREEN, "THIEVING", 		-1, IntToString(GetSkillRank(42, oPC, TRUE)));
-	SetGUIObjectText(oPC, sSCREEN, "FLETCHING", 	-1, IntToString(GetSkillRank(43, oPC, TRUE)));
-	SetGUIObjectText(oPC, sSCREEN, "SLAYER", 		-1, IntToString(GetSkillRank(44, oPC, TRUE)));
-	SetGUIObjectText(oPC, sSCREEN, "FARMING", 		-1, IntToString(GetSkillRank(46, oPC, TRUE)));
+	string sSCREEN = "SCREEN_INVENTORY";
+	SetGUIObjectHidden(oPC, sSCREEN, "CHARACTER_DATA", TRUE);
+	SetGUIObjectHidden(oPC, sSCREEN, "MENU_PAGES", TRUE);
+	SetGUIObjectHidden(oPC, sSCREEN, "BANK_BUTTON", FALSE);
 }
 
 void FinalizeStorageSave(object oPC, object oBANK, string sID)
@@ -48,10 +32,46 @@ void BeginStorageSave(object oPC, object oCONTROL)
 	DelayCommand(0.0f, FinalizeStorageSave(oPC, oBANK, sID));
 }
 
+void SwitchInventory(object oPC, object oCONTROL)
+{
+	object oSWITCH = oPC;
+	if (GetResRef(oCONTROL) != "sfpb_storage")
+	{
+		string sID = GetPCPlayerName(oPC);
+		oSWITCH = GetObjectFromRosterName(sID);
+	}
+	object oNEW = SetOwnersControlledCompanion(oCONTROL, oSWITCH);
+}
+
+void TransferItem(object oPC, object oCONTROL)
+{
+	string sID = GetPCPlayerName(oPC);
+	object oBANK = GetObjectFromRosterName(sID);
+	if (oBANK == OBJECT_INVALID)
+	{
+		SendMessageToPC(oPC, "Error: Persistent chest not found.");
+		return;
+	}
+	object oITEM = GetPlayerCurrentTarget(oCONTROL);
+	if (GetItemPossessor(oITEM) != oCONTROL)
+	{
+		SendMessageToPC(oPC, "Error: Targeted object is not a transferable item. Right click on the item you wish to transfer.");
+		return;
+	}
+	object oTAKE = oBANK;
+	if (GetResRef(oCONTROL) == "sfpb_storage") oTAKE = GetOwnedCharacter(oCONTROL);
+	AssignCommand(oCONTROL, ActionGiveItem(oITEM, oTAKE, FALSE));
+}
 void main(string sCOMMAND)
 {
 	object oPC = OBJECT_SELF;
 	object oCONTROL = GetControlledCharacter(oPC);
-	if (sCOMMAND == "ADD") DoStats(oPC, oCONTROL);
-	else if (sCOMMAND == "REMOVE") BeginStorageSave(oPC, oCONTROL);	
+	int nCOMMAND = StringToInt(sCOMMAND);
+	switch (nCOMMAND)
+	{		
+		case 1: DoStats(oPC, oCONTROL); break;
+		case 2: BeginStorageSave(oPC, oCONTROL); break;
+		case 3: SwitchInventory(oPC, oCONTROL); break;
+		case 4: TransferItem(oPC, oCONTROL); break;
+	}
 }

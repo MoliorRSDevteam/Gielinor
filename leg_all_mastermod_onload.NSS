@@ -19,6 +19,7 @@
 void main()
 {
 	object oModule = GetModule();
+	DelayCommand(0.0f, PackCampaignDatabase("bank_items"));
 	
 	// Check for the Tele Plugin and fire its script if it is.
 	if (GetLocalInt(GetModule(), "LEG_TELE_ACTIVE"))

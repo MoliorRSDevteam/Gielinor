@@ -1,59 +1,131 @@
+// NW_C2_DEFAULT9
 /*
-
-    Script:			AI Script for the Death Event to go NPC's and Mobs.  Mostly a copy of the built in
-					AI with minor modifications.
-	Version:		1.1
-	Plugin Version: 1.93
-	Author:			Marshall Vyper
-	Parameters:		N/A
+    Default OnSpawn handler
 	
-	Change Log:		06/23/2011 - 1.00 MV - Initial Release
-					11/12/2012 - 1.1 MV - Added support to call optional Pre Scripts
-	
-	
+	Sir Elric's Simple Creature Respawning for NWN2 v1.0	
+ 
+    To create customized spawn scripts, use the "Custom OnSpawn" script template. 
 */
+//:://///////////////////////////////////////////////////
+//:: Copyright (c) 2002 Floodgate Entertainment
+//:: Created  By: Naomi Novik
+//:: Created  On: 12/11/2002
+//:: Modified On: 9th August, 2007
+//:: Modified By: Sir Elric
+//:://///////////////////////////////////////////////////
+// Updated 2003-08-20 Georg Zoeller: Added check for variables to active spawn in conditions without changing the spawnscript
+// ChazM 6/20/05 ambient anims flag set on spawn for encounter cratures.
+// ChazM 1/6/06 modified call to WalkWayPoints()
+// DBR 2/03/06  Added option for a spawn script (AI stuff, but also handy in general)
+// ChazM 8/22/06 Removed reference to "kinc_globals".
+// ChazM 3/8/07 Added campaign level creature spawn modifications script.  Moved excess commented code out to template.
+// ChazM 4/5/07 Incorporeal creatures immune to non magic weapons
+
+#include "x0_i0_anims"
+#include "x0_i0_treasure"
+#include "x2_inc_switches"
+
+const int RESPAWN_ALL_NPC = TRUE;// if you want all npc to respawn when killed set to TRUE
+								 // if you want only specific npc to respawn set to FALSE
+								 // if you choose FALSE see instructions in se_respawn_me_os
+								 // *Note that if you choose FALSE this script can be deleted
+
+// set variables needed for respawning
+void SE_SetVars(object oSelf)
+{
+    SetLocalString(oSelf, "DeathScript", "se_respawn_me_od");
+    SetLocalString(oSelf, "MyResref", GetResRef(oSelf));		
+    SetLocalLocation(oSelf, "MyLocation", GetLocation(oSelf));	
+}
 
 
-// /////////////////////////////////////////////////////////////////////////////////////////////////////
-// INCLUDES
-// /////////////////////////////////////////////////////////////////////////////////////////////////////
-#include "x2_inc_compon"
-#include "x0_i0_spawncond"
-
-
-
-// /////////////////////////////////////////////////////////////////////////////////////////////////////
-// MAIN ROUTINE
-// /////////////////////////////////////////////////////////////////////////////////////////////////////
 void main()
 {
-	// Run custom script
-	string sScript = GetLocalString(OBJECT_SELF, "LEG_AI_OnDeathScript");
-	if (sScript != "")
-		ExecuteScript(sScript, OBJECT_SELF);
-	
-	string sDeathScript = GetLocalString(OBJECT_SELF, "DeathScript");
-	if (sDeathScript != "")
-		ExecuteScript(sDeathScript, OBJECT_SELF);
-
-	
-    int nClass = GetLevelByClass(CLASS_TYPE_COMMONER);
-    int nAlign = GetAlignmentGoodEvil(OBJECT_SELF);
-    object oKiller = GetLastKiller();
-
-    // If we're a good/neutral commoner,
-    // adjust the killer's alignment evil
-    if(nClass > 0 && (nAlign == ALIGNMENT_GOOD || nAlign == ALIGNMENT_NEUTRAL))
+	// Sir Elric's Simple Creature Respawning for NWN2 v1.0	
+	if(RESPAWN_ALL_NPC && !GetIsEncounterCreature(OBJECT_SELF))
+		SE_SetVars(OBJECT_SELF);
+		
+    // Run this campaign's standard creature spawn modifications script (set in module load)
+    string sScriptSpawnCreature = GetGlobalString("N2_SCRIPT_SPAWN_CREATURE");
+    if (sScriptSpawnCreature != "")
     {
-        AdjustAlignment(oKiller, ALIGNMENT_EVIL, 5);
+		ExecuteScript(sScriptSpawnCreature, OBJECT_SELF);
     }
 
-    // Call to allies to let them know we're dead
-    SpeakString("NW_I_AM_DEAD", TALKVOLUME_SILENT_TALK);
+    // ***** Spawn-In Conditions ***** //
+    // See x2_inc_switches for more information about these
+    
+    // Enable stealth mode by setting a variable on the creature
+    // Great for ambushes
+    if (GetCreatureFlag(OBJECT_SELF, CREATURE_VAR_USE_SPAWN_STEALTH) == TRUE)
+    {
+        SetSpawnInCondition(NW_FLAG_STEALTH);
+    }
+    
+    // Make creature enter search mode after spawning by setting a variable
+    // Great for guards, etc
+    if (GetCreatureFlag(OBJECT_SELF, CREATURE_VAR_USE_SPAWN_SEARCH) == TRUE)
+    {
+        SetSpawnInCondition(NW_FLAG_SEARCH);
+    }
 
-    //Shout Attack my target, only works with the On Spawn In setup
-    SpeakString("NW_ATTACK_MY_TARGET", TALKVOLUME_SILENT_TALK);
-	
-	// Last thing we want to do is to call our Master Death script!
-	ExecuteScript("leg_all_masterdeath", OBJECT_SELF);
+    // Enable immobile ambient animations by setting a variable
+    if (GetCreatureFlag(OBJECT_SELF, CREATURE_VAR_USE_SPAWN_AMBIENT_IMMOBILE) == TRUE)
+    {
+        SetSpawnInCondition(NW_FLAG_IMMOBILE_AMBIENT_ANIMATIONS);
+    }
+
+    // Enable mobile ambient animations by setting a variable
+    if (GetCreatureFlag(OBJECT_SELF, CREATURE_VAR_USE_SPAWN_AMBIENT) == TRUE)
+    {
+        SetSpawnInCondition(NW_FLAG_AMBIENT_ANIMATIONS);
+    }
+
+    // ***** DEFAULT GENERIC BEHAVIOR ***** //
+    // * Goes through and sets up which shouts the NPC will listen to.
+    SetListeningPatterns();
+
+    // * Walk among a set of waypoints if they exist.
+    // * 1. Find waypoints with the tag "WP_" + NPC TAG + "_##" and walk
+    // *    among them in order.
+    // * 2. If the tag of the Way Point is "POST_" + NPC TAG, stay there
+    // *    and return to it after combat.
+    //
+    // * If "NW_FLAG_DAY_NIGHT_POSTING" is set, you can also
+    // * create waypoints with the tags "WN_" + NPC Tag + "_##"
+    // * and those will be walked at night. (The standard waypoints
+    // * will be walked during the day.)
+    // * The night "posting" waypoint tag is simply "NIGHT_" + NPC tag.
+    WalkWayPoints(FALSE, "spawn");
+    
+    //* Create a small amount of treasure on the creature
+    if ((GetLocalInt(GetModule(), "X2_L_NOTREASURE") == FALSE)  &&
+        (GetLocalInt(OBJECT_SELF, "X2_L_NOTREASURE") == FALSE)   )
+    {
+        CTG_GenerateNPCTreasure(TREASURE_TYPE_MONSTER, OBJECT_SELF);
+    }
+    
+    // encounter creatures use ambient animations
+    if (GetIsEncounterCreature())
+		SetSpawnInCondition(NW_FLAG_AMBIENT_ANIMATIONS, TRUE);
+
+    // * If Incorporeal, apply changes
+    if (GetCreatureFlag(OBJECT_SELF, CREATURE_VAR_IS_INCORPOREAL) == TRUE)
+    {
+        effect eConceal = EffectConcealment(50, MISS_CHANCE_TYPE_NORMAL);
+        eConceal = ExtraordinaryEffect(eConceal);
+        effect eGhost = EffectCutsceneGhost();
+        eGhost = ExtraordinaryEffect(eGhost);
+        effect eImmuneToNonMagicWeapons = EffectDamageReduction(1000, DAMAGE_POWER_PLUS_ONE, 0, DR_TYPE_MAGICBONUS);
+        eImmuneToNonMagicWeapons = ExtraordinaryEffect(eImmuneToNonMagicWeapons);
+		
+        ApplyEffectToObject(DURATION_TYPE_PERMANENT, eConceal, OBJECT_SELF);
+        ApplyEffectToObject(DURATION_TYPE_PERMANENT, eGhost, OBJECT_SELF);
+        ApplyEffectToObject(DURATION_TYPE_PERMANENT, eImmuneToNonMagicWeapons, OBJECT_SELF);
+    }
+    	
+	//DBR 2/03/06 - added option for a spawn script (ease of AI hookup)
+	string sSpawnScript=GetLocalString(OBJECT_SELF,"SpawnScript");
+	if (sSpawnScript!="")
+		ExecuteScript(sSpawnScript,OBJECT_SELF);
 }

@@ -1,3 +1,4 @@
+#include "nw_i0_spells"
 #include "profession_include"
 
 void RuneTeleport(object oPC, string sINPUT)
@@ -175,6 +176,12 @@ void RuneExecute(object oPC)
 void main(string sCOMMAND, string sINPUT)
 {
 	object oPC = OBJECT_SELF;
+	effect eFX = GetFirstEffect(oPC);
+	while (GetIsEffectValid(eFX) == TRUE)
+	{
+		if (GetEffectType(eFX) == EFFECT_TYPE_CUTSCENEIMMOBILIZE) return;
+		eFX = GetNextEffect(oPC);
+	}
 	if (sCOMMAND == "TELEPORT") RuneTeleport(oPC, sINPUT);
 	else if (sCOMMAND == "ENCHANT") RuneEnchant(oPC, sINPUT);
 	else RuneExecute(oPC);
