@@ -80,7 +80,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="302575B33165E2ABEEE2827CD2D22B8B88946A83" downloadHash="170967D45F76F02C74A9ECE155304CF5CD7119B0" name="al-kharid - tanner shop.trx" dlsize="10462" size="53291" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="B0D3AC3821644B4C1184C310BC21EC29A4BE641F" downloadHash="188421AD718720B5DB69DA802903C954E0D58B07" name="al-kharid - tanner shop.trx" dlsize="10615" size="53358" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -345,7 +345,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="89AE58594186A727E9F28483ABBE7D9D9B57F738" downloadHash="E9DA16028D340A39359E43484B0526A6760AB8FE" name="south falador.trx" dlsize="12166138" size="54569026" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="C9F2E937D98AA780091FB7DAABFAB3DE7FA36FE1" downloadHash="6350755EA2C137D797011932BEC791D70A48B67B" name="south falador.trx" dlsize="12273808" size="54561399" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -485,7 +485,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="E12C872FCFCD7958CD8DC52636C61003D1D9F150" downloadHash="CFE5C90624E5FC455708EE15E65C1D16F18497BD" name="wilderness - lava maze.trx" dlsize="7152098" size="33433963" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="D2033D718C3B6E40A1F73E30F05A1890B0249F88" downloadHash="8DF99197D45DA303D8EBAD5AF431349097706987" name="wilderness - lava maze.trx" dlsize="7160057" size="33434832" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -685,7 +685,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="AB0A4778E8D730343CC173D0B13DAE6406A68E8E" downloadHash="BD54F2AD753516DB1CF6A88E89EED39B41777DD8" name="musa point.trx" dlsize="6709219" size="42418974" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="EE4899C90ABBE3C45C37515505AD8B1DA5403403" downloadHash="332EF7139F1E4FCC41559808F8EAABDF16AF2ACE" name="musa point.trx" dlsize="6674453" size="42415310" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -740,7 +740,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="C120292EC85A6528AAB0EB545661D87BC51EA24D" downloadHash="18D1F2C8FFDB4852ACA53896BD88BA37BE89999C" name="lumbridge.trx" dlsize="7360615" size="31244858" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="C0718A992ED5CD84F86F5F06B4BBA67AE2A495F4" downloadHash="8661D55212750BD3395CE2796292C1E63ACF2853" name="lumbridge.trx" dlsize="7330788" size="31171135" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -875,7 +875,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="8DAFF477F24331ECAF81346780D7AB21136862B5" downloadHash="A97342609EE0F64EF9DD083E121344682EAC7D23" name="al-kharid desert.trx" dlsize="9836961" size="40506023" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="6CB4146162CF6CF7A73E80B4FD421B4558DC7DC5" downloadHash="7ADBD83626EA43F8965F246A631A14B174A402E0" name="al-kharid desert.trx" dlsize="9785157" size="40476560" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -945,7 +945,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="DDDB400C481777083D4D16D418B489C21998E91C" downloadHash="4505A0C99E7B57315643130ABB6269086698D4D9" name="varrock.trx" dlsize="11097312" size="47756467" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="7BEE3770D6AD297EB4C09A55C92546C001776485" downloadHash="3BB6565597D98156E3F023E84CF2820CD1A3BF49" name="varrock.trx" dlsize="11410497" size="48741777" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -960,7 +960,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="F90DA50DED42C57431224F5BC4AD96407B97066C" downloadHash="65E6C6ADFABF6CBA56E7A99B85F9AF9A8FD959AC" name="lumbridge castle.trx" dlsize="134008" size="134679" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="0546BDA59CA4FD57DA4F1EB7BBB469F8D698CB83" downloadHash="376326923FA72D8D099ED88B9DA59578C35165F2" name="lumbridge castle.trx" dlsize="132506" size="133183" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1110,7 +1110,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="08DBC6A2074FA456016562CF201FC6ECF2876D14" downloadHash="52C5EDE2E28EFEEE9CE2D53326EA2B68482CA9B7" name="tutorial island.trx" dlsize="9931172" size="49253395" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="2A678A2916D2061628A6431F8930E19ED111E182" downloadHash="CEB42DC025D86C583F862CFB641BB4B1DC582BA1" name="tutorial island.trx" dlsize="10006017" size="49300265" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1270,7 +1270,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="B9E0BB3D9B69ACBE663092349603FC2344C947E0" downloadHash="E8C3D9C0D5200D39EBB8A22F40C2035E8EC49CAE" name="al-kharid.trx" dlsize="4432776" size="22162957" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="CF75D8C7C962CE5A729B09ACE9191DFB3F87DEEC" downloadHash="E83E18742FBD3CD7382F542E33E927FACA867B35" name="al-kharid.trx" dlsize="4801618" size="23400274" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1280,7 +1280,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="432010A2916B029DF402D791CE885A1041FB6115" downloadHash="AAF1440AB92EDF2524CDEB0E6AE4AE9DF1BBE6B9" name="edgeville.trx" dlsize="7929476" size="38285966" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="7634CE8BC3BAD039B1EBBF26ED8CCBBDC2AB2BB2" downloadHash="138793F3EE07B05089EEC40EFE73A54B1B277089" name="edgeville.trx" dlsize="7939880" size="38233395" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1370,7 +1370,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="1236FABC438677FFD2D1C2578BC852F30D0450F1" downloadHash="036ACB1D34DBCC7E3E1A3FE6A11FECCFB423EC9C" name="draynor.trx" dlsize="9170124" size="53991819" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="772A45D6DFF8C492DEABD8C71309AECB6DEE74BB" downloadHash="A2D81BDBB3E95BE4698EEA3FC0F7621471E198FD" name="draynor.trx" dlsize="9180230" size="53993098" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1460,7 +1460,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="C8206EECB01E374AF7C5861D0C899B66BEA42564" downloadHash="92BF9615707C72ACEBB7E62B72CA0907137EF26A" name="lumbridge swamp.trx" dlsize="8286246" size="40206782" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="0D228A3849F22F235861E57FA7CF3BEC68F85E96" downloadHash="F68622214E245595267FF5765F385F7630827D24" name="lumbridge swamp.trx" dlsize="8327463" size="40254676" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1690,7 +1690,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="1F645B1480837122793D306ACAD72AE56BF1FEBF" downloadHash="5D7C26D3232011D9A81EAAA236A980E3EC09E3EA" name="2da_loadingscreens.hak" dlsize="232386728" size="743693896" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="19C67B2C12058D05A200CE973B6C64E0B0CD455F" downloadHash="9D248E6C97D0E8AD687FC7D919F594EE06591222" name="2da_loadingscreens.hak" dlsize="232450729" size="744010824" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2245,7 +2245,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="238D4AB3E9E363E8078879B42941BD0561B89ADD" downloadHash="F0E9F7D2A2C0C684D739954466558402C119191B" name="kharidian - pollnivneach.trx" dlsize="3024644" size="17101299" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="8847F9A5454510C57AC1522C880F88DA68D7E77F" downloadHash="AC2740BB9E4465C704EF0917CE153CAEACE421BF" name="kharidian - pollnivneach.trx" dlsize="3034977" size="17107729" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
