@@ -740,7 +740,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="C0718A992ED5CD84F86F5F06B4BBA67AE2A495F4" downloadHash="8661D55212750BD3395CE2796292C1E63ACF2853" name="lumbridge.trx" dlsize="7330788" size="31171135" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="3F68308F6BE0D5D70287857E4A8BD01C01BB573D" downloadHash="0F0ECE32EC48CD98E4BD2A4D6E65D2211EAA64A1" name="lumbridge.trx" dlsize="7328361" size="31212081" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -945,7 +945,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="7BEE3770D6AD297EB4C09A55C92546C001776485" downloadHash="3BB6565597D98156E3F023E84CF2820CD1A3BF49" name="varrock.trx" dlsize="11410497" size="48741777" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="48CE5FD4E52957BD92536643CC295314AD4C17E2" downloadHash="67893BD11378F262A8D20FB5C2B660A69A50DA86" name="varrock.trx" dlsize="11343607" size="48702323" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
