@@ -35,24 +35,27 @@ void SlayerKill(object oPARTY, string sMOB, string sNAME)
 	FloatingTextStringOnCreature(sTXT, oPARTY, FALSE);
 }
 
-void SlayAndTeleportCheck(object oPC, object oMOB)
+void SlayerCheck(object oPC, object oMOB)
 {
 	string sMOB = GetTag(oMOB);
 	string sNAME = GetName(oMOB);
-	string sWP = GetLocalString(oMOB, "QUEST_TP");
-	object oWP = GetObjectByTag(sWP);
-	object oINVALID = OBJECT_INVALID;
 	object oPARTY = GetFirstFactionMember(oPC, FALSE);
-	while (oPARTY != oINVALID)
+	while (oPARTY != OBJECT_INVALID)
 	{
 		if (GetIsOwnedByPlayer(oPARTY) == TRUE) SlayerKill(oPARTY, sMOB, sNAME);
-		if (oWP != oINVALID) AssignCommand(oPARTY, JumpToObject(oWP));
 		oPARTY = GetNextFactionMember(oPC, FALSE);
-	}	
+	}
 }
 
 void UpdateQuest(object oPC, object oMOB)
 {
+	string sWP = GetLocalString(oMOB, "QUEST_WP");
+	if (sWP != "")
+	{
+		object oWP = GetObjectByTag(sWP);
+		if (oWP == OBJECT_INVALID) SendMessageToPC(oPC, "ERROR: Waypoint not found."); 
+		else DelayCommand(0.0f, JumpPartyToArea(oPC, oWP));
+	}
 	string sQUEST = GetLocalString(oMOB, "QUEST_ID");
 	if (sQUEST == "") return;
 	int nSTEP = GetLocalInt(oMOB, "QUEST_STEP");
@@ -75,26 +78,23 @@ void main()
 	object oMODULE = GetModule();
 	object oMOB = OBJECT_SELF;
 	object oPC = GetLastKiller();
+	SlayerCheck(oPC, oMOB);
 	UpdateQuest(oPC, oMOB);
-	DelayCommand(0.0f, SlayAndTeleportCheck(oPC, oMOB));
 	
 	// If the LOOT Plugin is active.
-	if (GetLocalInt(oMODULE, "LEG_LOOT_ACTIVE") == TRUE)
-	{
-		if (GetLocalInt(oMODULE, "LEG_LOOT_ONDEATH") == TRUE)
-		{
-			object oParent = GetLocalObject(oMOB, "SPAWN_Parent");
-			if (oParent == OBJECT_INVALID) oParent = oMOB;
-			else if (GetLocalString(oParent, "LEG_LOOT_ID") == "") oParent = oMOB;
+	if (GetLocalInt(oMODULE, "LEG_LOOT_ACTIVE") != TRUE) return;	
+	if (GetLocalInt(oMODULE, "LEG_LOOT_ONDEATH") != TRUE) return;
+	
+	object oParent = GetLocalObject(oMOB, "SPAWN_Parent");
+	if (oParent == OBJECT_INVALID) oParent = oMOB;
+	else if (GetLocalString(oParent, "LEG_LOOT_ID") == "") oParent = oMOB;
 		
-			// If the Spawn plugin says to not Drop Loot on Death, then we don't make loot at all here.
-			// Of course if we are not using the spawn plugin at all, then go ahead and make loot.
-			if (!GetLocalInt(oMODULE, "LEG_SPAWN_ACTIVE") || !GetLocalInt(GetLocalObject(oMOB, "SPAWN_Parent"),"LEG_SPAWN_DoNotDropMyLoot"))
-			{
-				AddScriptParameterObject(oPC);
-				AddScriptParameterObject(oParent);
-				ExecuteScriptEnhanced("leg_loot_makeloot", oMOB);
-			}
-		}
+	// If the Spawn plugin says to not Drop Loot on Death, then we don't make loot at all here.
+	// Of course if we are not using the spawn plugin at all, then go ahead and make loot.
+	if (!GetLocalInt(oMODULE, "LEG_SPAWN_ACTIVE") || !GetLocalInt(GetLocalObject(oMOB, "SPAWN_Parent"),"LEG_SPAWN_DoNotDropMyLoot"))
+	{
+		AddScriptParameterObject(oPC);
+		AddScriptParameterObject(oParent);
+		ExecuteScriptEnhanced("leg_loot_makeloot", oMOB);
 	}
 }

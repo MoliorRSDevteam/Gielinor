@@ -290,7 +290,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="6456B34EF6127F96940EA2EEDE28A964F41E07F9" downloadHash="C5E6E768A3B2795DC015162E4B0F3D981E7C9D63" name="rogues castle.trx" dlsize="65471" size="65728" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="0273C0E782F573269A8BF8290260555061121581" downloadHash="23775244C88A19A40D3F254567FBA93A71168F61" name="rogues castle.trx" dlsize="66022" size="66248" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1690,12 +1690,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="19C67B2C12058D05A200CE973B6C64E0B0CD455F" downloadHash="9D248E6C97D0E8AD687FC7D919F594EE06591222" name="2da_loadingscreens.hak" dlsize="232450729" size="744010824" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="891775445640DB06323CB3F208B56AF86EA47B95" downloadHash="7131CA77EAD118B68D72BEB0A5ACCB6E6F8B8B0F" name="2da_loadingscreens.hak" dlsize="232424086" size="744071596" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="B4D7CE62B6CE933A64108C6D0DE9D312701B9E23" downloadHash="85930E5A2FEA923EF506B0C54094D9F62874E555" name="xmls.hak" dlsize="54181" size="1386422" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="5831A565DE6BCCD30FE1B16E39C0145CFAF0CAB6" downloadHash="47033F41EC582D738281D2BBAB08B86A8F17324B" name="xmls.hak" dlsize="54124" size="1385888" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2220,12 +2220,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="DA5B128863B47935C551EE9C158AFF1FB4A83C00" downloadHash="B197DFA8E11649A128E25D3CFF2BD1E3B9274FBE" name="kharidian - uzer.trx" dlsize="6715261" size="38228171" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="801EB5354E8B08E22F0CB8824B10B6F238727834" downloadHash="4A793F0B144CEE85197BB0427A9FDEB689CC9D51" name="kharidian - uzer.trx" dlsize="6699426" size="38223234" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="3BE31BE62CECF9B42F03BFE82A18DF0B6F6C8D3A" downloadHash="C677437B4322DCA3D93F6E4CC2FF7ACE75D32447" name="Sophanem - Church.trx" dlsize="28462" size="28534" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="F23F7B4EE31BE46C1BBFB96B8D63BF64B72EE4C2" downloadHash="4940D8A9694960D93E7AA4EDBBC1351D02A4F79E" name="Sophanem - Church.trx" dlsize="28325" size="28396" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2310,7 +2310,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="16F572E258D357E1104D90D1490CA6A925882D5C" downloadHash="FA0A46C6C0DA30FE82154188B7D7EC3A8506EFFE" name="Sophanem - Temple.trx" dlsize="18674" size="18691" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="3855E0B17EF8412E5FDFB301C91289773C0974CF" downloadHash="5DDDBF3E6FA86648D045DF5723FD963BFA788452" name="Sophanem - Temple.trx" dlsize="17275" size="17305" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2681,6 +2681,26 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="29B0DC03A117B27BB07E3AA638FBF2AE9E2A743F" downloadHash="D0C2C0758FF1459095D14C30DE4C8D617DA160EB" name="sophenam - pyramid {vision2}.trx" dlsize="44618" size="45833" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="4D5C675DF0D5AB1DE34D5E58AF378B01313BE41D" downloadHash="D5E13C21F9C1BF9F35A34B321ABE01C1F1C95998" name="Jalsavrah Pyramid.trx" dlsize="36730" size="36923" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="248783F71A11A0CAD56316A101D7640F99FB1749" downloadHash="0D43043C55576F4F69B61C8BDC756D04F260497E" name="Jalsavrah Pyramid - Floor 1.trx" dlsize="39577" size="39887" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="BB3CEAD93EC8563C5866804E363E7785D1A7D405" downloadHash="43B64A32A515C1C5D7E4C0DA4DF7703213D2F127" name="mus_realpyra.bmu" dlsize="5110615" size="5214435" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="7E1A04E056F4B3A77B95C5DAF2745BBE0124CD70" downloadHash="E4A09A04398AC75CB3DBFE91219887E5403622C4" name="mus_fakepyra.bmu" dlsize="3836015" size="3879920" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
