@@ -193,6 +193,11 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			sDESC = "The cities of the Menaphites have barred their gates to all. An unsettling desert wanderer may know of a secret entrance to Sophenam, the city of the dead.";
 			sREQU = "Gertrude's Cat";
 			break;
+		case 38: 
+			sNAME = "Death Plateau";
+			sDESC = "";
+			sREQU = "None";
+			break;
 	}
 	if (nTYPE == 1) return sNAME;
 	else if (nTYPE == 2) return sDESC;
