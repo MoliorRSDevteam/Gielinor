@@ -1690,7 +1690,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="891775445640DB06323CB3F208B56AF86EA47B95" downloadHash="7131CA77EAD118B68D72BEB0A5ACCB6E6F8B8B0F" name="2da_loadingscreens.hak" dlsize="232424086" size="744071596" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="F78D8CB8EDE29E5D96E3AE848BC18380F69F8017" downloadHash="E413696DA5F900EFB47C6AB34EB43CC9DC576AF5" name="2da_loadingscreens.hak" dlsize="232446387" size="744071650" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2445,7 +2445,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="D3A89B2DF5C5E1A6F1E3665EFBEDF0893FA413C0" downloadHash="D52A7C4B065078D8B6F4C6B616483D73CEC60F41" name="death plateau - cavern pass.trx" dlsize="553989" size="7268157" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="6A0E8BC4BBFF80C83B24EDED0F3FD2745C0B5F7A" downloadHash="BE01CAAA91D31DA6992334F39EE411C930ED01D8" name="death plateau - cavern pass.trx" dlsize="554036" size="6906336" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2471,11 +2471,6 @@
     </server-ref>
   </resource>
   <resource type="DirectoryEntry" hash="212E6D7DCA8399FEF651832BCAA9FB05025EA4D6" downloadHash="D98055F056146569182427F073006DD813B29B63" name="troll stronghold - upper level.trx" dlsize="1360616" size="11973729" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
-  <resource type="DirectoryEntry" hash="8F57FD0DF29ACE58F70BDE292306034504D74635" downloadHash="B4C2F367A94C52D51BDC3296DEC10CF7F1B00D4A" name="death plateu.trx" dlsize="12152358" size="47499975" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2625,7 +2620,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="15307D8EE80D4F274586FC849F9361B53B57A533" downloadHash="A8A5507EE6DC5BFA971B916A17CE6A47408BF377" name="burthorpe.trx" dlsize="8279541" size="34619061" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="61457A74C5FBD278056AE1777D24311AA19D63AC" downloadHash="6DE35018187E617051BE496EB7E1CA5C7DF35C70" name="burthorpe.trx" dlsize="8285776" size="34633651" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2690,17 +2685,32 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="248783F71A11A0CAD56316A101D7640F99FB1749" downloadHash="0D43043C55576F4F69B61C8BDC756D04F260497E" name="Jalsavrah Pyramid - Floor 1.trx" dlsize="39577" size="39887" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
   <resource type="Music" hash="BB3CEAD93EC8563C5866804E363E7785D1A7D405" downloadHash="43B64A32A515C1C5D7E4C0DA4DF7703213D2F127" name="mus_realpyra.bmu" dlsize="5110615" size="5214435" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
   <resource type="Music" hash="7E1A04E056F4B3A77B95C5DAF2745BBE0124CD70" downloadHash="E4A09A04398AC75CB3DBFE91219887E5403622C4" name="mus_fakepyra.bmu" dlsize="3836015" size="3879920" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="248783F71A11A0CAD56316A101D7640F99FB1749" downloadHash="0D43043C55576F4F69B61C8BDC756D04F260497E" name="jalsavrah pyramid - floor 1.trx" dlsize="39577" size="39887" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="AE4004BE61E0162CBE5677F93515C0506005C3D0" downloadHash="AE5B22B192D1A08BBFB85B8FFE966F0D821CABB0" name="death plateau.trx" dlsize="12131846" size="47508962" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="B7474DDD8846D1AC6D3AF256E1FB5EDB0F75241F" downloadHash="7473ED42278A7F82063F3CC87CCF176C97273810" name="Saba's house.trx" dlsize="8273" size="8252" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="965B2373D54552A6B89FDD861E73A4EC3FB070E7" downloadHash="1DFED7744F99EE7D295D693F7C3D67B449D062F8" name="mus_deathplat.bmu" dlsize="3219016" size="3265104" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>

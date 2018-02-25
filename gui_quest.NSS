@@ -195,7 +195,7 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			break;
 		case 38: 
 			sNAME = "Death Plateau";
-			sDESC = "";
+			sDESC = "The trolls have blocked the only path to Death Plateau, disallowing a counterstrike. Find an alternative path for the soldiers to march upon.";
 			sREQU = "None";
 			break;
 	}
