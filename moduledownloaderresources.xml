@@ -1400,11 +1400,6 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="910BD81117CC95391D728B09FFD99FCEFB6A8503" downloadHash="14AF38044E7F7AFBE28641FB6F13555D0DD994DA" name="0taverly.trx" dlsize="8989842" size="42670088" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
   <resource type="DirectoryEntry" hash="ACEE933EC5D4349786B15D2FB31CD5B13F111FDB" downloadHash="0ACE90B444B32864E98633D7ECA5A84666F20AD6" name="varrock - house7.trx" dlsize="3813" size="3799" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
@@ -1675,7 +1670,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Tlk" hash="A9B57AB282E5F962F0B969CC9F93D0509653E2D7" downloadHash="13E6EF8EAB9AC785D8C20C7BADEEE6A5AFEE9259" name="moliorrs.tlk" dlsize="11068" size="45922" critical="false" exclude="false" urlOverride="">
+  <resource type="Tlk" hash="4690287790C61F3A1CCCD757026F303DCD3DA6A9" downloadHash="36613A9FFBA536F394E920E77C8F66049EEEDFD7" name="moliorrs.tlk" dlsize="11071" size="45970" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1690,7 +1685,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="F78D8CB8EDE29E5D96E3AE848BC18380F69F8017" downloadHash="E413696DA5F900EFB47C6AB34EB43CC9DC576AF5" name="2da_loadingscreens.hak" dlsize="232446387" size="744071650" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="D168102BC8508F7AA4C509152D10B93871C81CDC" downloadHash="746C758247A3D03F1A842ED31ECDB9B7C164B572" name="2da_loadingscreens.hak" dlsize="232413422" size="744072884" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2405,7 +2400,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="A17520F1B540953804067BC476F88D65464EBCAB" downloadHash="DB0EE8C4D5122B9B52C374B58879599BB5BAC8EF" name="trollheim.trx" dlsize="2589537" size="11918216" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="11A4833B24E028000466D677CA9804AACDAD6051" downloadHash="405C75886BB49440EC341103A75BDD2A6ACFE332" name="trollheim.trx" dlsize="2598794" size="11862539" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2435,7 +2430,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="5E55FB5417283269955CE1571199713313B65111" downloadHash="A48B9B7D8453F31077F27D7EFBE21C8717225713" name="trollheim - passway.trx" dlsize="16370" size="16387" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="DA4F77FAD34B413CE205CDCD6699E001845F64FF" downloadHash="20D2001419A2E8AF43F8B02F4326FF5BFDAE7B57" name="trollheim - passway.trx" dlsize="16310" size="16329" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2480,7 +2475,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="5ED31AB2E7F3DCC7CEC3BF0619A4BFC07A9FB802" downloadHash="2EB0D142BEE47F8738A02A1AB93012F45F077CE0" name="trollheim - arena.trx" dlsize="2170571" size="10472559" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="8935D22385BF70AFE0AA6F700E5FBD2C0FB8F721" downloadHash="E706411A56B1D74F3FC0EC7720313DCD8CEFA44F" name="trollheim - arena.trx" dlsize="2171719" size="10473951" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2680,7 +2675,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="4D5C675DF0D5AB1DE34D5E58AF378B01313BE41D" downloadHash="D5E13C21F9C1BF9F35A34B321ABE01C1F1C95998" name="Jalsavrah Pyramid.trx" dlsize="36730" size="36923" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="1D735BE28515DFDC3616AC323A2F612CFD98A85B" downloadHash="60A697C8B546DEA1CFBE5338E7776CA5D1CDDA7E" name="Jalsavrah Pyramid.trx" dlsize="36734" size="36927" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2695,22 +2690,72 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="248783F71A11A0CAD56316A101D7640F99FB1749" downloadHash="0D43043C55576F4F69B61C8BDC756D04F260497E" name="jalsavrah pyramid - floor 1.trx" dlsize="39577" size="39887" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
-  <resource type="DirectoryEntry" hash="AE4004BE61E0162CBE5677F93515C0506005C3D0" downloadHash="AE5B22B192D1A08BBFB85B8FFE966F0D821CABB0" name="death plateau.trx" dlsize="12131846" size="47508962" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
   <resource type="DirectoryEntry" hash="B7474DDD8846D1AC6D3AF256E1FB5EDB0F75241F" downloadHash="7473ED42278A7F82063F3CC87CCF176C97273810" name="Saba's house.trx" dlsize="8273" size="8252" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
   <resource type="Music" hash="965B2373D54552A6B89FDD861E73A4EC3FB070E7" downloadHash="1DFED7744F99EE7D295D693F7C3D67B449D062F8" name="mus_deathplat.bmu" dlsize="3219016" size="3265104" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="22AABEB44E36D1D6C31A8AA3FA9DC81EB63CF1BC" downloadHash="4FC8C2855DAF424813B9DC9DC1A6716B9E1C63D3" name="viggoras folly.trx" dlsize="358201" size="361483" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="50503ED7E8A28DC705BD6A1FCF42F216EF177862" downloadHash="706E20CDE2E975D2C0D935F515E03B9228796E24" name="troll stronghold - lower level1.trx" dlsize="679910" size="11285242" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="26570712D971AA48D2B807BAF56AB2F313296B8B" downloadHash="120E9272332B3339B37F4C14E37C6BA3F6581208" name="trollheim - death plateau.trx" dlsize="12211088" size="46917281" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="7FE92812C261794CA1C0BDBF22A9EA1E455A10B3" downloadHash="EA53F146D9F0835714AF6DAD6793BA64AFFC45A2" name="trollheim - passage.trx" dlsize="1542426" size="11214255" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="0F0FCFEBF8CEB259EC6A69757EFEB1E8F8154780" downloadHash="5B5CCC3CDD167ADD86A225762B37AB1119C3E020" name="mus_trollarena.bmu" dlsize="3451148" size="3516297" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="971048FEA56DAB5B2849D39FFCE87C319B236330" downloadHash="C1189E9B51EF193883AC20F174DAC109DD771119" name="mus_trollheim.bmu" dlsize="2479423" size="2546214" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="F9880DC1B797A7DEB7EEF51E8249D6857A1A9E49" downloadHash="9F954A9AC36839FD53B0B94B839A84B2F3FD5DF9" name="mus_trollstronghold.bmu" dlsize="3494170" size="3591112" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="BE61A77A738052EDBBB2E3883F8F0C18C30571C7" downloadHash="224F1AB8B32B796C4E1087DE27CE88D78BE54FB6" name="trollheim - gwd entrance.trx" dlsize="878727" size="6275437" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="910BD81117CC95391D728B09FFD99FCEFB6A8503" downloadHash="14AF38044E7F7AFBE28641FB6F13555D0DD994DA" name="taverly.trx" dlsize="8989842" size="42670088" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="DE0A540887D8B0E845C8352BA6FB45A70E7F3D82" downloadHash="74AC0B5E90E22A0040C83EB80E81BB5B60CCF9F3" name="mus_warriorsguild.bmu" dlsize="3019478" size="3093322" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="80D8D182A953D7803B0C5953577F766A5E8CE234" downloadHash="2B4200A25C8C9CC5BB5BD0E869135752C05B5BD5" name="mus_burthyard.bmu" dlsize="1921315" size="2047589" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="2BDD02D9310F430D6303DEDC958C782551285153" downloadHash="CA47C2F3C541050A467B662999583BA28CE57898" name="mus_slayertower.bmu" dlsize="4403254" size="4560777" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>

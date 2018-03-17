@@ -153,21 +153,6 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			sDESC = "Deep in the desert sand, the ruins of the once great city of Uzer, a lone survivor—an ancient clay golem—forever paces back and forth.";
 			sREQU = "20 Crafting, 20 Thieving";
 			break;
-		case 30: 
-			sNAME = "Death Plateau";
-			sDESC = "The Burthorpe Captain of the Guards is missing his scouts, he needs the know what happened and to find a safe passage through the plateau.";
-			sREQU = "None";
-			break;
-		case 31: 
-			sNAME = "Troll Stronghold";
-			sDESC = "Trolls have begun to muster their forces in the North, I should speak to the Captain of the Guard.";
-			sREQU = "Death Plateau and the ability to fight medium levels.";
-			break;
-		case 32: 
-			sNAME = "Witch's House";
-			sDESC = "A young boy who lives in Taverly has kicked his ball into the garden of a scary, old lady.";
-			sREQU = "None.";
-			break;
 		case 33: 
 			sNAME = "Priest in Peril";
 			sDESC = "Drezel, a Saradomin priest, has vanished during the night from his post at Paterdomus. King Roald is looking for help in finding him.";
@@ -197,6 +182,11 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			sNAME = "Death Plateau";
 			sDESC = "The trolls have blocked the only path to Death Plateau, disallowing a counterstrike. Find an alternative path for the soldiers to march upon.";
 			sREQU = "None";
+			break;
+		case 39: 
+			sNAME = "Troll Stronghold";
+			sDESC = "The Imperial Guard raid was a failure, and Dunstan's son has been captured by the trolls!";
+			sREQU = "30 Thieving, Death Plateau";
 			break;
 	}
 	if (nTYPE == 1) return sNAME;
