@@ -188,6 +188,11 @@ string GetRelevantQuestInfo(int nQUEST, int nTYPE)
 			sDESC = "The Imperial Guard raid was a failure, and Dunstan's son has been captured by the trolls!";
 			sREQU = "30 Thieving, Death Plateau";
 			break;
+		case 40: 
+			sNAME = "Druidic Ritual";
+			sDESC = "The Druids north of Taverley need help making a potion to reclaim the stone circle south of Varrock.";
+			sREQU = "None.";
+			break;
 	}
 	if (nTYPE == 1) return sNAME;
 	else if (nTYPE == 2) return sDESC;
