@@ -1670,7 +1670,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Tlk" hash="4690287790C61F3A1CCCD757026F303DCD3DA6A9" downloadHash="36613A9FFBA536F394E920E77C8F66049EEEDFD7" name="moliorrs.tlk" dlsize="11071" size="45970" critical="false" exclude="false" urlOverride="">
+  <resource type="Tlk" hash="1CE39B744A038C09A03E8446B56732BC0269A317" downloadHash="7A84CE7E83D4475126D9D6E68A00E3004C01B280" name="moliorrs.tlk" dlsize="12706" size="49644" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1690,7 +1690,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="19F7E442903822126196E4F63B61F1406EE9D622" downloadHash="ABA79B2B946F4637119604614398B5CC64BE4486" name="xmls.hak" dlsize="56248" size="1417341" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="AEEBEC73A08E8BD5C4B6E802DD017BAA9D39A57F" downloadHash="334DF0B4D919B7FF1F9D9610CF37B5991FC0A20A" name="xmls.hak" dlsize="56238" size="1416004" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2740,7 +2740,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="EE4EC52E9728114BC0F14397CECD2756CE3DD5DB" downloadHash="985099F3276899406568B0F9A6BE920C8D719383" name="taverly.trx" dlsize="9265461" size="43404892" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="259FF544444696FA0248D3B4F4B1299D402BE5CF" downloadHash="7990B6CC9EF775C4A6D3C9559780B816FAE58FDD" name="taverly.trx" dlsize="9235022" size="43363219" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2775,7 +2775,27 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="5F02DEC5270871E3FABEC2B70F0382DEFA2367E1" downloadHash="2A3220E9E97FCC184B00C7D1E9F542830C1595A5" name="moliorrs2da.hak" dlsize="11486622" size="46847375" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="8C35A3D38DB032619726A094B0C3702E462EE425" downloadHash="13DCAEDE9D0F912FBAAA7FA3C64636ED171464EC" name="moliorrs2da.hak" dlsize="11493863" size="46897563" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="5D282E449C53EC411217FEBF92787B8544C8139D" downloadHash="B483DEDA81DD19F105C417E1C628801AA8E97C03" name="Taverly Dungeon.trx" dlsize="4072304" size="27374307" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="9071477BA9917622C6CA1B22038E26787E0D101C" downloadHash="6D8839D23085C49C43A501DEF21D07F1301C9278" name="mus_shipgrave.bmu" dlsize="3783085" size="3797808" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="43DE2EA35E350FEE52E6DD6704738D660DB91409" downloadHash="4AA639B3C4E6DAF734AF8A1BE1D3222B90721530" name="mus_tavsouth.bmu" dlsize="1300013" size="1312816" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="4AB12EDE172036D9C29470C2D70FBDC465C3D260" downloadHash="2D02680FB45D0BCF4FE9C1945E1D5505B2D98D4B" name="mus_tavdung.bmu" dlsize="3819015" size="3846067" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
