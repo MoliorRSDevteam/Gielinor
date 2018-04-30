@@ -19,6 +19,60 @@ void main(string sPOOL, string sREQ, string sOUTPUT, string sMULT, string sSKILL
 			return;
 		}
 	}
+    if (sOUTPUT == "adamantdart")
+    {
+        int nQUEST = GetJournalEntry("28", oPC);
+        if ((nQUEST !=20) && (nQUEST != 20))
+        {
+            SendMessageToPC(oPC, "You must have completed the quest 'Tourist Trap' to be able to produce this item.");
+            return;
+        }
+    }
+        if (sOUTPUT == "bronzedart")
+    {
+        int nQUEST = GetJournalEntry("28", oPC);
+        if ((nQUEST !=20) && (nQUEST != 20))
+        {
+            SendMessageToPC(oPC, "You must have completed the quest 'Tourist Trap' to be able to produce this item.");
+            return;
+        }
+    }
+    if (sOUTPUT == "irondart")
+    {
+        int nQUEST = GetJournalEntry("28", oPC);
+        if ((nQUEST !=20) && (nQUEST != 20))
+        {
+            SendMessageToPC(oPC, "You must have completed the quest 'Tourist Trap' to be able to produce this item.");
+            return;
+        }
+    }
+        if (sOUTPUT == "mithrildart")
+    {
+        int nQUEST = GetJournalEntry("28", oPC);
+        if ((nQUEST !=20) && (nQUEST != 20))
+        {
+            SendMessageToPC(oPC, "You must have completed the quest 'Tourist Trap' to be able to produce this item.");
+            return;
+        }
+    }
+    if (sOUTPUT == "steeldart")
+    {
+        int nQUEST = GetJournalEntry("28", oPC);
+        if ((nQUEST !=20) && (nQUEST != 20))
+        {
+            SendMessageToPC(oPC, "You must have completed the quest 'Tourist Trap' to be able to produce this item.");
+            return;
+        }
+    }
+        if (sOUTPUT == "runedart")
+    {
+        int nQUEST = GetJournalEntry("28", oPC);
+        if ((nQUEST !=20) && (nQUEST != 20))
+        {
+            SendMessageToPC(oPC, "You must have completed the quest 'Tourist Trap' to be able to produce this item.");
+            return;
+        }
+    }
 	object oINVALID = OBJECT_INVALID;
 	object oPOOL = oINVALID;
 	if (sPOOL != "")
@@ -49,6 +103,7 @@ void main(string sPOOL, string sREQ, string sOUTPUT, string sMULT, string sSKILL
 		case SKILL_COOKING: sSOUND = "Cooking"; sANIM = "cooking01"; break;
 		case SKILL_FLETCHING: sSOUND = "Fletching"; sANIM = "craft01"; break;
 		case SKILL_PRAYER: sSOUND = "Prayer"; sANIM = "worship"; break;
+		case SKILL_HERBLORE: sSOUND = "Herblore"; sANIM = "cooking01"; break;
 		default: return;
 	}
 	int nREQ = StringToInt(sREQ);

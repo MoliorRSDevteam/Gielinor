@@ -80,7 +80,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="B0D3AC3821644B4C1184C310BC21EC29A4BE641F" downloadHash="188421AD718720B5DB69DA802903C954E0D58B07" name="al-kharid - tanner shop.trx" dlsize="10615" size="53358" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="7DDE16CBEC416E9C0A91BFC5F2666B329B5D9038" downloadHash="1147595A2631C56475F28279FFD10F4665AEE8AC" name="al-kharid - tanner shop.trx" dlsize="10552" size="53357" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -270,7 +270,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="D53FC1D16787EA536643773F6D10E2AAA8F5BA6D" downloadHash="F30059F711B9AFAA5A050046F3BCF8FDDA05053D" name="road to falador.trx" dlsize="12309287" size="49027293" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="E3C4949A5DDAD5E328DFC595CD24F445B570EA36" downloadHash="5006079A207ECD458F44921FB1021B3D8CFFC08E" name="road to falador.trx" dlsize="11018532" size="44638085" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -945,7 +945,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="48CE5FD4E52957BD92536643CC295314AD4C17E2" downloadHash="67893BD11378F262A8D20FB5C2B660A69A50DA86" name="varrock.trx" dlsize="11343607" size="48702323" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="4C601F02296FF215D98F91676AB5FE0D0C62D152" downloadHash="7C46B7F80943EA39AAF30F4AD1269785AB7D9366" name="varrock.trx" dlsize="11367385" size="48701868" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1105,7 +1105,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="57BA47FF47462C1F9A36AF6F5FDE9C6C4A895C9E" downloadHash="09237E93E3DDF9D3246BD6B90C6FC5EA7B773394" name="falador.trx" dlsize="5990597" size="31446334" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="1EFE1A204B386303C6259910645520101F182364" downloadHash="F0AF75EDD2A6DD6791245C61D7860F0CDB376C38" name="falador.trx" dlsize="6259589" size="32319780" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1270,7 +1270,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="CF75D8C7C962CE5A729B09ACE9191DFB3F87DEEC" downloadHash="E83E18742FBD3CD7382F542E33E927FACA867B35" name="al-kharid.trx" dlsize="4801618" size="23400274" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="EC1BFC3B7F02CAE2F3779928881FD5B7C1D01714" downloadHash="2A8742A1C300158371115434B469C3513984AF8F" name="al-kharid.trx" dlsize="4807906" size="23400665" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1670,7 +1670,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Tlk" hash="4690287790C61F3A1CCCD757026F303DCD3DA6A9" downloadHash="36613A9FFBA536F394E920E77C8F66049EEEDFD7" name="moliorrs.tlk" dlsize="11071" size="45970" critical="false" exclude="false" urlOverride="">
+  <resource type="Tlk" hash="1CE39B744A038C09A03E8446B56732BC0269A317" downloadHash="7A84CE7E83D4475126D9D6E68A00E3004C01B280" name="moliorrs.tlk" dlsize="12706" size="49644" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1685,12 +1685,12 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="C34C13579EA25FBCF0894947690AF15218465EB9" downloadHash="14FAD04DF03138125F7059B49B2952808C35ECF9" name="2da_loadingscreens.hak" dlsize="232457444" size="744129143" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="B5AE86F8C38FEAAAA78E355A82DC6CBC5057B3EB" downloadHash="561E0B51C048C6D51AA843FC4E432E6743C03E60" name="2da_loadingscreens.hak" dlsize="232254325" size="737290535" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="C51C8BC3A4F07C893AF4814C5792C29E6FEA8777" downloadHash="6741EDEF7B29E11D8776AE1ED2DB815461DE03A2" name="xmls.hak" dlsize="55466" size="1426706" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="AEEBEC73A08E8BD5C4B6E802DD017BAA9D39A57F" downloadHash="334DF0B4D919B7FF1F9D9610CF37B5991FC0A20A" name="xmls.hak" dlsize="56238" size="1416004" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2110,7 +2110,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="58C7C1E32FAA05C7F092A127939CE4D674A8C6FA" downloadHash="3B36E2E8A40BEAC94F4700337970A24CAED9FF47" name="kharidian - south desert.trx" dlsize="5832120" size="31133818" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="07971CBA6A5F1BCCEC54A74C6B3DC6FC1E4DB8AF" downloadHash="AD8B277EB28928F742995C0A1DA72C1A63DC19CB" name="kharidian - south desert.trx" dlsize="5890314" size="31184736" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2215,7 +2215,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="801EB5354E8B08E22F0CB8824B10B6F238727834" downloadHash="4A793F0B144CEE85197BB0427A9FDEB689CC9D51" name="kharidian - uzer.trx" dlsize="6699426" size="38223234" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="BEB6ABCD4F17333A3DE2E106F0F815D196206AEB" downloadHash="726712A4DC0E56CCEAF3DD2DDE24C951609AB596" name="kharidian - uzer.trx" dlsize="6701799" size="38208467" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2240,7 +2240,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="8847F9A5454510C57AC1522C880F88DA68D7E77F" downloadHash="AC2740BB9E4465C704EF0917CE153CAEACE421BF" name="kharidian - pollnivneach.trx" dlsize="3034977" size="17107729" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="A9EB860C0AB615653115EF36DB0CEF218F0C811A" downloadHash="962A59957DFE7551C843DCC96770277E310895B4" name="kharidian - pollnivneach.trx" dlsize="3006765" size="17090403" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2285,7 +2285,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="52A6F946C7A10809F61F55B075A032A1ABE0F20A" downloadHash="776F811D945CB507CDAA7450BEE5D6CB5B69067D" name="kharidian - nardah.trx" dlsize="7949812" size="40897738" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="10911AB209F59A3CE9521480B8FF8EE40870F3F2" downloadHash="DB68A04D180C49BFF0A4D83F21FABB704CDCC126" name="kharidian - nardah.trx" dlsize="7978342" size="40936752" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2740,7 +2740,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="530A27BBAF6958D37F94C7A94455A321EC00F5C9" downloadHash="02B3318C5E318232497715A4A173C506EF948C73" name="taverly.trx" dlsize="9145107" size="43153907" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="259FF544444696FA0248D3B4F4B1299D402BE5CF" downloadHash="7990B6CC9EF775C4A6D3C9559780B816FAE58FDD" name="taverly.trx" dlsize="9235022" size="43363219" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2756,6 +2756,46 @@
     </server-ref>
   </resource>
   <resource type="Music" hash="2BDD02D9310F430D6303DEDC958C782551285153" downloadHash="CA47C2F3C541050A467B662999583BA28CE57898" name="mus_slayertower.bmu" dlsize="4403254" size="4560777" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="E7C6186659154869B2B6A83125805DBC3B3FC91C" downloadHash="F5E0C76C6645DAB54982D7BF1008AE4EFCC97656" name="Taverly - Herblore shop.trx" dlsize="25201" size="25222" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="F90249A623E4F56B4D236BA8BA2F679481771F53" downloadHash="A32139DE26B0D705D42AD4147D725AB8AE9814B4" name="Falador cave.trx" dlsize="32115" size="32186" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="9364151B3DCB6F8066A7BF8E8A8E801F48AA8AD1" downloadHash="D6CFB25496D2E2401AD94AC27A3CD7132C18B731" name="dark wizards tower.trx" dlsize="2888693" size="15160070" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Hak" hash="8C35A3D38DB032619726A094B0C3702E462EE425" downloadHash="13DCAEDE9D0F912FBAAA7FA3C64636ED171464EC" name="moliorrs2da.hak" dlsize="11493863" size="46897563" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="DirectoryEntry" hash="5D282E449C53EC411217FEBF92787B8544C8139D" downloadHash="B483DEDA81DD19F105C417E1C628801AA8E97C03" name="Taverly Dungeon.trx" dlsize="4072304" size="27374307" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="9071477BA9917622C6CA1B22038E26787E0D101C" downloadHash="6D8839D23085C49C43A501DEF21D07F1301C9278" name="mus_shipgrave.bmu" dlsize="3783085" size="3797808" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="43DE2EA35E350FEE52E6DD6704738D660DB91409" downloadHash="4AA639B3C4E6DAF734AF8A1BE1D3222B90721530" name="mus_tavsouth.bmu" dlsize="1300013" size="1312816" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Music" hash="4AB12EDE172036D9C29470C2D70FBDC465C3D260" downloadHash="2D02680FB45D0BCF4FE9C1945E1D5505B2D98D4B" name="mus_tavdung.bmu" dlsize="3819015" size="3846067" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>

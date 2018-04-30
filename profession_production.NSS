@@ -28,6 +28,7 @@ void main(string sOUTPUT, int nMULT, int nSKILL, int nXP, string sTAG_A, int nQT
 		case SKILL_COOKING: sSOUND = "Cooking"; sANIM = "cooking01"; break;
 		case SKILL_FLETCHING: sSOUND = "Fletching"; sANIM = "craft01"; break;
 		case SKILL_PRAYER: sSOUND = "Prayer"; sANIM = "worship"; break;
+		case SKILL_HERBLORE: sSOUND = "Herblore"; sANIM = "cooking01"; break;
 	}
 	if (GetTag(oPOOL) == "furnace") sANIM = "forge02";
 	SetLocalInt(oPC, "PROF_SKILL", nSKILL);

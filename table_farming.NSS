@@ -42,30 +42,30 @@ void RetrieveProperPlant(object oPC, object oITEM, int nSEED)
 	switch (nSEED)
 	{
 		//Allotments
-		case 100: sNAME = "Potatoe";	sPLANT = "cabbage";		nFARM = 1;	break;
+		case 100: sNAME = "Potatoe";	sPLANT = "onion";		nFARM = 1;	break;
 		case 101: sNAME = "Onion";		sPLANT = "onion";		nFARM = 5;	break;
 		case 102: sNAME = "Cabbage";	sPLANT = "cabbage";		nFARM = 7; 	break;
-		case 103: sNAME = "Tomato";		sPLANT = "cabbage";		nFARM = 12;	break;
-		case 104: sNAME = "Sweetcorn";	sPLANT = "cabbage";		nFARM = 20;	break;
-		case 105: sNAME = "Strawberry";	sPLANT = "cabbage";		nFARM = 31;	break;
-		case 106: sNAME = "Watermelon";	sPLANT = "cabbage";		nFARM = 47;	break;
+		case 103: sNAME = "Tomato";		sPLANT = "onion";		nFARM = 12;	break;
+		case 104: sNAME = "Sweetcorn";	sPLANT = "sweetcorn";	nFARM = 20;	break;
+		case 105: sNAME = "Strawberry";	sPLANT = "onion";		nFARM = 31;	break;
+		case 106: sNAME = "Watermelon";	sPLANT = "onion";		nFARM = 47;	break;
 		
 		//Flowers
-		case 205: sNAME = "Limpwurt";	sPLANT = "cabbage";		nFARM = 26; break;
+		case 205: sNAME = "Limpwurt";	sPLANT = "onion";		nFARM = 26; break;
 		
 		//Herbs
-		case 300: sNAME = "Guam";		sPLANT = "cabbage"; 	nFARM = 9;	fTIME = 1800.0; break;
-		case 301: sNAME = "Marrentil";	sPLANT = "cabbage";		nFARM = 14;	fTIME = 1800.0; break;
-		case 302: sNAME = "Tarromin";	sPLANT = "cabbage";		nFARM = 19;	fTIME = 1800.0; break;
-		case 303: sNAME = "Harralander";sPLANT = "cabbage";		nFARM = 26;	fTIME = 1800.0; break;
-		case 305: sNAME = "Ranarr";		sPLANT = "cabbage";		nFARM = 32;	fTIME = 1800.0; break;
+		case 300: sNAME = "Guam";		sPLANT = "herb"; 		nFARM = 9;	fTIME = 1800.0; break;
+		case 301: sNAME = "Marrentil";	sPLANT = "herb";		nFARM = 14;	fTIME = 1800.0; break;
+		case 302: sNAME = "Tarromin";	sPLANT = "herb";		nFARM = 19;	fTIME = 1800.0; break;
+		case 303: sNAME = "Harralander";sPLANT = "herb";		nFARM = 26;	fTIME = 1800.0; break;
+		case 305: sNAME = "Ranarr";		sPLANT = "herb";		nFARM = 32;	fTIME = 1800.0; break;
 		
 		//Hops (Not Implemented yet)
 		case 400: sNAME = "Barley";		sPLANT = "cabbage";		nFARM = 3;	break;
 		
 		//Bushes
-		case 500: sNAME = "Redberries";		sPLANT = "cabbage";		nFARM = 10; break;
-		case 501: sNAME = "Cadavaberries";	sPLANT = "cabbage";		nFARM = 22; break;
+		case 500: sNAME = "Redberries";		sPLANT = "bush";		nFARM = 10; break;
+		case 501: sNAME = "Cadavaberries";	sPLANT = "cadava";		nFARM = 22; break;
 		
 		//Trees
 		case 600: sNAME = "Oak Tree";		sPLANT = "oakstump";	nFARM = 15;	fTIME = 3600.0; break;
@@ -73,13 +73,12 @@ void RetrieveProperPlant(object oPC, object oITEM, int nSEED)
 		case 602: sNAME = "Maple Tree";		sPLANT = "maplestump";	nFARM = 45; fTIME = 3600.0; break;
 		case 603: sNAME = "Yew Tree";		sPLANT = "yewstump";	nFARM = 60; fTIME = 3600.0; break;
 		case 604: sNAME = "Magic Tree";		sPLANT = "magicstump";	nFARM = 75; fTIME = 3600.0; break;
-		
 		default: return;
 	}
 	
 	if (GetSkillRank(SKILL_FARMING, oPC) < nFARM)
 	{
-		SendMessageToPC(oPC, "You need level " + IntToString(nFARM) + "in Farming to be able to plant that seed.");
+		SendMessageToPC(oPC, "You need level " + IntToString(nFARM) + " in Farming to be able to plant that seed.");
 		return;
 	}
 	
@@ -90,7 +89,7 @@ void RetrieveProperPlant(object oPC, object oITEM, int nSEED)
 	int nTREE;
 	if (nTREE > 599) nTREE = TRUE;
 	int nTIME = FloatToInt(fTIME);
-	int nXP = nFARM * 10 * (nTIME / 60);
+	int nXP = nFARM * 2 * (nTIME / 60);
 	object oPLANT = CreateObject(OBJECT_TYPE_PLACEABLE, sPLANT, GetLocation(oPC), FALSE, sNAME);
 	DelayCommand(0.0f, AdjustPlant(oPLANT, sNAME, fTIME, nXP, nFARM, nTREE));
 }
