@@ -58,6 +58,16 @@ void main()
         sXML = "bonesmenu.xml";
         sSCREEN = "BONESMENU";
     }
+        else if (sPLACE == "plotitemsplace")
+    {
+        sXML = "questremoveitemgui.xml";
+        sSCREEN = "PLOTITEMMENU";
+    }
+       else if (sPLACE == "patronstatue")
+    {
+        sXML = "patrons.xml";
+        sSCREEN = "PATRONSMENU";
+    }
     else return;
     object oPC = GetLastUsedBy();
     DisplayGuiScreen(oPC, sSCREEN, FALSE, sXML);
