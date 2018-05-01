@@ -345,7 +345,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="C9F2E937D98AA780091FB7DAABFAB3DE7FA36FE1" downloadHash="6350755EA2C137D797011932BEC791D70A48B67B" name="south falador.trx" dlsize="12273808" size="54561399" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="905CF953E324AA4F97945513224D1D610E6F7105" downloadHash="EB5A1858FAD1E9089C98DDD4C6365E4AA7230B3A" name="south falador.trx" dlsize="12814804" size="56162692" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
