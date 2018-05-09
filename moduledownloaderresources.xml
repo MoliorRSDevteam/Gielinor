@@ -310,7 +310,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="8E7E47765730E88C523F5C68CCF4992F2EF013AD" downloadHash="8AEDB78DA4BB8A71CCC74EF0588A6571FB7B0E33" name="varrock - museum.trx" dlsize="143884" size="144438" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="4AED59BA7BEEE6F825978E4C6622B32460ACAF95" downloadHash="CF1FF97AA16BE4D631C7C2A9D2F31F718B45C9CE" name="varrock - museum.trx" dlsize="136946" size="137631" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -945,7 +945,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="4C601F02296FF215D98F91676AB5FE0D0C62D152" downloadHash="7C46B7F80943EA39AAF30F4AD1269785AB7D9366" name="varrock.trx" dlsize="11367385" size="48701868" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="FE775DDF10F11B5F4754549B1DC0F31FF91C8A90" downloadHash="BC9708A551F88C7C33442FFC82665B961620EA8A" name="varrock.trx" dlsize="11378297" size="48712294" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1690,7 +1690,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="AEEBEC73A08E8BD5C4B6E802DD017BAA9D39A57F" downloadHash="334DF0B4D919B7FF1F9D9610CF37B5991FC0A20A" name="xmls.hak" dlsize="56238" size="1416004" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="457FD2C11B87A2AA662396B286DCE8BBB0176E4A" downloadHash="0115CA2095862652371D0DA7FF438D37E3296110" name="xmls.hak" dlsize="56215" size="1416029" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
