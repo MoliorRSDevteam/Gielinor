@@ -36,7 +36,7 @@ void ActionSpam(float duration)
 }
 void main()
 {
-	//SendMessageToPC(oPC, "<color=white>" + "Skills xp loaded from server database table "+sTable+".");
+	//SendMessageToPC(oPC, "<color=white>" + "Welcome to Molior RS.");
 	//TRISTON temporary boots for testing
 	//SendMessageToPC(oPC, "<color=white>" + "'tb_loadxp'Some temporary boots for testing");
 	//CreateItemOnObject("leatherboots", oPC, 1);
@@ -64,5 +64,5 @@ void main()
 	location loc = LEG_COMMON_GetPersistentLocation("NWNX", oPC, "TB_Jobs_serverloc", sTable);
 	SendMessageToPC(oPC, "debug "+GetName(oPC) + " : "+IntToString(GetSkillRank(SKILL_CRAFTING, oPC)) + " : " + LocationToString(loc));
 	AssignCommand(oPC, JumpToLocation(loc));
-	SendMessageToPC(oPC, "<color=white>" + "tb_loadxp: Loading in pre-server load data. ");
+	SendMessageToPC(oPC, "<color=white>" + "Welcome to Molior RS");
 }
