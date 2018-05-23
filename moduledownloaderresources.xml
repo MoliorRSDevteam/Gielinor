@@ -945,7 +945,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="FE775DDF10F11B5F4754549B1DC0F31FF91C8A90" downloadHash="BC9708A551F88C7C33442FFC82665B961620EA8A" name="varrock.trx" dlsize="11378297" size="48712294" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="A57CA7FCA0C45E5BE41B92061BAFCA0783083B3A" downloadHash="DDB0743620FFE1AA5885E57D88B2FEBAFDEB4DB2" name="varrock.trx" dlsize="11384703" size="48756546" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1670,7 +1670,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Tlk" hash="3C4FE246E0F08120B29F93D09DB03980972A00A9" downloadHash="230E382A311959DB4FE90917F6BE63A0CFABB5FF" name="moliorrs.tlk" dlsize="12736" size="49754" critical="false" exclude="false" urlOverride="">
+  <resource type="Tlk" hash="1E586BCD636800CC401FBBE7E1200B3609F82D6B" downloadHash="4D4A2A0D8CB721B3AB2FC94ABDCFE355418E2BA3" name="moliorrs.tlk" dlsize="12741" size="49821" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1690,7 +1690,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="4BFBD93D7A61AF9D61C34204D9D0421A4EDD9D4B" downloadHash="DD71980481F8F822307C89E9D318E6ACAD09C289" name="xmls.hak" dlsize="56917" size="1425271" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="1B48379D3B52941CE85851E22439594E000198C6" downloadHash="D5CA5FA2F15CF5473DEEE94857235E3DCED86878" name="xmls.hak" dlsize="56991" size="1428842" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2775,7 +2775,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Hak" hash="F560EA61B8C3CEF6966CB21C2BF007B45F6328A7" downloadHash="DBECE8DF9179222DF65FB90283A0E81C3CF35A46" name="moliorrs2da.hak" dlsize="12042886" size="48654974" critical="false" exclude="false" urlOverride="">
+  <resource type="Hak" hash="1112B0A6864BCA0D59B938EF04D94E3BFBBF67EC" downloadHash="FB63588A7B2DC6A87426EB523DFC8CCFA457FBA5" name="moliorrs2da.hak" dlsize="12047469" size="48664983" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
