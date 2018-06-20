@@ -1025,7 +1025,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="DirectoryEntry" hash="EE971B1FC0912D83BF1C48985FF7DECD1F2F9C62" downloadHash="26EA715D28E251265A3E4B973CE9189E0303D21A" name="Molior RS base.trx" dlsize="54742" size="55625" critical="false" exclude="false" urlOverride="">
+  <resource type="DirectoryEntry" hash="4E02D50F1DB908C3F61298008F0F4C3B19E17829" downloadHash="30F63C51BF2CBE59C33E4F71D382F60AE17A420A" name="Molior RS base.trx" dlsize="49920" size="50973" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1670,7 +1670,7 @@
       <string>0</string>
     </server-ref>
   </resource>
-  <resource type="Tlk" hash="1E586BCD636800CC401FBBE7E1200B3609F82D6B" downloadHash="4D4A2A0D8CB721B3AB2FC94ABDCFE355418E2BA3" name="moliorrs.tlk" dlsize="12741" size="49821" critical="false" exclude="false" urlOverride="">
+  <resource type="Tlk" hash="006CACFF2630CA3706227D44D55AF2A4890BE37B" downloadHash="C92812A59FD1089F986392A339648516057BBEF9" name="moliorrs.tlk" dlsize="12835" size="50098" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -1686,11 +1686,6 @@
     </server-ref>
   </resource>
   <resource type="Hak" hash="B5AE86F8C38FEAAAA78E355A82DC6CBC5057B3EB" downloadHash="561E0B51C048C6D51AA843FC4E432E6743C03E60" name="2da_loadingscreens.hak" dlsize="232254325" size="737290535" critical="false" exclude="false" urlOverride="">
-    <server-ref>
-      <string>0</string>
-    </server-ref>
-  </resource>
-  <resource type="Hak" hash="1B48379D3B52941CE85851E22439594E000198C6" downloadHash="D5CA5FA2F15CF5473DEEE94857235E3DCED86878" name="xmls.hak" dlsize="56991" size="1428842" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
@@ -2796,6 +2791,11 @@
     </server-ref>
   </resource>
   <resource type="Music" hash="4AB12EDE172036D9C29470C2D70FBDC465C3D260" downloadHash="2D02680FB45D0BCF4FE9C1945E1D5505B2D98D4B" name="mus_tavdung.bmu" dlsize="3819015" size="3846067" critical="false" exclude="false" urlOverride="">
+    <server-ref>
+      <string>0</string>
+    </server-ref>
+  </resource>
+  <resource type="Hak" hash="FA9DDBEFF9813ACA52494E30FA0CF0EBD9518F2C" downloadHash="D2FC66971A0179FC026D3FB0B72275860B9AC1F6" name="xmls.hak" dlsize="57046" size="1428876" critical="false" exclude="false" urlOverride="">
     <server-ref>
       <string>0</string>
     </server-ref>
