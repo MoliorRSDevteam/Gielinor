@@ -68,6 +68,11 @@ void main()
         sXML = "patrons.xml";
         sSCREEN = "PATRONSMENU";
     }
+       else if (sPLACE == "millforflour")
+    {
+        sXML = "millforflour.xml";
+        sSCREEN = "MILLFLOURSMENU";
+    }
     else return;
     object oPC = GetLastUsedBy();
     DisplayGuiScreen(oPC, sSCREEN, FALSE, sXML);
